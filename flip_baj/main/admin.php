@@ -394,7 +394,7 @@ if (isset($_COOKIE['loggedin']) && $_COOKIE['loggedin'] === 'true') {
 	</div>
 	
 </main>
-<script src="main/js/admin.js"></script>
+<script src="js/admin.js"></script>
 
 <?php
 include 'footer.php';
