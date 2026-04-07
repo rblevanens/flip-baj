@@ -1,0 +1,71 @@
+Projet BAJ (Bourse aux jeux) 2017. Version simplifiée qui tente de réduire les temps d\textquotesingle{}accès énormes rencontrés lors de l\textquotesingle{}édition 2016. Suppression des grosses page JS pour un découpage plus simple. Projet relancé surtout en 2023 et 2024, avec de grandes améliorations pour s\textquotesingle{}adapter au nouveau règlement.\doxysection{Version}\label{md_main_README_autotoc_md1}
+\doxysubsection{0.\+0.\+1}\label{md_main_README_autotoc_md2}
+
+\begin{DoxyItemize}
+\item création des indexes sur toutes les tables al\+\_\+bourse (voir repertoire sql)
+\begin{DoxyItemize}
+\item il faudra refaire ce fichier et bien le bétonner en partant d\textquotesingle{}une base vierge. car je n\textquotesingle{}ai traiter pour le moment que le cas de al\+\_\+bourse\+\_\+users
+\end{DoxyItemize}
+\item liste de tous les vendeurs (pas de sélection sur l\textquotesingle{}année ni sur les listes)
+\item formulaire de création de vendeur ok
+\item je pense qu\textquotesingle{}il faudra faire une page d\textquotesingle{}update de vendeur, pour les vieux vendeurs qui n\textquotesingle{}ont pas de listes et qui ont leurs données incomplètes. Ceci pour éviter d\textquotesingle{}avoir à créer deux venderus identiques.
+\item ne pas oublier d\textquotesingle{}exécuter le fichier SQL d\textquotesingle{}ajout des colonnes et indexes
+\item créer un directoryindex pour apache pour le download des fichiers
+\end{DoxyItemize}
+
+Script\+Alias /fichiers /home/alchimie/\+Documents/fdjtl/pdf $<$Directory \char`\"{}/home/alchimie/\+Documents/fdjtl/pdf\char`\"{}$>$ Require all granted Allow from all Options +Indexes $<$/\+Directory$>$ $<$/\+Virtual\+Host$>$\doxysubsection{2024}\label{md_main_README_autotoc_md3}
+
+\begin{DoxyItemize}
+\item Présence des indexes.
+\item Réfection des différentes pages.
+\item Ajout d\textquotesingle{}une page Admin pour gérer l\textquotesingle{}import, l\textquotesingle{}export, les flux d\textquotesingle{}argents et les jeux supspects.
+\item Ajout d\textquotesingle{}une table des acheteurs, séparée de la table des vendeurs
+\item Fusion des différentes tables de vendeurs
+\item Changement de la liste des jeux en stock pour afficher l\textquotesingle{}ensemble des jeux et des champs de recherche
+\item Changement du calcul des prix rendus pour s\textquotesingle{}adapter au règlement (rendu$\ast$1,2=vendu)
+\item Changement de la page de remboursement pour pouvoir choisir le montant et le moyen de paiement
+\item Changement de la gestion des jeux perdus \+: plus de changement de statut, mais l\textquotesingle{}ajout de la caractéristique \char`\"{}vigilance\char`\"{}.
+\item Ajout des scripts d\textquotesingle{}import de tables directement dans le logiciel.
+\item Création d\textquotesingle{}une table des remboursements
+\item Ajout d\textquotesingle{}une classe secondaire PDF de \doxyref{FPDF}{p.}{classFPDF} pour aider à la confection des PDF et en particulier des tableaux
+\item Modification de la gestion des pdf \+: plus de règlement, édition en fin de festival.
+\item Ajout de la notion de panier et du statut \char`\"{}\+Dans un panier\char`\"{}
+\item Ajout de la doc via doxygen
+\item Ajout de commentaires en syntaxe java\+Doc
+\item Création d\textquotesingle{}un repo github
+\item Réfection du site en ligne utilisé \+: bourseauxjeux.\+alchimiedujeu.\+fr
+\item Suppression des parties de code / fichiers inutilisés
+\item Mise à jour Bootstrap (v5.\+1.\+3) + Jquery (v3.\+7.\+0) et les bibliothèques dépendantes
+\item Elagage des CSS, uniformisation des pages
+\item Suppression du maximum d\textquotesingle{}images \+: passage aux icones Bootstrap-\/icons
+\end{DoxyItemize}\doxysection{Installation}\label{md_main_README_autotoc_md4}
+\doxysubsection{Première installation}\label{md_main_README_autotoc_md5}
+\begin{DoxyVerb}Il faut installer un serveur apache avec base de donnée mysql. Le site : https://doc.ubuntu-fr.org/lamp contient toutes les informations nécessaires. 
+Le fichier SQL : bdd.sql contient tout le code sql pour créer la base et les différentes tables nécessaires.
+Il faut modifier le fichier pdo_connect.php avec le nom de la base et les informations de connections.
+Les factures seront téléchargées dans le dossier main/pdf/pdf/facture. Il faut vérifier les autorisations d'écriture des dossiers. Une bonne méthode est d'éxécuter : 
+ "chown www-data -R chemin/racine/main/pdf/pdf"
+\end{DoxyVerb}
+ \doxysubsection{Mise en service à chaque édition}\label{md_main_README_autotoc_md6}
+\begin{DoxyVerb}Importer les tables via la page admin. Le script : 
+- Truncate la base de donnée des user et acheteurs. 
+- Mets l'id_vendeur de tous les anciens jeux à 0, ce qui anonymise mais permet de garder les stats. 
+\end{DoxyVerb}
+ \doxysection{Actions de fin de festival}\label{md_main_README_autotoc_md7}
+\begin{DoxyVerb}Télécharger les stats de fin de festival et les factures via la page admin. 
+Il est conseillé de télécharger aussi la base de donnée (.zip) depuis la page admin.
+\end{DoxyVerb}
+ \doxysection{Contributors}\label{md_main_README_autotoc_md8}
+Inconnus Yanick Mescam Eric Piallat Mathieu Piallat\doxysection{Bibliothèques Externes}\label{md_main_README_autotoc_md9}
+Ce projet utilise les bibliothèques externes suivantes \+: \begin{DoxyVerb}Bootstrap v5.1.3 - https://getbootstrap.com/
+Crypto-JS - https://github.com/brix/crypto-js
+jQuery UI v1.13.2 - https://jqueryui.com/
+jQuery v3.7.0 - https://jquery.com/
+DataTables v2.0.5 - https://datatables.net/
+KeyTable v2.12.0 - https://datatables.net/extensions/keytable/
+Responsive v3.0.2 - https://datatables.net/extensions/responsive/
+Scroller v2.4.1 - https://datatables.net/extensions/scroller/
+jquery.jeditable v1.7.1 - https://github.com/tuupola/jquery_jeditable
+\end{DoxyVerb}
+ Les bibliothèques j\+Query UI v1.\+13.\+2, j\+Query 3 v3.\+7.\+0, Data\+Tables v2.\+0.\+5, Key\+Table v2.\+12.\+0, Responsive v3.\+0.\+2 et Scroller v2.\+4.\+1 sont situées dans le même fichier (datatables.\+min.\+js)\doxysection{License}\label{md_main_README_autotoc_md10}
+Bénévole In Orange -\/ Association loi 1901 -- Alchimie Du Jeu 

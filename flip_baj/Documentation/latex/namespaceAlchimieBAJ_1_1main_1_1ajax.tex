@@ -1,0 +1,741 @@
+\doxysection{Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax Namespace Reference}
+\label{namespaceAlchimieBAJ_1_1main_1_1ajax}\index{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ generate\+CSV} (\$data, \$filename)
+\item 
+\textbf{ Get\+Stats} (\$annee)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ if} (!isset( \$\+\_\+\+SERVER[ \textquotesingle{}HTTP\+\_\+\+X\+\_\+\+REQUESTED\+\_\+\+WITH\textquotesingle{}])$\vert$$\vert$strtolower( \$\+\_\+\+SERVER[ \textquotesingle{}HTTP\+\_\+\+X\+\_\+\+REQUESTED\+\_\+\+WITH\textquotesingle{}]) !=\textquotesingle{}xmlhttprequest\textquotesingle{})
+\item 
+\textbf{ if}(is\+\_\+null(\$pdo)) \textbf{ if}(isset(\$\+\_\+\+POST[\textquotesingle{}id\textquotesingle{}])) \textbf{ else}
+\item 
+\textbf{ if} (! isset( \$\+\_\+\+SERVER[ \textquotesingle{}HTTP\+\_\+\+X\+\_\+\+REQUESTED\+\_\+\+WITH\textquotesingle{}]) and strtolower( \$\+\_\+\+SERVER[ \textquotesingle{}HTTP\+\_\+\+X\+\_\+\+REQUESTED\+\_\+\+WITH\textquotesingle{}]) !=\textquotesingle{}xmlhttprequest\textquotesingle{})
+\item 
+\textbf{ if}(is\+\_\+null(\$pdo)) \textbf{ try}
+\item 
+\textbf{ if} (! isset( \$\+\_\+\+SERVER[ \textquotesingle{}HTTP\+\_\+\+X\+\_\+\+REQUESTED\+\_\+\+WITH\textquotesingle{}]) and strtolower( \$\+\_\+\+SERVER[ \textquotesingle{}HTTP\+\_\+\+X\+\_\+\+REQUESTED\+\_\+\+WITH\textquotesingle{}]) !=\textquotesingle{}xmlhttprequest\textquotesingle{})
+\item 
+\textbf{ \$data} = \$statement-\/$>$fetch\+All(PDO\+::\+FETCH\+\_\+\+ASSOC)
+\item 
+\textbf{ if}(is\+\_\+null(\$pdo)) \textbf{ \$term} = trim(strip\+\_\+tags(\$\+\_\+\+GET[\textquotesingle{}term\textquotesingle{}]))
+\item 
+\textbf{ \$exact} = trim(strip\+\_\+tags(\$\+\_\+\+GET[\textquotesingle{}exact\textquotesingle{}]))
+\item 
+\textbf{ else} \textbf{ \$new\+Parameter} = \textquotesingle{}\%\textquotesingle{} . \$term . \textquotesingle{}\%\textquotesingle{}
+\item 
+\textbf{ \$total\+Data} = 0
+\item 
+\textbf{ \$a\+\_\+json} = array()
+\item 
+\textbf{ \$a\+\_\+json\+\_\+row} = array()
+\item 
+\textbf{ while} ( \$jeu=\$statement-\/$>$fetch())
+\item 
+\textbf{ \$statement} = null
+\item 
+\textbf{ \$pdo} = null
+\item 
+\textbf{ if} (!isset( \$\+\_\+\+SERVER[ \textquotesingle{}HTTP\+\_\+\+X\+\_\+\+REQUESTED\+\_\+\+WITH\textquotesingle{}])$\vert$$\vert$strtolower( \$\+\_\+\+SERVER[ \textquotesingle{}HTTP\+\_\+\+X\+\_\+\+REQUESTED\+\_\+\+WITH\textquotesingle{}]) !=\textquotesingle{}xmlhttprequest\textquotesingle{})
+\item 
+\textbf{ if}(is\+\_\+null(\$pdo)) \textbf{ \$sql\+Conditions} = array()
+\item 
+\textbf{ \$sql\+Parameters} = array()
+\item 
+\textbf{ if}(isset(\$\+\_\+\+POST[\textquotesingle{}id\+Vendeur\textquotesingle{}])) \textbf{ if}(isset(\$\+\_\+\+POST[\textquotesingle{}id\+Statut\textquotesingle{}])) \textbf{ if}(isset(\$\+\_\+\+POST[\textquotesingle{}vigilance\textquotesingle{}])) \textbf{ if}(isset(\$\+\_\+\+POST[\textquotesingle{}code\+\_\+barre\textquotesingle{}])) \textbf{ if}(isset(\$\+\_\+\+POST[\textquotesingle{}nom\+\_\+jeu\textquotesingle{}])) \textbf{ \$sql\+Conditions} [$\,$] = \$SQL\+\_\+5\+\_\+6\+\_\+where\+Annee
+\item 
+\textbf{ \$sql\+Query} = \$SQL\+\_\+5\+\_\+getlistejeux . implode(\textquotesingle{} AND \textquotesingle{}, \$sql\+Conditions) . \$SQL\+\_\+5\+\_\+7\+\_\+order\+By
+\item 
+\textbf{ while}(\$jeu=\$statement-\/$>$fetch()) \textbf{ \$json\+\_\+data}
+\item 
+\textbf{ if}(!isset(\$\+\_\+\+SERVER[\textquotesingle{}HTTP\+\_\+\+X\+\_\+\+REQUESTED\+\_\+\+WITH\textquotesingle{}])$\vert$$\vert$strtolower(\$\+\_\+\+SERVER[\textquotesingle{}HTTP\+\_\+\+X\+\_\+\+REQUESTED\+\_\+\+WITH\textquotesingle{}]) !==\textquotesingle{}xmlhttprequest\textquotesingle{}) \textbf{ \$response}
+\item 
+\textbf{ \$res} = \$statement-\/$>$fetch()
+\item 
+\textbf{ \$response} [\textquotesingle{}message1\textquotesingle{}]
+\item 
+\textbf{ \$response} [\textquotesingle{}message2\textquotesingle{}] = \textquotesingle{}1\textquotesingle{}
+\item 
+\textbf{ catch} (PDOException \$e)
+\item 
+\textbf{ \$stmt} = \$pdo-\/$>$query(\$sql)
+\item 
+\textbf{ \$csv\+Filename} = \char`\"{}stats\+\_\+bourse.\+csv\char`\"{}
+\item 
+\textbf{ \$annee} = \$\+\_\+\+POST[\char`\"{}annee\char`\"{}]
+\item 
+\textbf{ if}(is\+\_\+null(\$pdo)) \textbf{ \$id\+Acheteur} = filter\+\_\+var(\$\+\_\+\+POST[\char`\"{}id\+Acheteur\char`\"{}], FILTER\+\_\+\+SANITIZE\+\_\+\+STRING, FILTER\+\_\+\+FLAG\+\_\+\+STRIP\+\_\+\+LOW $\vert$ FILTER\+\_\+\+FLAG\+\_\+\+STRIP\+\_\+\+HIGH)
+\item 
+\textbf{ \$email\+Acheteur} = filter\+\_\+var(\$\+\_\+\+POST[\char`\"{}email\+Acheteur\char`\"{}], FILTER\+\_\+\+SANITIZE\+\_\+\+STRING, FILTER\+\_\+\+FLAG\+\_\+\+STRIP\+\_\+\+LOW $\vert$ FILTER\+\_\+\+FLAG\+\_\+\+STRIP\+\_\+\+HIGH)
+\item 
+\textbf{ \$nom\+Acheteur} = filter\+\_\+var(\$\+\_\+\+POST[\char`\"{}nom\+Acheteur\char`\"{}], FILTER\+\_\+\+SANITIZE\+\_\+\+STRING, FILTER\+\_\+\+FLAG\+\_\+\+STRIP\+\_\+\+LOW $\vert$ FILTER\+\_\+\+FLAG\+\_\+\+STRIP\+\_\+\+HIGH)
+\item 
+\textbf{ \$prenom\+Acheteur} = filter\+\_\+var(\$\+\_\+\+POST[\char`\"{}prenom\+Acheteur\char`\"{}], FILTER\+\_\+\+SANITIZE\+\_\+\+STRING, FILTER\+\_\+\+FLAG\+\_\+\+STRIP\+\_\+\+LOW $\vert$ FILTER\+\_\+\+FLAG\+\_\+\+STRIP\+\_\+\+HIGH)
+\item 
+\textbf{ \$adresse\+Acheteur} = filter\+\_\+var(\$\+\_\+\+POST[\char`\"{}adresse\+Acheteur\char`\"{}], FILTER\+\_\+\+SANITIZE\+\_\+\+STRING, FILTER\+\_\+\+FLAG\+\_\+\+STRIP\+\_\+\+LOW $\vert$ FILTER\+\_\+\+FLAG\+\_\+\+STRIP\+\_\+\+HIGH)
+\item 
+\textbf{ \$code\+Postal\+Acheteur} = filter\+\_\+var(\$\+\_\+\+POST[\char`\"{}code\+Postal\+Acheteur\char`\"{}], FILTER\+\_\+\+SANITIZE\+\_\+\+STRING, FILTER\+\_\+\+FLAG\+\_\+\+STRIP\+\_\+\+LOW $\vert$ FILTER\+\_\+\+FLAG\+\_\+\+STRIP\+\_\+\+HIGH)
+\item 
+\textbf{ \$ville\+Acheteur} = filter\+\_\+var(\$\+\_\+\+POST[\char`\"{}ville\+Acheteur\char`\"{}], FILTER\+\_\+\+SANITIZE\+\_\+\+STRING, FILTER\+\_\+\+FLAG\+\_\+\+STRIP\+\_\+\+LOW $\vert$ FILTER\+\_\+\+FLAG\+\_\+\+STRIP\+\_\+\+HIGH)
+\item 
+\textbf{ \$id\+Transaction} = filter\+\_\+var(\$\+\_\+\+POST[\char`\"{}id\+Transaction\char`\"{}], FILTER\+\_\+\+SANITIZE\+\_\+\+STRING, FILTER\+\_\+\+FLAG\+\_\+\+STRIP\+\_\+\+LOW $\vert$ FILTER\+\_\+\+FLAG\+\_\+\+STRIP\+\_\+\+HIGH)
+\item 
+\textbf{ \$sql} = \$SQL\+\_\+41\+\_\+attribution\+\_\+acheteur\+\_\+transaction
+\item 
+\textbf{ if}(! isset(\$\+\_\+\+SERVER[\textquotesingle{}HTTP\+\_\+\+X\+\_\+\+REQUESTED\+\_\+\+WITH\textquotesingle{}]) and strtolower(\$\+\_\+\+SERVER[\textquotesingle{}HTTP\+\_\+\+X\+\_\+\+REQUESTED\+\_\+\+WITH\textquotesingle{}]) !=\textquotesingle{}xmlhttprequest\textquotesingle{}) \textbf{ \$type} =\$\+\_\+\+POST[\char`\"{}type\char`\"{}]
+\item 
+\textbf{ \$ret} = \textbf{ Afficher\+Trans}(\$type)
+\item 
+\textbf{ \$\+SQL}
+\item 
+\textbf{ if} ( \$\+\_\+\+SERVER[\char`\"{}REQUEST\+\_\+\+METHOD\char`\"{}]==\char`\"{}POST\char`\"{})
+\item 
+\textbf{ if} (! isset( \$\+\_\+\+SERVER[ \textquotesingle{}HTTP\+\_\+\+X\+\_\+\+REQUESTED\+\_\+\+WITH\textquotesingle{}])$\vert$$\vert$strtolower( \$\+\_\+\+SERVER[ \textquotesingle{}HTTP\+\_\+\+X\+\_\+\+REQUESTED\+\_\+\+WITH\textquotesingle{}]) !=\textquotesingle{}xmlhttprequest\textquotesingle{})
+\item 
+\textbf{ if}(is\+\_\+null(\$pdo)) \textbf{ \$rsql} =\$SQL\+\_\+31\+\_\+getacheteur
+\item 
+\textbf{ \$param} = array()
+\item 
+\textbf{ \$acheteurs} = \$statement-\/$>$fetch\+All(PDO\+::\+FETCH\+\_\+\+ASSOC)
+\item 
+\textbf{ catch}(PDOException \$e) \textbf{ \$records\+Total} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{namespaceAlchimieBAJ_1_1main_1_1ajax_a0eee7ae2f9b00aebee6e6d7a328304f2}} 
+\index{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}!generateCSV@{generateCSV}}
+\index{generateCSV@{generateCSV}!AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}}
+\doxysubsubsection{generateCSV()}
+{\footnotesize\ttfamily Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax\textbackslash{}generate\+CSV (\begin{DoxyParamCaption}\item[{}]{\$data,  }\item[{}]{\$filename }\end{DoxyParamCaption})}
+
+Génère un fichier CSV à partir des données récupérées de la base de données.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$data} & Les données à convertir en CSV. \\
+\hline
+string & {\em \$filename} & Le nom du fichier CSV à générer. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 23 of file stats-\/finfestival-\/get.\+php.
+
+
+
+References Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax\textbackslash{}\$data, and \$file.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_1_1ajax_af269983bfbc58d65fe902fede457be41}} 
+\index{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}!GetStats@{GetStats}}
+\index{GetStats@{GetStats}!AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}}
+\doxysubsubsection{GetStats()}
+{\footnotesize\ttfamily Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax\textbackslash{}\+Get\+Stats (\begin{DoxyParamCaption}\item[{}]{\$annee }\end{DoxyParamCaption})}
+
+Cette fonction permet de récupérer l\textquotesingle{}ensembles des informations nécessaires à la page des stats.
+
+\$jeux va stocker le résultat de la requête tirée de al\+\_\+bourse\+\_\+liste \$vente va stocker le résultat de la requête tirée de v\+\_\+bourse\+\_\+transactions \$remb va stocker le résultat de la requête tirée de al\+\_\+bourse\+\_\+remboursements \$dons va stocker le résultat de la requête tirée de al\+\_\+bourse\+\_\+dons
+
+
+\begin{DoxyParams}{Parameters}
+{\em \{\+Integer\}} & \$annee
+\begin{DoxyItemize}
+\item sur 4 chiffres
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\{Array\} \$a\+\_\+json -\/ Encodé en Json, contient \+: \{Integer\} \$a\+\_\+json[\textquotesingle{}nb\+Jeux\+Enregistres\textquotesingle{}] \{Integer\} \$a\+\_\+json[\textquotesingle{}nb\+Jeux\+Stock\textquotesingle{}] \{Integer\} \$a\+\_\+json[\textquotesingle{}nb\+Jeux\+Vendus\textquotesingle{}] \{Integer\} \$a\+\_\+json[\textquotesingle{}nb\+Jeux\+Donnés\textquotesingle{}] \{Integer\} \$a\+\_\+json[\textquotesingle{}Ventes\+CB\textquotesingle{}] \{Integer\} \$a\+\_\+json[\textquotesingle{}Ventes\+Especes\textquotesingle{}] \{Integer\} \$a\+\_\+json[\textquotesingle{}Ventes\+Cheque\textquotesingle{}] \{Integer\} \$a\+\_\+json[\textquotesingle{}Ventes\+Sac\textquotesingle{}] -\/ Nombre de sacs vendus \{Integer\} \$a\+\_\+json[\textquotesingle{}total\+Stock\+Prix\+Vendu\textquotesingle{}] -\/ Valorisation du stock \{Integer\} \$a\+\_\+json[\textquotesingle{}Remb\+Especes\textquotesingle{}] \{Integer\} \$a\+\_\+json[\textquotesingle{}Remb\+Cheques\textquotesingle{}] \{Integer\} \$a\+\_\+json[\textquotesingle{}Remb\+Paypal\textquotesingle{}] \{Integer\} \$a\+\_\+json[\textquotesingle{}total\+Remb\textquotesingle{}] -\/ Total déjà remboursé \{Integer\} \$a\+\_\+json[\textquotesingle{}total\+ARendre\textquotesingle{}] -\/ Somme prix rendu des jeux vendus \{Integer\} \$a\+\_\+json[\textquotesingle{}total\+Dons\textquotesingle{}] 
+\end{DoxyReturn}
+
+
+Definition at line 48 of file stats-\/get.\+php.
+
+
+
+References Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax\textbackslash{}\$a\+\_\+json, Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax\textbackslash{}\$annee, Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax\textbackslash{}\$pdo, Alchimie\+BAJ\textbackslash{}main\textbackslash{}\$\+SQL\+\_\+26\+\_\+get\+Infos\+Jeux, Alchimie\+BAJ\textbackslash{}main\textbackslash{}\$\+SQL\+\_\+27\+\_\+get\+Infos\+Ventes, Alchimie\+BAJ\textbackslash{}main\textbackslash{}\$\+SQL\+\_\+28\+\_\+get\+Infos\+Remb, Alchimie\+BAJ\textbackslash{}main\textbackslash{}\$\+SQL\+\_\+29\+\_\+get\+Infos\+Dons, and Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax\textbackslash{}\$statement.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\label{namespaceAlchimieBAJ_1_1main_1_1ajax_a21a2910669aa357490b6943731f4d1d3}} 
+\index{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}!\$a\_json@{\$a\_json}}
+\index{\$a\_json@{\$a\_json}!AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}}
+\doxysubsubsection{\$a\_json}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\+::ajax\textbackslash{}\$a\+\_\+json = array()}
+
+Script de traitement des fichiers CSV pour insertion dans les tables al\+\_\+bourse\+\_\+users et al\+\_\+bourse\+\_\+liste. 
+
+Definition at line 29 of file jeux-\/get.\+php.
+
+
+
+Referenced by Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax\textbackslash{}\+Get\+Stats().
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_1_1ajax_a0b6a94cbe2e9d1e58992a187f8edf107}} 
+\index{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}!\$a\_json\_row@{\$a\_json\_row}}
+\index{\$a\_json\_row@{\$a\_json\_row}!AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}}
+\doxysubsubsection{\$a\_json\_row}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\+::ajax\textbackslash{}\$a\+\_\+json\+\_\+row = array()}
+
+
+
+Definition at line 30 of file jeux-\/get.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_1_1ajax_a8042cc8f675888e5130600094e1fcbc3}} 
+\index{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}!\$acheteurs@{\$acheteurs}}
+\index{\$acheteurs@{\$acheteurs}!AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}}
+\doxysubsubsection{\$acheteurs}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\+::ajax\textbackslash{}\$acheteurs = \$statement-\/$>$fetch\+All(PDO\+::\+FETCH\+\_\+\+ASSOC)}
+
+
+
+Definition at line 34 of file user-\/get-\/autocomplete.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_1_1ajax_a81682c3fe2cb620254df6dcd3865863b}} 
+\index{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}!\$adresseAcheteur@{\$adresseAcheteur}}
+\index{\$adresseAcheteur@{\$adresseAcheteur}!AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}}
+\doxysubsubsection{\$adresseAcheteur}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\+::ajax\textbackslash{}\$adresse\+Acheteur = filter\+\_\+var(\$\+\_\+\+POST[\char`\"{}adresse\+Acheteur\char`\"{}], FILTER\+\_\+\+SANITIZE\+\_\+\+STRING, FILTER\+\_\+\+FLAG\+\_\+\+STRIP\+\_\+\+LOW $\vert$ FILTER\+\_\+\+FLAG\+\_\+\+STRIP\+\_\+\+HIGH)}
+
+
+
+Definition at line 16 of file transaction-\/update.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_1_1ajax_aee2e314b8669846193b5070239716cbd}} 
+\index{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}!\$annee@{\$annee}}
+\index{\$annee@{\$annee}!AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}}
+\doxysubsubsection{\$annee}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\+::ajax\textbackslash{}\$annee = \$\+\_\+\+POST[\char`\"{}annee\char`\"{}]}
+
+Ce document fait l\textquotesingle{}ensemble des accès en base pour alimenter la page de stats.
+
+C\textquotesingle{}est un ajax, appelé par la fonction js \begin{DoxySeeAlso}{See also}
+update\+Stats(). 
+\end{DoxySeeAlso}
+
+
+Definition at line 10 of file stats-\/get.\+php.
+
+
+
+Referenced by Alchimie\+BAJ\textbackslash{}main\textbackslash{}\+Afficher\+Dons(), Alchimie\+BAJ\textbackslash{}main\textbackslash{}\+Afficher\+Remb(), Alchimie\+BAJ\textbackslash{}main\textbackslash{}\+Afficher\+Trans(), and Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax\textbackslash{}\+Get\+Stats().
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_1_1ajax_a49ffe557ba977b2870049a55adaf1fd4}} 
+\index{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}!\$codePostalAcheteur@{\$codePostalAcheteur}}
+\index{\$codePostalAcheteur@{\$codePostalAcheteur}!AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}}
+\doxysubsubsection{\$codePostalAcheteur}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\+::ajax\textbackslash{}\$code\+Postal\+Acheteur = filter\+\_\+var(\$\+\_\+\+POST[\char`\"{}code\+Postal\+Acheteur\char`\"{}], FILTER\+\_\+\+SANITIZE\+\_\+\+STRING, FILTER\+\_\+\+FLAG\+\_\+\+STRIP\+\_\+\+LOW $\vert$ FILTER\+\_\+\+FLAG\+\_\+\+STRIP\+\_\+\+HIGH)}
+
+
+
+Definition at line 17 of file transaction-\/update.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_1_1ajax_ad00bfa007b052fb492dfa1615fffe47e}} 
+\index{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}!\$csvFilename@{\$csvFilename}}
+\index{\$csvFilename@{\$csvFilename}!AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}}
+\doxysubsubsection{\$csvFilename}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\+::ajax\textbackslash{}\$csv\+Filename = \char`\"{}stats\+\_\+bourse.\+csv\char`\"{}}
+
+
+
+Definition at line 49 of file stats-\/finfestival-\/get.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_1_1ajax_a5d3b72bd06c607ec019765b471bc8bfa}} 
+\index{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}!\$data@{\$data}}
+\index{\$data@{\$data}!AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}}
+\doxysubsubsection{\$data}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\+::ajax\textbackslash{}\$data = \$statement-\/$>$fetch\+All(PDO\+::\+FETCH\+\_\+\+ASSOC)}
+
+
+
+Definition at line 25 of file get-\/ventes.\+php.
+
+
+
+Referenced by FPDF\textbackslash{}\+\_\+parsegif(), FPDF\textbackslash{}\+\_\+parsejpg(), FPDF\textbackslash{}\+\_\+parsepngstream(), FPDF\textbackslash{}\+\_\+putstream(), FPDF\textbackslash{}\+\_\+putstreamobject(), Alchimie\+BAJ\textbackslash{}main\textbackslash{}csv\+From\+Array(), and Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax\textbackslash{}generate\+CSV().
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_1_1ajax_afc658c7077a854fd1d1ffe1d6f25d49a}} 
+\index{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}!\$emailAcheteur@{\$emailAcheteur}}
+\index{\$emailAcheteur@{\$emailAcheteur}!AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}}
+\doxysubsubsection{\$emailAcheteur}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\+::ajax\textbackslash{}\$email\+Acheteur = filter\+\_\+var(\$\+\_\+\+POST[\char`\"{}email\+Acheteur\char`\"{}], FILTER\+\_\+\+SANITIZE\+\_\+\+STRING, FILTER\+\_\+\+FLAG\+\_\+\+STRIP\+\_\+\+LOW $\vert$ FILTER\+\_\+\+FLAG\+\_\+\+STRIP\+\_\+\+HIGH)}
+
+
+
+Definition at line 13 of file transaction-\/update.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_1_1ajax_ad9bcf6bb391f8fef8f26b579d143886d}} 
+\index{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}!\$exact@{\$exact}}
+\index{\$exact@{\$exact}!AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}}
+\doxysubsubsection{\$exact}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\+::ajax\textbackslash{}\$exact = trim(strip\+\_\+tags(\$\+\_\+\+GET[\textquotesingle{}exact\textquotesingle{}]))}
+
+
+
+Definition at line 12 of file jeux-\/get.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_1_1ajax_a19c02a255134bc3445abfa13e0edf25d}} 
+\index{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}!\$idAcheteur@{\$idAcheteur}}
+\index{\$idAcheteur@{\$idAcheteur}!AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}}
+\doxysubsubsection{\$idAcheteur}
+{\footnotesize\ttfamily \textbf{ if} (is\+\_\+null( \$pdo)) Alchimie\+BAJ\+::main\+::ajax\textbackslash{}\$id\+Acheteur = filter\+\_\+var(\$\+\_\+\+POST[\char`\"{}id\+Acheteur\char`\"{}], FILTER\+\_\+\+SANITIZE\+\_\+\+STRING, FILTER\+\_\+\+FLAG\+\_\+\+STRIP\+\_\+\+LOW $\vert$ FILTER\+\_\+\+FLAG\+\_\+\+STRIP\+\_\+\+HIGH)}
+
+
+
+Definition at line 12 of file transaction-\/update.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_1_1ajax_af8d5b6663204256a813c8b01df9c4e40}} 
+\index{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}!\$idTransaction@{\$idTransaction}}
+\index{\$idTransaction@{\$idTransaction}!AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}}
+\doxysubsubsection{\$idTransaction}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\+::ajax\textbackslash{}\$id\+Transaction = filter\+\_\+var(\$\+\_\+\+POST[\char`\"{}id\+Transaction\char`\"{}], FILTER\+\_\+\+SANITIZE\+\_\+\+STRING, FILTER\+\_\+\+FLAG\+\_\+\+STRIP\+\_\+\+LOW $\vert$ FILTER\+\_\+\+FLAG\+\_\+\+STRIP\+\_\+\+HIGH)}
+
+
+
+Definition at line 19 of file transaction-\/update.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_1_1ajax_aa3669c82da4a89271ba0aa014a08d0d6}} 
+\index{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}!\$json\_data@{\$json\_data}}
+\index{\$json\_data@{\$json\_data}!AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}}
+\doxysubsubsection{\$json\_data}
+{\footnotesize\ttfamily \textbf{ while} ( \$\textbf{ vendeur}=\$statement-\/$>$fetch()) Alchimie\+BAJ\+::main\+::ajax\textbackslash{}\$json\+\_\+data}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= array(}
+\DoxyCodeLine{    \textcolor{stringliteral}{"{}recordsTotal"{}} => intval(\$totalData),}
+\DoxyCodeLine{    \textcolor{stringliteral}{"{}recordsFiltered"{}} => intval(\$totalData),}
+\DoxyCodeLine{    \textcolor{stringliteral}{"{}data"{}} => \$data }
+\DoxyCodeLine{)}
+
+\end{DoxyCode}
+
+
+Definition at line 82 of file jeuxliste-\/getenstockspeed.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_1_1ajax_ab215c2b9c942095f49853772e56211e9}} 
+\index{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}!\$newParameter@{\$newParameter}}
+\index{\$newParameter@{\$newParameter}!AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}}
+\doxysubsubsection{\$newParameter}
+{\footnotesize\ttfamily \textbf{ else} Alchimie\+BAJ\+::main\+::ajax\textbackslash{}\$new\+Parameter = \textquotesingle{}\%\textquotesingle{} . \$term . \textquotesingle{}\%\textquotesingle{}}
+
+
+
+Definition at line 24 of file jeux-\/get.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_1_1ajax_a1adeeab37481ed436981d6ca9b97f6fb}} 
+\index{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}!\$nomAcheteur@{\$nomAcheteur}}
+\index{\$nomAcheteur@{\$nomAcheteur}!AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}}
+\doxysubsubsection{\$nomAcheteur}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\+::ajax\textbackslash{}\$nom\+Acheteur = filter\+\_\+var(\$\+\_\+\+POST[\char`\"{}nom\+Acheteur\char`\"{}], FILTER\+\_\+\+SANITIZE\+\_\+\+STRING, FILTER\+\_\+\+FLAG\+\_\+\+STRIP\+\_\+\+LOW $\vert$ FILTER\+\_\+\+FLAG\+\_\+\+STRIP\+\_\+\+HIGH)}
+
+
+
+Definition at line 14 of file transaction-\/update.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_1_1ajax_abca86c426510840eb9ad298a5d803301}} 
+\index{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}!\$param@{\$param}}
+\index{\$param@{\$param}!AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}}
+\doxysubsubsection{\$param}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\+::ajax\textbackslash{}\$param = array()}
+
+
+
+Definition at line 17 of file user-\/get-\/autocomplete.\+php.
+
+
+
+Referenced by FPDF\textbackslash{}\+\_\+httpencode(), and Read\+AFM().
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_1_1ajax_aeefc58bb31cda5452ac053826f4f4f3c}} 
+\index{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}!\$pdo@{\$pdo}}
+\index{\$pdo@{\$pdo}!AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}}
+\doxysubsubsection{\$pdo}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\+::ajax\textbackslash{}\$pdo = null}
+
+
+
+Definition at line 48 of file jeux-\/get.\+php.
+
+
+
+Referenced by Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax\textbackslash{}\+Get\+Stats().
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_1_1ajax_a3bfc4b8e8feffc5068d425892f137cce}} 
+\index{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}!\$prenomAcheteur@{\$prenomAcheteur}}
+\index{\$prenomAcheteur@{\$prenomAcheteur}!AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}}
+\doxysubsubsection{\$prenomAcheteur}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\+::ajax\textbackslash{}\$prenom\+Acheteur = filter\+\_\+var(\$\+\_\+\+POST[\char`\"{}prenom\+Acheteur\char`\"{}], FILTER\+\_\+\+SANITIZE\+\_\+\+STRING, FILTER\+\_\+\+FLAG\+\_\+\+STRIP\+\_\+\+LOW $\vert$ FILTER\+\_\+\+FLAG\+\_\+\+STRIP\+\_\+\+HIGH)}
+
+
+
+Definition at line 15 of file transaction-\/update.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_1_1ajax_a13792ef14986f4b8d0d40b026efaa0b7}} 
+\index{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}!\$recordsTotal@{\$recordsTotal}}
+\index{\$recordsTotal@{\$recordsTotal}!AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}}
+\doxysubsubsection{\$recordsTotal}
+{\footnotesize\ttfamily \textbf{ catch} (PDOException \$e) Alchimie\+BAJ\+::main\+::ajax\textbackslash{}\$records\+Total = 0}
+
+
+
+Definition at line 26 of file vendeurs-\/get.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_1_1ajax_aad750e5ead57ee312f888e45ba6cc2b6}} 
+\index{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}!\$res@{\$res}}
+\index{\$res@{\$res}!AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}}
+\doxysubsubsection{\$res}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\+::ajax\textbackslash{}\$res = \$statement-\/$>$fetch()}
+
+
+
+Definition at line 24 of file sac-\/get.\+php.
+
+
+
+Referenced by FPDF\textbackslash{}\+\_\+readstream(), FPDF\textbackslash{}\+\_\+\+UTF8encode(), FPDF\textbackslash{}\+\_\+\+UTF8to\+UTF16(), and Alchimie\+BAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}\+Generer\+Facture().
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_1_1ajax_a2f7c02bad3fea4b3c4df853d27b7c788}} 
+\index{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}!\$response@{\$response}}
+\index{\$response@{\$response}!AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}}
+\doxysubsubsection{\$response\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \textbf{ if} (!isset( \$\+\_\+\+SERVER[ \textquotesingle{}HTTP\+\_\+\+X\+\_\+\+REQUESTED\+\_\+\+WITH\textquotesingle{}])$\vert$$\vert$strtolower( \$\+\_\+\+SERVER[ \textquotesingle{}HTTP\+\_\+\+X\+\_\+\+REQUESTED\+\_\+\+WITH\textquotesingle{}]) !==\textquotesingle{}xmlhttprequest\textquotesingle{}) Alchimie\+BAJ\+::main\+::ajax\textbackslash{}\$response}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= array(}
+\DoxyCodeLine{    \textcolor{stringliteral}{'message1'} => array(), }
+\DoxyCodeLine{    \textcolor{stringliteral}{'message2'} => \textcolor{charliteral}{'0'} }
+\DoxyCodeLine{)}
+
+\end{DoxyCode}
+
+
+Definition at line 16 of file sac-\/get.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_1_1ajax_a8307d07cb7b56962080a9022a878178a}} 
+\index{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}!\$response@{\$response}}
+\index{\$response@{\$response}!AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}}
+\doxysubsubsection{\$response\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\+::ajax\textbackslash{}\$response[ \textquotesingle{}message1\textquotesingle{}]}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= array(}
+\DoxyCodeLine{        \textcolor{stringliteral}{'SAC\_ID'} => \$res[\textcolor{stringliteral}{'id'}],}
+\DoxyCodeLine{        \textcolor{stringliteral}{'SAC\_JEU'} => \$res[\textcolor{stringliteral}{'nom\_jeu'}],}
+\DoxyCodeLine{        \textcolor{stringliteral}{'SAC\_PRIX'} => \$res[\textcolor{stringliteral}{'vendu'}],}
+\DoxyCodeLine{        \textcolor{stringliteral}{'SAC\_CODEBARRE'} => \$res[\textcolor{stringliteral}{'code\_barre'}]}
+\DoxyCodeLine{    )}
+
+\end{DoxyCode}
+
+
+Definition at line 26 of file sac-\/get.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_1_1ajax_af55233376b6a34304f75a07d4b64aff6}} 
+\index{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}!\$response@{\$response}}
+\index{\$response@{\$response}!AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}}
+\doxysubsubsection{\$response\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\+::ajax\textbackslash{}\$response[ \textquotesingle{}message2\textquotesingle{}] = \textquotesingle{}1\textquotesingle{}}
+
+
+
+Definition at line 34 of file sac-\/get.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_1_1ajax_ae0505a1ba70f5567ac9a5f2d5661441a}} 
+\index{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}!\$ret@{\$ret}}
+\index{\$ret@{\$ret}!AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}}
+\doxysubsubsection{\$ret}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\+::ajax\textbackslash{}\$ret = \textbf{ Afficher\+Trans}(\$type)}
+
+
+
+Definition at line 12 of file transactionliste-\/get.\+php.
+
+
+
+Referenced by Alchimie\+BAJ\textbackslash{}main\textbackslash{}\+Afficher\+Dons(), Alchimie\+BAJ\textbackslash{}main\textbackslash{}\+Afficher\+Remb(), Alchimie\+BAJ\textbackslash{}main\textbackslash{}\+Afficher\+Trans(), and Alchimie\+BAJ\textbackslash{}main\textbackslash{}get\+User().
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_1_1ajax_a24830bddfef1193cbe9b9395c226f2d9}} 
+\index{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}!\$rsql@{\$rsql}}
+\index{\$rsql@{\$rsql}!AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}}
+\doxysubsubsection{\$rsql}
+{\footnotesize\ttfamily \textbf{ if} (is\+\_\+null( \$pdo)) Alchimie\+BAJ\+::main\+::ajax\textbackslash{}\$rsql =\$SQL\+\_\+31\+\_\+getacheteur}
+
+
+
+Definition at line 16 of file user-\/get-\/autocomplete.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_1_1ajax_a57299453279fc70b06d8da760fd7ce52}} 
+\index{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}!\$sql@{\$sql}}
+\index{\$sql@{\$sql}!AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}}
+\doxysubsubsection{\$sql}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\+::ajax\textbackslash{}\$sql = \$SQL\+\_\+41\+\_\+attribution\+\_\+acheteur\+\_\+transaction}
+
+
+
+Definition at line 74 of file transaction-\/update.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_1_1ajax_a426d856e93f854d06290438acf63d115}} 
+\index{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}!\$SQL@{\$SQL}}
+\index{\$SQL@{\$SQL}!AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}}
+\doxysubsubsection{\$SQL}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\+::ajax\textbackslash{}\$\+SQL}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \textcolor{stringliteral}{"{}TRUNCATE al\_bourse\_users;}}
+\DoxyCodeLine{\textcolor{stringliteral}{        TRUNCATE al\_bourse\_acheteur;}}
+\DoxyCodeLine{\textcolor{stringliteral}{        UPDATE `al\_bourse\_liste` SET `id\_utilisateur`=0 WHERE 1;}}
+\DoxyCodeLine{\textcolor{stringliteral}{        UPDATE `al\_bourse\_liste` SET `id\_utilisateur`=1, annee="{}}.DATE(\textcolor{charliteral}{'Y'}).\textcolor{stringliteral}{"{} WHERE id=-\/1;"{}}}
+
+\end{DoxyCode}
+
+
+Definition at line 15 of file upload\+\_\+files.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_1_1ajax_a1b4247b0b6df1a9f3f76636459ab2b42}} 
+\index{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}!\$sqlConditions@{\$sqlConditions}}
+\index{\$sqlConditions@{\$sqlConditions}!AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}}
+\doxysubsubsection{\$sqlConditions\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \textbf{ if} (is\+\_\+null( \$pdo)) Alchimie\+BAJ\+::main\+::ajax\textbackslash{}\$sql\+Conditions = array()}
+
+
+
+Definition at line 18 of file jeuxliste-\/getenstockspeed.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_1_1ajax_a0a2ff315df8b9ceb6d25a130e0b4944e}} 
+\index{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}!\$sqlConditions@{\$sqlConditions}}
+\index{\$sqlConditions@{\$sqlConditions}!AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}}
+\doxysubsubsection{\$sqlConditions\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \textbf{ if} (isset( \$\+\_\+\+POST[ \textquotesingle{}id\+Vendeur\textquotesingle{}])) \textbf{ if} (isset( \$\+\_\+\+POST[ \textquotesingle{}id\+Statut\textquotesingle{}])) \textbf{ if} (isset( \$\+\_\+\+POST[ \textquotesingle{}vigilance\textquotesingle{}])) \textbf{ if} (isset( \$\+\_\+\+POST[ \textquotesingle{}code\+\_\+barre\textquotesingle{}])) \textbf{ if} (isset( \$\+\_\+\+POST[ \textquotesingle{}nom\+\_\+jeu\textquotesingle{}])) Alchimie\+BAJ\+::main\+::ajax\textbackslash{}\$sql\+Conditions[$\,$] = \$SQL\+\_\+5\+\_\+6\+\_\+where\+Annee}
+
+
+
+Definition at line 47 of file jeuxliste-\/getenstockspeed.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_1_1ajax_a81c3af05f011e90ce1fd54527a2da214}} 
+\index{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}!\$sqlParameters@{\$sqlParameters}}
+\index{\$sqlParameters@{\$sqlParameters}!AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}}
+\doxysubsubsection{\$sqlParameters}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\+::ajax\textbackslash{}\$sql\+Parameters = array()}
+
+
+
+Definition at line 19 of file jeuxliste-\/getenstockspeed.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_1_1ajax_ae1b8c1ad262a91ffcaac6579d053284f}} 
+\index{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}!\$sqlQuery@{\$sqlQuery}}
+\index{\$sqlQuery@{\$sqlQuery}!AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}}
+\doxysubsubsection{\$sqlQuery}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\+::ajax\textbackslash{}\$sql\+Query = \$SQL\+\_\+5\+\_\+getlistejeux . implode(\textquotesingle{} AND \textquotesingle{}, \$sql\+Conditions) . \$SQL\+\_\+5\+\_\+7\+\_\+order\+By}
+
+
+
+Definition at line 50 of file jeuxliste-\/getenstockspeed.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_1_1ajax_a1d39b1eb1ca051de37adbd54154f6a29}} 
+\index{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}!\$statement@{\$statement}}
+\index{\$statement@{\$statement}!AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}}
+\doxysubsubsection{\$statement}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\+::ajax\textbackslash{}\$statement = null}
+
+
+
+Definition at line 47 of file jeux-\/get.\+php.
+
+
+
+Referenced by Alchimie\+BAJ\textbackslash{}main\textbackslash{}\+Afficher\+Dons(), Alchimie\+BAJ\textbackslash{}main\textbackslash{}\+Afficher\+Remb(), Alchimie\+BAJ\textbackslash{}main\textbackslash{}\+Afficher\+Trans(), Alchimie\+BAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}\+Generer\+Facture(), Alchimie\+BAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}\+Generer\+Justificatif(), Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax\textbackslash{}\+Get\+Stats(), and Alchimie\+BAJ\textbackslash{}main\textbackslash{}get\+User().
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_1_1ajax_a45aa83ff696a23ab934d4e7032b60045}} 
+\index{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}!\$stmt@{\$stmt}}
+\index{\$stmt@{\$stmt}!AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}}
+\doxysubsubsection{\$stmt}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\+::ajax\textbackslash{}\$stmt = \$pdo-\/$>$query(\$sql)}
+
+
+
+Definition at line 14 of file stats-\/finfestival-\/get.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_1_1ajax_a988f828356fa2b1197a74dc632bdf0b3}} 
+\index{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}!\$term@{\$term}}
+\index{\$term@{\$term}!AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}}
+\doxysubsubsection{\$term}
+{\footnotesize\ttfamily \textbf{ if} (is\+\_\+null( \$pdo)) Alchimie\+BAJ\+::main\+::ajax\textbackslash{}\$term = trim(strip\+\_\+tags(\$\+\_\+\+GET[\textquotesingle{}term\textquotesingle{}]))}
+
+
+
+Definition at line 11 of file jeux-\/get.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_1_1ajax_a4c571db6afb23ea6bd4ab0009699c8c1}} 
+\index{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}!\$totalData@{\$totalData}}
+\index{\$totalData@{\$totalData}!AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}}
+\doxysubsubsection{\$totalData}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\+::ajax\textbackslash{}\$total\+Data = 0}
+
+
+
+Definition at line 28 of file jeux-\/get.\+php.
+
+
+
+Referenced by Alchimie\+BAJ\textbackslash{}main\textbackslash{}get\+User().
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_1_1ajax_a0378a3136bef122235b2707090dd61e5}} 
+\index{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}!\$type@{\$type}}
+\index{\$type@{\$type}!AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}}
+\doxysubsubsection{\$type}
+{\footnotesize\ttfamily \textbf{ if} (! isset( \$\+\_\+\+SERVER[ \textquotesingle{}HTTP\+\_\+\+X\+\_\+\+REQUESTED\+\_\+\+WITH\textquotesingle{}]) and strtolower( \$\+\_\+\+SERVER[ \textquotesingle{}HTTP\+\_\+\+X\+\_\+\+REQUESTED\+\_\+\+WITH\textquotesingle{}]) !=\textquotesingle{}xmlhttprequest\textquotesingle{}) Alchimie\+BAJ\+::main\+::ajax\textbackslash{}\$type =\$\+\_\+\+POST[\char`\"{}type\char`\"{}]}
+
+
+
+Definition at line 11 of file transactionliste-\/get.\+php.
+
+
+
+Referenced by FPDF\textbackslash{}\+\_\+parsepngstream(), FPDF\textbackslash{}\+\_\+putfonts(), Alchimie\+BAJ\textbackslash{}main\textbackslash{}\+Afficher\+Trans(), FPDF\textbackslash{}\+Image(), and Make\+Font().
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_1_1ajax_a33ca24f9a872e7dab2bf9027f6f7f551}} 
+\index{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}!\$villeAcheteur@{\$villeAcheteur}}
+\index{\$villeAcheteur@{\$villeAcheteur}!AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}}
+\doxysubsubsection{\$villeAcheteur}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\+::ajax\textbackslash{}\$ville\+Acheteur = filter\+\_\+var(\$\+\_\+\+POST[\char`\"{}ville\+Acheteur\char`\"{}], FILTER\+\_\+\+SANITIZE\+\_\+\+STRING, FILTER\+\_\+\+FLAG\+\_\+\+STRIP\+\_\+\+LOW $\vert$ FILTER\+\_\+\+FLAG\+\_\+\+STRIP\+\_\+\+HIGH)}
+
+
+
+Definition at line 18 of file transaction-\/update.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_1_1ajax_a852d9540260b9ae77bc90c73911eedd0}} 
+\index{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}!catch@{catch}}
+\index{catch@{catch}!AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}}
+\doxysubsubsection{catch}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\+::ajax\textbackslash{}catch(PDOException \$e) (\begin{DoxyParamCaption}\item[{PDOException}]{\$e }\end{DoxyParamCaption})}
+
+
+
+Definition at line 35 of file sac-\/get.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_1_1ajax_a91e42efa3888f242d229e8a4e52c64c7}} 
+\index{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}!else@{else}}
+\index{else@{else}!AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}}
+\doxysubsubsection{else}
+{\footnotesize\ttfamily \textbf{ if} ( \$id\+Acheteur==0) Alchimie\+BAJ\+::main\+::ajax\textbackslash{}else}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    echo json\_encode([\textcolor{stringliteral}{'error'} => \textcolor{stringliteral}{'ID de l\(\backslash\)'acheteur manquant'}])}
+
+\end{DoxyCode}
+
+
+Definition at line 30 of file acheteur-\/get.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_1_1ajax_a280a06f4b0aca69b1a4d482a8b9957d3}} 
+\index{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}!if@{if}}
+\index{if@{if}!AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}}
+\doxysubsubsection{if\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\+::ajax\textbackslash{}if(\$\+\_\+\+SERVER[\char`\"{}REQUEST\+\_\+\+METHOD\char`\"{}]==\char`\"{}POST\char`\"{}) (\begin{DoxyParamCaption}\item[{}]{\$\+\_\+\+SERVER[\char`\"{}\+REQUEST\+\_\+\+METHOD\char`\"{}] = {\ttfamily =~\char`\"{}POST\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 24 of file upload\+\_\+files.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_1_1ajax_ada7202874d8de906f2138e48e4470cb8}} 
+\index{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}!if@{if}}
+\index{if@{if}!AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}}
+\doxysubsubsection{if\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\+::ajax\textbackslash{}if(! isset(\$\+\_\+\+SERVER[\textquotesingle{}HTTP\+\_\+\+X\+\_\+\+REQUESTED\+\_\+\+WITH\textquotesingle{}]) and strtolower(\$\+\_\+\+SERVER[\textquotesingle{}HTTP\+\_\+\+X\+\_\+\+REQUESTED\+\_\+\+WITH\textquotesingle{}]) !=\textquotesingle{}xmlhttprequest\textquotesingle{}) (\begin{DoxyParamCaption}\item[{! isset(\$\+\_\+\+SERVER[\textquotesingle{}HTTP\+\_\+\+X\+\_\+\+REQUESTED\+\_\+\+WITH\textquotesingle{}]) and strtolower(\$\+\_\+\+SERVER[\textquotesingle{}HTTP\+\_\+\+X\+\_\+\+REQUESTED\+\_\+\+WITH\textquotesingle{}]) !}]{ = {\ttfamily \textquotesingle{}xmlhttprequest\textquotesingle{}} }\end{DoxyParamCaption})}
+
+Ce fichier contient l\textquotesingle{}accès en base pour récupérer la somme en caisse. 
+
+Definition at line 10 of file argentencaisse-\/get.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_1_1ajax_ada7202874d8de906f2138e48e4470cb8}} 
+\index{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}!if@{if}}
+\index{if@{if}!AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}}
+\doxysubsubsection{if\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\+::ajax\textbackslash{}if(! isset(\$\+\_\+\+SERVER[\textquotesingle{}HTTP\+\_\+\+X\+\_\+\+REQUESTED\+\_\+\+WITH\textquotesingle{}]) and strtolower(\$\+\_\+\+SERVER[\textquotesingle{}HTTP\+\_\+\+X\+\_\+\+REQUESTED\+\_\+\+WITH\textquotesingle{}]) !=\textquotesingle{}xmlhttprequest\textquotesingle{}) (\begin{DoxyParamCaption}\item[{! isset(\$\+\_\+\+SERVER[\textquotesingle{}HTTP\+\_\+\+X\+\_\+\+REQUESTED\+\_\+\+WITH\textquotesingle{}]) and strtolower(\$\+\_\+\+SERVER[\textquotesingle{}HTTP\+\_\+\+X\+\_\+\+REQUESTED\+\_\+\+WITH\textquotesingle{}]) !}]{ = {\ttfamily \textquotesingle{}xmlhttprequest\textquotesingle{}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 6 of file get-\/ventes.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_1_1ajax_a52296fbf22543ce2d8e914bd8d30d051}} 
+\index{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}!if@{if}}
+\index{if@{if}!AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}}
+\doxysubsubsection{if\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\+::ajax\textbackslash{}if(! isset(\$\+\_\+\+SERVER[\textquotesingle{}HTTP\+\_\+\+X\+\_\+\+REQUESTED\+\_\+\+WITH\textquotesingle{}])$\vert$$\vert$strtolower(\$\+\_\+\+SERVER[\textquotesingle{}HTTP\+\_\+\+X\+\_\+\+REQUESTED\+\_\+\+WITH\textquotesingle{}]) !=\textquotesingle{}xmlhttprequest\textquotesingle{}) (\begin{DoxyParamCaption}\item[{! isset(\$\+\_\+\+SERVER[\textquotesingle{}HTTP\+\_\+\+X\+\_\+\+REQUESTED\+\_\+\+WITH\textquotesingle{}])$\vert$$\vert$strtolower(\$\+\_\+\+SERVER[\textquotesingle{}HTTP\+\_\+\+X\+\_\+\+REQUESTED\+\_\+\+WITH\textquotesingle{}]) !}]{ = {\ttfamily \textquotesingle{}xmlhttprequest\textquotesingle{}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 6 of file user-\/get-\/autocomplete.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_1_1ajax_a5328cc8e998d496722f16e8c0c48dbaa}} 
+\index{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}!if@{if}}
+\index{if@{if}!AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}}
+\doxysubsubsection{if\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\+::ajax\+::if (\begin{DoxyParamCaption}\item[{!isset(\$\+\_\+\+SERVER[\textquotesingle{}HTTP\+\_\+\+X\+\_\+\+REQUESTED\+\_\+\+WITH\textquotesingle{}])$\vert$$\vert$strtolower(\$\+\_\+\+SERVER[\textquotesingle{}HTTP\+\_\+\+X\+\_\+\+REQUESTED\+\_\+\+WITH\textquotesingle{}]) !}]{ = {\ttfamily \textquotesingle{}xmlhttprequest\textquotesingle{}} }\end{DoxyParamCaption})}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \$statement = \$pdo-\/>prepare(\$SQL\_25\_getlistevente)}
+
+\end{DoxyCode}
+
+
+Definition at line 6 of file acheteur-\/get.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_1_1ajax_af0d39bbf8daf35462f58807de613dbe9}} 
+\index{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}!if@{if}}
+\index{if@{if}!AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}}
+\doxysubsubsection{if\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\+::ajax\textbackslash{}if(!isset(\$\+\_\+\+SERVER[\textquotesingle{}HTTP\+\_\+\+X\+\_\+\+REQUESTED\+\_\+\+WITH\textquotesingle{}])$\vert$$\vert$strtolower(\$\+\_\+\+SERVER[\textquotesingle{}HTTP\+\_\+\+X\+\_\+\+REQUESTED\+\_\+\+WITH\textquotesingle{}]) !=\textquotesingle{}xmlhttprequest\textquotesingle{}) (\begin{DoxyParamCaption}\item[{!isset(\$\+\_\+\+SERVER[\textquotesingle{}HTTP\+\_\+\+X\+\_\+\+REQUESTED\+\_\+\+WITH\textquotesingle{}])$\vert$$\vert$strtolower(\$\+\_\+\+SERVER[\textquotesingle{}HTTP\+\_\+\+X\+\_\+\+REQUESTED\+\_\+\+WITH\textquotesingle{}]) !}]{ = {\ttfamily \textquotesingle{}xmlhttprequest\textquotesingle{}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 7 of file jeuxliste-\/getenstockspeed.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_1_1ajax_a6fd733a4fe1c6f0024c6528accc4c7e3}} 
+\index{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}!try@{try}}
+\index{try@{try}!AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}}
+\doxysubsubsection{try}
+{\footnotesize\ttfamily \textbf{ if} (! isset( \$\+\_\+\+SERVER[ \textquotesingle{}HTTP\+\_\+\+X\+\_\+\+REQUESTED\+\_\+\+WITH\textquotesingle{}]) and strtolower( \$\+\_\+\+SERVER[ \textquotesingle{}HTTP\+\_\+\+X\+\_\+\+REQUESTED\+\_\+\+WITH\textquotesingle{}]) !=\textquotesingle{}xmlhttprequest\textquotesingle{}) \textbf{ if} (is\+\_\+null( \$pdo)) Alchimie\+BAJ\+::main\+::ajax\textbackslash{}try}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \$statement = \$pdo-\/>prepare(\$SQL\_8\_argentencaisse\_get)}
+
+\end{DoxyCode}
+
+
+Definition at line 17 of file argentencaisse-\/get.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_1_1ajax_a8ebbbd7763c7d79bd102a14822fdfdbb}} 
+\index{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}!while@{while}}
+\index{while@{while}!AlchimieBAJ\textbackslash{}main\textbackslash{}ajax@{AlchimieBAJ\textbackslash{}main\textbackslash{}ajax}}
+\doxysubsubsection{while}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\+::ajax\+::while (\begin{DoxyParamCaption}\item[{}]{\$jeu = {\ttfamily \$statement-\/$>$fetch()} }\end{DoxyParamCaption})}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= array(}
+\DoxyCodeLine{    \textcolor{stringliteral}{"{}recordsTotal"{}} => intval(\$totalData),}
+\DoxyCodeLine{    \textcolor{stringliteral}{"{}recordsFiltered"{}} => intval(\$totalData),}
+\DoxyCodeLine{    \textcolor{stringliteral}{"{}data"{}} => \$data }
+\DoxyCodeLine{)}
+
+\end{DoxyCode}
+
+
+Definition at line 31 of file jeux-\/get.\+php.
+

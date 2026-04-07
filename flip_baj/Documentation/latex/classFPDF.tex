@@ -1,0 +1,2329 @@
+\doxysection{FPDF Class Reference}
+\label{classFPDF}\index{FPDF@{FPDF}}
+Inheritance diagram for FPDF\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classFPDF}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \+\_\+\+\_\+construct} (\$orientation=\textquotesingle{}P\textquotesingle{}, \$unit=\textquotesingle{}mm\textquotesingle{}, \$size=\textquotesingle{}A4\textquotesingle{})
+\item 
+\textbf{ Set\+Margins} (\$left, \$top, \$right=null)
+\item 
+\textbf{ Set\+Left\+Margin} (\$margin)
+\item 
+\textbf{ Set\+Top\+Margin} (\$margin)
+\item 
+\textbf{ Set\+Right\+Margin} (\$margin)
+\item 
+\textbf{ Set\+Auto\+Page\+Break} (\$auto, \$margin=0)
+\item 
+\textbf{ Set\+Display\+Mode} (\$zoom, \$layout=\textquotesingle{}default\textquotesingle{})
+\item 
+\textbf{ Set\+Compression} (\$compress)
+\item 
+\textbf{ Set\+Title} (\$title, \$is\+UTF8=false)
+\item 
+\textbf{ Set\+Author} (\$author, \$is\+UTF8=false)
+\item 
+\textbf{ Set\+Subject} (\$subject, \$is\+UTF8=false)
+\item 
+\textbf{ Set\+Keywords} (\$keywords, \$is\+UTF8=false)
+\item 
+\textbf{ Set\+Creator} (\$creator, \$is\+UTF8=false)
+\item 
+\textbf{ Alias\+Nb\+Pages} (\$alias=\textquotesingle{}\{nb\}\textquotesingle{})
+\item 
+\textbf{ Error} (\$msg)
+\item 
+\textbf{ Close} ()
+\item 
+\textbf{ Add\+Page} (\$orientation=\textquotesingle{}\textquotesingle{}, \$size=\textquotesingle{}\textquotesingle{}, \$rotation=0)
+\item 
+\textbf{ Header} ()
+\item 
+\textbf{ Footer} ()
+\item 
+\textbf{ Page\+No} ()
+\item 
+\textbf{ Set\+Draw\+Color} (\$r, \$g=null, \$b=null)
+\item 
+\textbf{ Set\+Fill\+Color} (\$r, \$g=null, \$b=null)
+\item 
+\textbf{ Set\+Text\+Color} (\$r, \$g=null, \$b=null)
+\item 
+\textbf{ Get\+String\+Width} (\$s)
+\item 
+\textbf{ Set\+Line\+Width} (\$width)
+\item 
+\textbf{ Line} (\$x1, \$y1, \$x2, \$y2)
+\item 
+\textbf{ Rect} (\$x, \$y, \$w, \$h, \$style=\textquotesingle{}\textquotesingle{})
+\item 
+\textbf{ Add\+Font} (\$family, \$style=\textquotesingle{}\textquotesingle{}, \$file=\textquotesingle{}\textquotesingle{}, \$dir=\textquotesingle{}\textquotesingle{})
+\item 
+\textbf{ Set\+Font} (\$family, \$style=\textquotesingle{}\textquotesingle{}, \$size=0)
+\item 
+\textbf{ Set\+Font\+Size} (\$size)
+\item 
+\textbf{ Add\+Link} ()
+\item 
+\textbf{ Set\+Link} (\$link, \$y=0, \$page=-\/1)
+\item 
+\textbf{ Link} (\$x, \$y, \$w, \$h, \$link)
+\item 
+\textbf{ Text} (\$x, \$y, \$txt)
+\item 
+\textbf{ Accept\+Page\+Break} ()
+\item 
+\textbf{ Cell} (\$w, \$h=0, \$txt=\textquotesingle{}\textquotesingle{}, \$border=0, \$ln=0, \$align=\textquotesingle{}\textquotesingle{}, \$fill=false, \$link=\textquotesingle{}\textquotesingle{})
+\item 
+\textbf{ Multi\+Cell} (\$w, \$h, \$txt, \$border=0, \$align=\textquotesingle{}J\textquotesingle{}, \$fill=false)
+\item 
+\textbf{ Write} (\$h, \$txt, \$link=\textquotesingle{}\textquotesingle{})
+\item 
+\textbf{ Ln} (\$h=null)
+\item 
+\textbf{ Image} (\$file, \$x=null, \$y=null, \$w=0, \$h=0, \$type=\textquotesingle{}\textquotesingle{}, \$link=\textquotesingle{}\textquotesingle{})
+\item 
+\textbf{ Get\+Page\+Width} ()
+\item 
+\textbf{ Get\+Page\+Height} ()
+\item 
+\textbf{ GetX} ()
+\item 
+\textbf{ SetX} (\$x)
+\item 
+\textbf{ GetY} ()
+\item 
+\textbf{ SetY} (\$y, \$resetX=true)
+\item 
+\textbf{ Set\+XY} (\$x, \$y)
+\item 
+\textbf{ Output} (\$dest=\textquotesingle{}\textquotesingle{}, \$name=\textquotesingle{}\textquotesingle{}, \$is\+UTF8=false)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \textbf{ VERSION} = \textquotesingle{}1.\+86\textquotesingle{}
+\item 
+\textbf{ \$h\+Pt}
+\item 
+\textbf{ \$h}
+\item 
+\textbf{ \$y}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \+\_\+checkoutput} ()
+\item 
+\textbf{ \+\_\+getpagesize} (\$size)
+\item 
+\textbf{ \+\_\+beginpage} (\$orientation, \$size, \$rotation)
+\item 
+\textbf{ \+\_\+endpage} ()
+\item 
+\textbf{ \+\_\+loadfont} (\$path)
+\item 
+\textbf{ \+\_\+isascii} (\$s)
+\item 
+\textbf{ \+\_\+httpencode} (\$param, \$value, \$is\+UTF8)
+\item 
+\textbf{ \+\_\+\+UTF8encode} (\$s)
+\item 
+\textbf{ \+\_\+\+UTF8to\+UTF16} (\$s)
+\item 
+\textbf{ \+\_\+escape} (\$s)
+\item 
+\textbf{ \+\_\+textstring} (\$s)
+\item 
+\textbf{ \+\_\+dounderline} (\$x, \$y, \$txt)
+\item 
+\textbf{ \+\_\+parsejpg} (\$file)
+\item 
+\textbf{ \+\_\+parsepng} (\$file)
+\item 
+\textbf{ \+\_\+parsepngstream} (\$f, \$file)
+\item 
+\textbf{ \+\_\+readstream} (\$f, \$n)
+\item 
+\textbf{ \+\_\+readint} (\$f)
+\item 
+\textbf{ \+\_\+parsegif} (\$file)
+\item 
+\textbf{ \+\_\+out} (\$s)
+\item 
+\textbf{ \+\_\+put} (\$s)
+\item 
+\textbf{ \+\_\+getoffset} ()
+\item 
+\textbf{ \+\_\+newobj} (\$n=null)
+\item 
+\textbf{ \+\_\+putstream} (\$data)
+\item 
+\textbf{ \+\_\+putstreamobject} (\$data)
+\item 
+\textbf{ \+\_\+putlinks} (\$n)
+\item 
+\textbf{ \+\_\+putpage} (\$n)
+\item 
+\textbf{ \+\_\+putpages} ()
+\item 
+\textbf{ \+\_\+putfonts} ()
+\item 
+\textbf{ \+\_\+tounicodecmap} (\$uv)
+\item 
+\textbf{ \+\_\+putimages} ()
+\item 
+\textbf{ \+\_\+putimage} (\&\$info)
+\item 
+\textbf{ \+\_\+putxobjectdict} ()
+\item 
+\textbf{ \+\_\+putresourcedict} ()
+\item 
+\textbf{ \+\_\+putresources} ()
+\item 
+\textbf{ \+\_\+putinfo} ()
+\item 
+\textbf{ \+\_\+putcatalog} ()
+\item 
+\textbf{ \+\_\+putheader} ()
+\item 
+\textbf{ \+\_\+puttrailer} ()
+\item 
+\textbf{ \+\_\+enddoc} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \$page}
+\item 
+\textbf{ \$n}
+\item 
+\textbf{ \$offsets}
+\item 
+\textbf{ \$buffer}
+\item 
+\textbf{ \$pages}
+\item 
+\textbf{ \$state}
+\item 
+\textbf{ \$compress}
+\item 
+\textbf{ \$iconv}
+\item 
+\textbf{ \$k}
+\item 
+\textbf{ \$\+Def\+Orientation}
+\item 
+\textbf{ \$\+Cur\+Orientation}
+\item 
+\textbf{ \$\+Std\+Page\+Sizes}
+\item 
+\textbf{ \$\+Def\+Page\+Size}
+\item 
+\textbf{ \$\+Cur\+Page\+Size}
+\item 
+\textbf{ \$\+Cur\+Rotation}
+\item 
+\textbf{ \$\+Page\+Info}
+\item 
+\textbf{ \$w\+Pt}
+\item 
+\textbf{ \$w}
+\item 
+\textbf{ \$l\+Margin}
+\item 
+\textbf{ \$t\+Margin}
+\item 
+\textbf{ \$r\+Margin}
+\item 
+\textbf{ \$b\+Margin}
+\item 
+\textbf{ \$c\+Margin}
+\item 
+\textbf{ \$x}
+\item 
+\textbf{ \$lasth}
+\item 
+\textbf{ \$\+Line\+Width}
+\item 
+\textbf{ \$fontpath}
+\item 
+\textbf{ \$\+Core\+Fonts}
+\item 
+\textbf{ \$fonts}
+\item 
+\textbf{ \$\+Font\+Files}
+\item 
+\textbf{ \$encodings}
+\item 
+\textbf{ \$cmaps}
+\item 
+\textbf{ \$\+Font\+Family}
+\item 
+\textbf{ \$\+Font\+Style}
+\item 
+\textbf{ \$underline}
+\item 
+\textbf{ \$\+Current\+Font}
+\item 
+\textbf{ \$\+Font\+Size\+Pt}
+\item 
+\textbf{ \$\+Font\+Size}
+\item 
+\textbf{ \$\+Draw\+Color}
+\item 
+\textbf{ \$\+Fill\+Color}
+\item 
+\textbf{ \$\+Text\+Color}
+\item 
+\textbf{ \$\+Color\+Flag}
+\item 
+\textbf{ \$\+With\+Alpha}
+\item 
+\textbf{ \$ws}
+\item 
+\textbf{ \$images}
+\item 
+\textbf{ \$\+Page\+Links}
+\item 
+\textbf{ \$links}
+\item 
+\textbf{ \$\+Auto\+Page\+Break}
+\item 
+\textbf{ \$\+Page\+Break\+Trigger}
+\item 
+\textbf{ \$\+In\+Header}
+\item 
+\textbf{ \$\+In\+Footer}
+\item 
+\textbf{ \$\+Alias\+Nb\+Pages}
+\item 
+\textbf{ \$\+Zoom\+Mode}
+\item 
+\textbf{ \$\+Layout\+Mode}
+\item 
+\textbf{ \$metadata}
+\item 
+\textbf{ \$\+Creation\+Date}
+\item 
+\textbf{ \$\+PDFVersion}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 10 of file fpdf.\+php.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{classFPDF_ade2bb382f41b77098b52b0b26e54ca83}} 
+\index{FPDF@{FPDF}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!FPDF@{FPDF}}
+\doxysubsubsection{\_\_construct()}
+{\footnotesize\ttfamily FPDF\+::\+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$orientation = {\ttfamily \textquotesingle{}P\textquotesingle{}},  }\item[{}]{\$unit = {\ttfamily \textquotesingle{}mm\textquotesingle{}},  }\item[{}]{\$size = {\ttfamily \textquotesingle{}A4\textquotesingle{}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 75 of file fpdf.\+php.
+
+
+
+References \$\+Def\+Orientation, \$k, \+\_\+getpagesize(), Error(), Set\+Auto\+Page\+Break(), Set\+Compression(), Set\+Display\+Mode(), and Set\+Margins().
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{classFPDF_acbbdac1880bb508196d248987bcf9045}} 
+\index{FPDF@{FPDF}!\_beginpage@{\_beginpage}}
+\index{\_beginpage@{\_beginpage}!FPDF@{FPDF}}
+\doxysubsubsection{\_beginpage()}
+{\footnotesize\ttfamily FPDF\+::\+\_\+beginpage (\begin{DoxyParamCaption}\item[{}]{\$orientation,  }\item[{}]{\$size,  }\item[{}]{\$rotation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 1081 of file fpdf.\+php.
+
+
+
+References \$b\+Margin, \$\+Def\+Orientation, \$\+Def\+Page\+Size, \$k, \$l\+Margin, \$page, \$t\+Margin, \+\_\+getpagesize(), and Error().
+
+
+
+Referenced by Add\+Page().
+
+\mbox{\label{classFPDF_aae8f75d4fcd8774b6663c378cf2a32e4}} 
+\index{FPDF@{FPDF}!\_checkoutput@{\_checkoutput}}
+\index{\_checkoutput@{\_checkoutput}!FPDF@{FPDF}}
+\doxysubsubsection{\_checkoutput()}
+{\footnotesize\ttfamily FPDF\+::\+\_\+checkoutput (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 1042 of file fpdf.\+php.
+
+
+
+References \$file, and Error().
+
+
+
+Referenced by Output().
+
+\mbox{\label{classFPDF_a35c042a9f396daa571e91a16ea65edc4}} 
+\index{FPDF@{FPDF}!\_dounderline@{\_dounderline}}
+\index{\_dounderline@{\_dounderline}!FPDF@{FPDF}}
+\doxysubsubsection{\_dounderline()}
+{\footnotesize\ttfamily FPDF\+::\+\_\+dounderline (\begin{DoxyParamCaption}\item[{}]{\$x,  }\item[{}]{\$y,  }\item[{}]{\$txt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 1243 of file fpdf.\+php.
+
+
+
+References \$up, \$ut, \$w, \$x, \$y, and Get\+String\+Width().
+
+\mbox{\label{classFPDF_a5872b1a94bcd6c00a0bdd2ece02409ac}} 
+\index{FPDF@{FPDF}!\_enddoc@{\_enddoc}}
+\index{\_enddoc@{\_enddoc}!FPDF@{FPDF}}
+\doxysubsubsection{\_enddoc()}
+{\footnotesize\ttfamily FPDF\+::\+\_\+enddoc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 1898 of file fpdf.\+php.
+
+
+
+Referenced by Close().
+
+\mbox{\label{classFPDF_a0c727a46d970b65e123da12e3cb34b58}} 
+\index{FPDF@{FPDF}!\_endpage@{\_endpage}}
+\index{\_endpage@{\_endpage}!FPDF@{FPDF}}
+\doxysubsubsection{\_endpage()}
+{\footnotesize\ttfamily FPDF\+::\+\_\+endpage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 1129 of file fpdf.\+php.
+
+
+
+Referenced by Add\+Page(), and Close().
+
+\mbox{\label{classFPDF_a315a57aaf556052008dd99ff196b812e}} 
+\index{FPDF@{FPDF}!\_escape@{\_escape}}
+\index{\_escape@{\_escape}!FPDF@{FPDF}}
+\doxysubsubsection{\_escape()}
+{\footnotesize\ttfamily FPDF\+::\+\_\+escape (\begin{DoxyParamCaption}\item[{}]{\$s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 1226 of file fpdf.\+php.
+
+
+
+Referenced by Cell(), and Text().
+
+\mbox{\label{classFPDF_a2fb565c393ea60b222188c5330e66af4}} 
+\index{FPDF@{FPDF}!\_getoffset@{\_getoffset}}
+\index{\_getoffset@{\_getoffset}!FPDF@{FPDF}}
+\doxysubsubsection{\_getoffset()}
+{\footnotesize\ttfamily FPDF\+::\+\_\+getoffset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 1476 of file fpdf.\+php.
+
+\mbox{\label{classFPDF_aca25fc93dd33864413e1bfb8665ccc2a}} 
+\index{FPDF@{FPDF}!\_getpagesize@{\_getpagesize}}
+\index{\_getpagesize@{\_getpagesize}!FPDF@{FPDF}}
+\doxysubsubsection{\_getpagesize()}
+{\footnotesize\ttfamily FPDF\+::\+\_\+getpagesize (\begin{DoxyParamCaption}\item[{}]{\$size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 1062 of file fpdf.\+php.
+
+
+
+References Error().
+
+
+
+Referenced by \+\_\+\+\_\+construct(), and \+\_\+beginpage().
+
+\mbox{\label{classFPDF_a2ab5b59f645d5067c1b08f1f7905b734}} 
+\index{FPDF@{FPDF}!\_httpencode@{\_httpencode}}
+\index{\_httpencode@{\_httpencode}!FPDF@{FPDF}}
+\doxysubsubsection{\_httpencode()}
+{\footnotesize\ttfamily FPDF\+::\+\_\+httpencode (\begin{DoxyParamCaption}\item[{}]{\$param,  }\item[{}]{\$value,  }\item[{}]{\$is\+UTF8 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 1159 of file fpdf.\+php.
+
+
+
+References Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax\textbackslash{}\$param, \+\_\+isascii(), and \+\_\+\+UTF8encode().
+
+
+
+Referenced by Output().
+
+\mbox{\label{classFPDF_a7de56b83bea44afb0149676532234659}} 
+\index{FPDF@{FPDF}!\_isascii@{\_isascii}}
+\index{\_isascii@{\_isascii}!FPDF@{FPDF}}
+\doxysubsubsection{\_isascii()}
+{\footnotesize\ttfamily FPDF\+::\+\_\+isascii (\begin{DoxyParamCaption}\item[{}]{\$s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 1147 of file fpdf.\+php.
+
+
+
+Referenced by \+\_\+httpencode(), and \+\_\+textstring().
+
+\mbox{\label{classFPDF_adb97b18ebefc4e1af64dbd0c2e614c59}} 
+\index{FPDF@{FPDF}!\_loadfont@{\_loadfont}}
+\index{\_loadfont@{\_loadfont}!FPDF@{FPDF}}
+\doxysubsubsection{\_loadfont()}
+{\footnotesize\ttfamily FPDF\+::\+\_\+loadfont (\begin{DoxyParamCaption}\item[{}]{\$path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 1134 of file fpdf.\+php.
+
+
+
+References \$enc, \$name, \$subsetted, and Error().
+
+
+
+Referenced by Add\+Font().
+
+\mbox{\label{classFPDF_a24e3ec793a213bd5492c1d8e2c5838bd}} 
+\index{FPDF@{FPDF}!\_newobj@{\_newobj}}
+\index{\_newobj@{\_newobj}!FPDF@{FPDF}}
+\doxysubsubsection{\_newobj()}
+{\footnotesize\ttfamily FPDF\+::\+\_\+newobj (\begin{DoxyParamCaption}\item[{}]{\$n = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 1481 of file fpdf.\+php.
+
+\mbox{\label{classFPDF_a01f1638c57a38691668dbf5a7bdf9852}} 
+\index{FPDF@{FPDF}!\_out@{\_out}}
+\index{\_out@{\_out}!FPDF@{FPDF}}
+\doxysubsubsection{\_out()}
+{\footnotesize\ttfamily FPDF\+::\+\_\+out (\begin{DoxyParamCaption}\item[{}]{\$s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 1457 of file fpdf.\+php.
+
+
+
+Referenced by Add\+Page(), Cell(), Image(), Line(), Multi\+Cell(), Rect(), Set\+Draw\+Color(), Set\+Fill\+Color(), Set\+Font(), Set\+Font\+Size(), Set\+Line\+Width(), and Text().
+
+\mbox{\label{classFPDF_a3c95d5d6ce5651c4cf53cd88e82982b8}} 
+\index{FPDF@{FPDF}!\_parsegif@{\_parsegif}}
+\index{\_parsegif@{\_parsegif}!FPDF@{FPDF}}
+\doxysubsubsection{\_parsegif()}
+{\footnotesize\ttfamily FPDF\+::\+\_\+parsegif (\begin{DoxyParamCaption}\item[{}]{\$file }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 1432 of file fpdf.\+php.
+
+
+
+References Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax\textbackslash{}\$data, and \$file.
+
+\mbox{\label{classFPDF_aa0f75e695bf426888c0dc7d3a9635e22}} 
+\index{FPDF@{FPDF}!\_parsejpg@{\_parsejpg}}
+\index{\_parsejpg@{\_parsejpg}!FPDF@{FPDF}}
+\doxysubsubsection{\_parsejpg()}
+{\footnotesize\ttfamily FPDF\+::\+\_\+parsejpg (\begin{DoxyParamCaption}\item[{}]{\$file }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 1252 of file fpdf.\+php.
+
+
+
+References Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax\textbackslash{}\$data, \$file, and Error().
+
+\mbox{\label{classFPDF_a5d9bff475aeba54667a4dbc058b1517b}} 
+\index{FPDF@{FPDF}!\_parsepng@{\_parsepng}}
+\index{\_parsepng@{\_parsepng}!FPDF@{FPDF}}
+\doxysubsubsection{\_parsepng()}
+{\footnotesize\ttfamily FPDF\+::\+\_\+parsepng (\begin{DoxyParamCaption}\item[{}]{\$file }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 1271 of file fpdf.\+php.
+
+
+
+References \$file, \+\_\+parsepngstream(), and Error().
+
+\mbox{\label{classFPDF_a2fa338357dd39cbbaa69c8a1d811745e}} 
+\index{FPDF@{FPDF}!\_parsepngstream@{\_parsepngstream}}
+\index{\_parsepngstream@{\_parsepngstream}!FPDF@{FPDF}}
+\doxysubsubsection{\_parsepngstream()}
+{\footnotesize\ttfamily FPDF\+::\+\_\+parsepngstream (\begin{DoxyParamCaption}\item[{}]{\$f,  }\item[{}]{\$file }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 1282 of file fpdf.\+php.
+
+
+
+References Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax\textbackslash{}\$data, \$file, \$h, \$n, Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax\textbackslash{}\$type, \$w, \+\_\+readint(), \+\_\+readstream(), and Error().
+
+
+
+Referenced by \+\_\+parsepng().
+
+\mbox{\label{classFPDF_acfeafc55e4fb0bda46ba6a48869e8b70}} 
+\index{FPDF@{FPDF}!\_put@{\_put}}
+\index{\_put@{\_put}!FPDF@{FPDF}}
+\doxysubsubsection{\_put()}
+{\footnotesize\ttfamily FPDF\+::\+\_\+put (\begin{DoxyParamCaption}\item[{}]{\$s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 1470 of file fpdf.\+php.
+
+\mbox{\label{classFPDF_af31a901fbed24337636bd85634042060}} 
+\index{FPDF@{FPDF}!\_putcatalog@{\_putcatalog}}
+\index{\_putcatalog@{\_putcatalog}!FPDF@{FPDF}}
+\doxysubsubsection{\_putcatalog()}
+{\footnotesize\ttfamily FPDF\+::\+\_\+putcatalog (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 1865 of file fpdf.\+php.
+
+\mbox{\label{classFPDF_a283308a9c41ca18f57649d60f312d7d1}} 
+\index{FPDF@{FPDF}!\_putfonts@{\_putfonts}}
+\index{\_putfonts@{\_putfonts}!FPDF@{FPDF}}
+\doxysubsubsection{\_putfonts()}
+{\footnotesize\ttfamily FPDF\+::\+\_\+putfonts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 1604 of file fpdf.\+php.
+
+
+
+References \$cw, \$file, \$name, and Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax\textbackslash{}\$type.
+
+\mbox{\label{classFPDF_a132522bbceb722a3181fc216f93bd9a9}} 
+\index{FPDF@{FPDF}!\_putheader@{\_putheader}}
+\index{\_putheader@{\_putheader}!FPDF@{FPDF}}
+\doxysubsubsection{\_putheader()}
+{\footnotesize\ttfamily FPDF\+::\+\_\+putheader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 1886 of file fpdf.\+php.
+
+\mbox{\label{classFPDF_ac00fdb8b339c9b9ef3556515979bc7b7}} 
+\index{FPDF@{FPDF}!\_putimage@{\_putimage}}
+\index{\_putimage@{\_putimage}!FPDF@{FPDF}}
+\doxysubsubsection{\_putimage()}
+{\footnotesize\ttfamily FPDF\+::\+\_\+putimage (\begin{DoxyParamCaption}\item[{\&}]{\$info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 1782 of file fpdf.\+php.
+
+\mbox{\label{classFPDF_ab1f143c4ef408cb6287fa60b8dbdd8c4}} 
+\index{FPDF@{FPDF}!\_putimages@{\_putimages}}
+\index{\_putimages@{\_putimages}!FPDF@{FPDF}}
+\doxysubsubsection{\_putimages()}
+{\footnotesize\ttfamily FPDF\+::\+\_\+putimages (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 1772 of file fpdf.\+php.
+
+
+
+References \$file.
+
+\mbox{\label{classFPDF_adeada505b347aa76ae6f1522b4219fe0}} 
+\index{FPDF@{FPDF}!\_putinfo@{\_putinfo}}
+\index{\_putinfo@{\_putinfo}!FPDF@{FPDF}}
+\doxysubsubsection{\_putinfo()}
+{\footnotesize\ttfamily FPDF\+::\+\_\+putinfo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 1857 of file fpdf.\+php.
+
+\mbox{\label{classFPDF_a3c68fcc25192e3a58942419353e5ef47}} 
+\index{FPDF@{FPDF}!\_putlinks@{\_putlinks}}
+\index{\_putlinks@{\_putlinks}!FPDF@{FPDF}}
+\doxysubsubsection{\_putlinks()}
+{\footnotesize\ttfamily FPDF\+::\+\_\+putlinks (\begin{DoxyParamCaption}\item[{}]{\$n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 1513 of file fpdf.\+php.
+
+\mbox{\label{classFPDF_a82ec337a9fefb892db0a395df94e7d2b}} 
+\index{FPDF@{FPDF}!\_putpage@{\_putpage}}
+\index{\_putpage@{\_putpage}!FPDF@{FPDF}}
+\doxysubsubsection{\_putpage()}
+{\footnotesize\ttfamily FPDF\+::\+\_\+putpage (\begin{DoxyParamCaption}\item[{}]{\$n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 1536 of file fpdf.\+php.
+
+\mbox{\label{classFPDF_a01951b3fad634e87f5ab6763d6444476}} 
+\index{FPDF@{FPDF}!\_putpages@{\_putpages}}
+\index{\_putpages@{\_putpages}!FPDF@{FPDF}}
+\doxysubsubsection{\_putpages()}
+{\footnotesize\ttfamily FPDF\+::\+\_\+putpages (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 1566 of file fpdf.\+php.
+
+\mbox{\label{classFPDF_a7681576bf6a875238ecdabd5fb4f36b8}} 
+\index{FPDF@{FPDF}!\_putresourcedict@{\_putresourcedict}}
+\index{\_putresourcedict@{\_putresourcedict}!FPDF@{FPDF}}
+\doxysubsubsection{\_putresourcedict()}
+{\footnotesize\ttfamily FPDF\+::\+\_\+putresourcedict (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 1833 of file fpdf.\+php.
+
+\mbox{\label{classFPDF_a2fb9db0c32c794a2535eb445b7fcaaca}} 
+\index{FPDF@{FPDF}!\_putresources@{\_putresources}}
+\index{\_putresources@{\_putresources}!FPDF@{FPDF}}
+\doxysubsubsection{\_putresources()}
+{\footnotesize\ttfamily FPDF\+::\+\_\+putresources (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 1845 of file fpdf.\+php.
+
+\mbox{\label{classFPDF_aa8d99b3ff3053b19a646bdde9db4f071}} 
+\index{FPDF@{FPDF}!\_putstream@{\_putstream}}
+\index{\_putstream@{\_putstream}!FPDF@{FPDF}}
+\doxysubsubsection{\_putstream()}
+{\footnotesize\ttfamily FPDF\+::\+\_\+putstream (\begin{DoxyParamCaption}\item[{}]{\$data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 1490 of file fpdf.\+php.
+
+
+
+References Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax\textbackslash{}\$data.
+
+\mbox{\label{classFPDF_abefd0843fdc9d3680b4d5193cd3d7ef7}} 
+\index{FPDF@{FPDF}!\_putstreamobject@{\_putstreamobject}}
+\index{\_putstreamobject@{\_putstreamobject}!FPDF@{FPDF}}
+\doxysubsubsection{\_putstreamobject()}
+{\footnotesize\ttfamily FPDF\+::\+\_\+putstreamobject (\begin{DoxyParamCaption}\item[{}]{\$data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 1497 of file fpdf.\+php.
+
+
+
+References Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax\textbackslash{}\$data.
+
+\mbox{\label{classFPDF_a977c65c92c43a052d2ec4b1e80a2a7dd}} 
+\index{FPDF@{FPDF}!\_puttrailer@{\_puttrailer}}
+\index{\_puttrailer@{\_puttrailer}!FPDF@{FPDF}}
+\doxysubsubsection{\_puttrailer()}
+{\footnotesize\ttfamily FPDF\+::\+\_\+puttrailer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 1891 of file fpdf.\+php.
+
+\mbox{\label{classFPDF_a61df2cca07c80226d3b671b8ac208214}} 
+\index{FPDF@{FPDF}!\_putxobjectdict@{\_putxobjectdict}}
+\index{\_putxobjectdict@{\_putxobjectdict}!FPDF@{FPDF}}
+\doxysubsubsection{\_putxobjectdict()}
+{\footnotesize\ttfamily FPDF\+::\+\_\+putxobjectdict (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 1827 of file fpdf.\+php.
+
+\mbox{\label{classFPDF_a0d76d528045f895215a9bc0c16c8aad5}} 
+\index{FPDF@{FPDF}!\_readint@{\_readint}}
+\index{\_readint@{\_readint}!FPDF@{FPDF}}
+\doxysubsubsection{\_readint()}
+{\footnotesize\ttfamily FPDF\+::\+\_\+readint (\begin{DoxyParamCaption}\item[{}]{\$f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 1425 of file fpdf.\+php.
+
+
+
+Referenced by \+\_\+parsepngstream().
+
+\mbox{\label{classFPDF_abdc4f5232eab0e2bfc86570c07d44688}} 
+\index{FPDF@{FPDF}!\_readstream@{\_readstream}}
+\index{\_readstream@{\_readstream}!FPDF@{FPDF}}
+\doxysubsubsection{\_readstream()}
+{\footnotesize\ttfamily FPDF\+::\+\_\+readstream (\begin{DoxyParamCaption}\item[{}]{\$f,  }\item[{}]{\$n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 1408 of file fpdf.\+php.
+
+
+
+References Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax\textbackslash{}\$res.
+
+
+
+Referenced by \+\_\+parsepngstream().
+
+\mbox{\label{classFPDF_a7a9f870d2548f450a8bc90f59b96656d}} 
+\index{FPDF@{FPDF}!\_textstring@{\_textstring}}
+\index{\_textstring@{\_textstring}!FPDF@{FPDF}}
+\doxysubsubsection{\_textstring()}
+{\footnotesize\ttfamily FPDF\+::\+\_\+textstring (\begin{DoxyParamCaption}\item[{}]{\$s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 1235 of file fpdf.\+php.
+
+
+
+References \+\_\+isascii(), and \+\_\+\+UTF8to\+UTF16().
+
+\mbox{\label{classFPDF_af37fbc973613a223cc40e519ddd21383}} 
+\index{FPDF@{FPDF}!\_tounicodecmap@{\_tounicodecmap}}
+\index{\_tounicodecmap@{\_tounicodecmap}!FPDF@{FPDF}}
+\doxysubsubsection{\_tounicodecmap()}
+{\footnotesize\ttfamily FPDF\+::\+\_\+tounicodecmap (\begin{DoxyParamCaption}\item[{}]{\$uv }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 1721 of file fpdf.\+php.
+
+
+
+References \$uv.
+
+\mbox{\label{classFPDF_a40c0174fb54baa1a5b08bb60a208c0bf}} 
+\index{FPDF@{FPDF}!\_UTF8encode@{\_UTF8encode}}
+\index{\_UTF8encode@{\_UTF8encode}!FPDF@{FPDF}}
+\doxysubsubsection{\_UTF8encode()}
+{\footnotesize\ttfamily FPDF\+::\+\_\+\+UTF8encode (\begin{DoxyParamCaption}\item[{}]{\$s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 1169 of file fpdf.\+php.
+
+
+
+References Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax\textbackslash{}\$res.
+
+
+
+Referenced by \+\_\+httpencode(), Set\+Author(), Set\+Creator(), Set\+Keywords(), Set\+Subject(), and Set\+Title().
+
+\mbox{\label{classFPDF_ae0d452fb23ac5d8bf11c17fbb96824ac}} 
+\index{FPDF@{FPDF}!\_UTF8toUTF16@{\_UTF8toUTF16}}
+\index{\_UTF8toUTF16@{\_UTF8toUTF16}!FPDF@{FPDF}}
+\doxysubsubsection{\_UTF8toUTF16()}
+{\footnotesize\ttfamily FPDF\+::\+\_\+\+UTF8to\+UTF16 (\begin{DoxyParamCaption}\item[{}]{\$s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 1191 of file fpdf.\+php.
+
+
+
+References Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax\textbackslash{}\$res.
+
+
+
+Referenced by \+\_\+textstring().
+
+\mbox{\label{classFPDF_acb406647f47041ae06ec01324e6a2377}} 
+\index{FPDF@{FPDF}!AcceptPageBreak@{AcceptPageBreak}}
+\index{AcceptPageBreak@{AcceptPageBreak}!FPDF@{FPDF}}
+\doxysubsubsection{AcceptPageBreak()}
+{\footnotesize\ttfamily FPDF\+::\+Accept\+Page\+Break (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 574 of file fpdf.\+php.
+
+
+
+References \$\+Auto\+Page\+Break.
+
+
+
+Referenced by Cell(), and Image().
+
+\mbox{\label{classFPDF_a65701ff5a1099cb568664b7f35345e1a}} 
+\index{FPDF@{FPDF}!AddFont@{AddFont}}
+\index{AddFont@{AddFont}!FPDF@{FPDF}}
+\doxysubsubsection{AddFont()}
+{\footnotesize\ttfamily FPDF\+::\+Add\+Font (\begin{DoxyParamCaption}\item[{}]{\$family,  }\item[{}]{\$style = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$file = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$dir = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 443 of file fpdf.\+php.
+
+
+
+References \$file, \$fontpath, \+\_\+loadfont(), and Error().
+
+
+
+Referenced by Alchimie\+BAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}\+PDF\textbackslash{}\+Header(), and Set\+Font().
+
+\mbox{\label{classFPDF_aa4784e97caa10d7b5bd5b37cdb8de523}} 
+\index{FPDF@{FPDF}!AddLink@{AddLink}}
+\index{AddLink@{AddLink}!FPDF@{FPDF}}
+\doxysubsubsection{AddLink()}
+{\footnotesize\ttfamily FPDF\+::\+Add\+Link (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 536 of file fpdf.\+php.
+
+
+
+References \$n.
+
+\mbox{\label{classFPDF_a492d53d9fa740318b264eaf8912e32b3}} 
+\index{FPDF@{FPDF}!AddPage@{AddPage}}
+\index{AddPage@{AddPage}!FPDF@{FPDF}}
+\doxysubsubsection{AddPage()}
+{\footnotesize\ttfamily FPDF\+::\+Add\+Page (\begin{DoxyParamCaption}\item[{}]{\$orientation = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$size = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$rotation = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 287 of file fpdf.\+php.
+
+
+
+References \$\+Color\+Flag, \$\+Draw\+Color, \$\+Fill\+Color, \$\+Font\+Family, \$\+Font\+Size\+Pt, \$\+Line\+Width, \$\+Text\+Color, \+\_\+beginpage(), \+\_\+endpage(), \+\_\+out(), Error(), Footer(), Header(), and Set\+Font().
+
+
+
+Referenced by Cell(), Close(), Image(), and Alchimie\+BAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}\+PDF\textbackslash{}\+Table().
+
+\mbox{\label{classFPDF_a519cf01024f5981364ec7cd2d5281253}} 
+\index{FPDF@{FPDF}!AliasNbPages@{AliasNbPages}}
+\index{AliasNbPages@{AliasNbPages}!FPDF@{FPDF}}
+\doxysubsubsection{AliasNbPages()}
+{\footnotesize\ttfamily FPDF\+::\+Alias\+Nb\+Pages (\begin{DoxyParamCaption}\item[{}]{\$alias = {\ttfamily \textquotesingle{}\{nb\}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 258 of file fpdf.\+php.
+
+\mbox{\label{classFPDF_a37c88a6a7daf937b3dd88a903ccbfa64}} 
+\index{FPDF@{FPDF}!Cell@{Cell}}
+\index{Cell@{Cell}!FPDF@{FPDF}}
+\doxysubsubsection{Cell()}
+{\footnotesize\ttfamily FPDF\+::\+Cell (\begin{DoxyParamCaption}\item[{}]{\$w,  }\item[{}]{\$h = {\ttfamily 0},  }\item[{}]{\$txt = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$border = {\ttfamily 0},  }\item[{}]{\$ln = {\ttfamily 0},  }\item[{}]{\$align = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$fill = {\ttfamily false},  }\item[{}]{\$link = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 580 of file fpdf.\+php.
+
+
+
+References \$c\+Margin, \$h, \$k, \$l\+Margin, \$w, \$ws, \$x, \$y, \+\_\+escape(), \+\_\+out(), Accept\+Page\+Break(), Add\+Page(), Error(), Get\+String\+Width(), and Link().
+
+
+
+Referenced by Alchimie\+BAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}\+PDF\textbackslash{}\+Ecrire\+Sur\+Plusieurs\+Lignes(), Alchimie\+BAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}\+PDF\textbackslash{}\+Footer(), Alchimie\+BAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}\+PDF\textbackslash{}\+Header(), Multi\+Cell(), Alchimie\+BAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}\+PDF\textbackslash{}\+Table(), and Write().
+
+\mbox{\label{classFPDF_af6bcdd2acb114191b61065e85ff0b62c}} 
+\index{FPDF@{FPDF}!Close@{Close}}
+\index{Close@{Close}!FPDF@{FPDF}}
+\doxysubsubsection{Close()}
+{\footnotesize\ttfamily FPDF\+::\+Close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 270 of file fpdf.\+php.
+
+
+
+References \+\_\+enddoc(), \+\_\+endpage(), Add\+Page(), and Footer().
+
+
+
+Referenced by Output().
+
+\mbox{\label{classFPDF_abbf9af8630c425b22b9199cc906ee1bb}} 
+\index{FPDF@{FPDF}!Error@{Error}}
+\index{Error@{Error}!FPDF@{FPDF}}
+\doxysubsubsection{Error()}
+{\footnotesize\ttfamily FPDF\+::\+Error (\begin{DoxyParamCaption}\item[{}]{\$msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 264 of file fpdf.\+php.
+
+
+
+Referenced by \+\_\+\+\_\+construct(), \+\_\+beginpage(), \+\_\+checkoutput(), \+\_\+getpagesize(), \+\_\+loadfont(), \+\_\+parsejpg(), \+\_\+parsepng(), \+\_\+parsepngstream(), Add\+Font(), Add\+Page(), Cell(), Image(), Multi\+Cell(), Output(), Set\+Display\+Mode(), Set\+Font(), Text(), and Write().
+
+\mbox{\label{classFPDF_aaa8da01869c5e5a75ff9150016dad08d}} 
+\index{FPDF@{FPDF}!Footer@{Footer}}
+\index{Footer@{Footer}!FPDF@{FPDF}}
+\doxysubsubsection{Footer()}
+{\footnotesize\ttfamily FPDF\+::\+Footer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reimplemented in \textbf{ Alchimie\+BAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}\+PDF} \doxyref{}{p.}{classAlchimieBAJ_1_1main_1_1pdf_1_1PDF_a2f6c69cf826908022a585a11e5b0b286}.
+
+
+
+Definition at line 361 of file fpdf.\+php.
+
+
+
+Referenced by Add\+Page(), and Close().
+
+\mbox{\label{classFPDF_a8d1d545bca607acd20c9783dd98acb2a}} 
+\index{FPDF@{FPDF}!GetPageHeight@{GetPageHeight}}
+\index{GetPageHeight@{GetPageHeight}!FPDF@{FPDF}}
+\doxysubsubsection{GetPageHeight()}
+{\footnotesize\ttfamily FPDF\+::\+Get\+Page\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 940 of file fpdf.\+php.
+
+
+
+References \$h.
+
+
+
+Referenced by Alchimie\+BAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}\+PDF\textbackslash{}\+Table().
+
+\mbox{\label{classFPDF_a962e816444c454cd54cfd47c4ee88b7e}} 
+\index{FPDF@{FPDF}!GetPageWidth@{GetPageWidth}}
+\index{GetPageWidth@{GetPageWidth}!FPDF@{FPDF}}
+\doxysubsubsection{GetPageWidth()}
+{\footnotesize\ttfamily FPDF\+::\+Get\+Page\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 934 of file fpdf.\+php.
+
+
+
+References \$w.
+
+\mbox{\label{classFPDF_a55c99f3416c3788c759249b6315c948a}} 
+\index{FPDF@{FPDF}!GetStringWidth@{GetStringWidth}}
+\index{GetStringWidth@{GetStringWidth}!FPDF@{FPDF}}
+\doxysubsubsection{GetStringWidth()}
+{\footnotesize\ttfamily FPDF\+::\+Get\+String\+Width (\begin{DoxyParamCaption}\item[{}]{\$s }\end{DoxyParamCaption})}
+
+
+
+Definition at line 405 of file fpdf.\+php.
+
+
+
+References \$cw, and \$w.
+
+
+
+Referenced by \+\_\+dounderline(), Cell(), Alchimie\+BAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}\+PDF\textbackslash{}\+Ecrire\+Sur\+Plusieurs\+Lignes(), Alchimie\+BAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}\+PDF\textbackslash{}\+Header(), and Alchimie\+BAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}\+PDF\textbackslash{}\+Nb\+Lines().
+
+\mbox{\label{classFPDF_a8b7bbc6309142f76ec2a78815f2f700f}} 
+\index{FPDF@{FPDF}!GetX@{GetX}}
+\index{GetX@{GetX}!FPDF@{FPDF}}
+\doxysubsubsection{GetX()}
+{\footnotesize\ttfamily FPDF\+::\+GetX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 946 of file fpdf.\+php.
+
+
+
+References \$x.
+
+
+
+Referenced by Alchimie\+BAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}\+PDF\textbackslash{}\+Table().
+
+\mbox{\label{classFPDF_a7a0b514eaa73283268ac14e9f0d7f0c4}} 
+\index{FPDF@{FPDF}!GetY@{GetY}}
+\index{GetY@{GetY}!FPDF@{FPDF}}
+\doxysubsubsection{GetY()}
+{\footnotesize\ttfamily FPDF\+::\+GetY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 961 of file fpdf.\+php.
+
+
+
+References \$y.
+
+
+
+Referenced by Alchimie\+BAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}\+PDF\textbackslash{}\+Table().
+
+\mbox{\label{classFPDF_ab1bedba6d1753b9e3f18ed3820743fd6}} 
+\index{FPDF@{FPDF}!Header@{Header}}
+\index{Header@{Header}!FPDF@{FPDF}}
+\doxysubsubsection{Header()}
+{\footnotesize\ttfamily FPDF\+::\+Header (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reimplemented in \textbf{ Alchimie\+BAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}\+PDF} \doxyref{}{p.}{classAlchimieBAJ_1_1main_1_1pdf_1_1PDF_a147f445905d8cb1ca9d465f14576e04f}.
+
+
+
+Definition at line 356 of file fpdf.\+php.
+
+
+
+Referenced by Add\+Page().
+
+\mbox{\label{classFPDF_a680c80cc244b5636db22994cf1b27a68}} 
+\index{FPDF@{FPDF}!Image@{Image}}
+\index{Image@{Image}!FPDF@{FPDF}}
+\doxysubsubsection{Image()}
+{\footnotesize\ttfamily FPDF\+::\+Image (\begin{DoxyParamCaption}\item[{}]{\$file,  }\item[{}]{\$x = {\ttfamily null},  }\item[{}]{\$y = {\ttfamily null},  }\item[{}]{\$w = {\ttfamily 0},  }\item[{}]{\$h = {\ttfamily 0},  }\item[{}]{\$type = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$link = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 869 of file fpdf.\+php.
+
+
+
+References \$file, \$h, \$k, Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax\textbackslash{}\$type, \$w, \$x, \$y, \+\_\+out(), Accept\+Page\+Break(), Add\+Page(), Error(), and Link().
+
+
+
+Referenced by Alchimie\+BAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}\+PDF\textbackslash{}\+Header().
+
+\mbox{\label{classFPDF_a408bfb653ed942e1e00d80ea9cdc139b}} 
+\index{FPDF@{FPDF}!Line@{Line}}
+\index{Line@{Line}!FPDF@{FPDF}}
+\doxysubsubsection{Line()}
+{\footnotesize\ttfamily FPDF\+::\+Line (\begin{DoxyParamCaption}\item[{}]{\$x1,  }\item[{}]{\$y1,  }\item[{}]{\$x2,  }\item[{}]{\$y2 }\end{DoxyParamCaption})}
+
+
+
+Definition at line 425 of file fpdf.\+php.
+
+
+
+References \+\_\+out().
+
+\mbox{\label{classFPDF_a50de51eae9ed1dab3a448491fcbbdde5}} 
+\index{FPDF@{FPDF}!Link@{Link}}
+\index{Link@{Link}!FPDF@{FPDF}}
+\doxysubsubsection{Link()}
+{\footnotesize\ttfamily FPDF\+::\+Link (\begin{DoxyParamCaption}\item[{}]{\$x,  }\item[{}]{\$y,  }\item[{}]{\$w,  }\item[{}]{\$h,  }\item[{}]{\$link }\end{DoxyParamCaption})}
+
+
+
+Definition at line 554 of file fpdf.\+php.
+
+
+
+References \$h, \$page, \$w, \$x, and \$y.
+
+
+
+Referenced by Cell(), and Image().
+
+\mbox{\label{classFPDF_a445e0364c7fa330c415495bb31f5651c}} 
+\index{FPDF@{FPDF}!Ln@{Ln}}
+\index{Ln@{Ln}!FPDF@{FPDF}}
+\doxysubsubsection{Ln()}
+{\footnotesize\ttfamily FPDF\+::\+Ln (\begin{DoxyParamCaption}\item[{}]{\$h = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 859 of file fpdf.\+php.
+
+
+
+References \$h, \$lasth, and \$l\+Margin.
+
+
+
+Referenced by Alchimie\+BAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}\+PDF\textbackslash{}\+Header(), and Alchimie\+BAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}\+PDF\textbackslash{}\+Table().
+
+\mbox{\label{classFPDF_aaa047bd8692257bb2962d5d65c090319}} 
+\index{FPDF@{FPDF}!MultiCell@{MultiCell}}
+\index{MultiCell@{MultiCell}!FPDF@{FPDF}}
+\doxysubsubsection{MultiCell()}
+{\footnotesize\ttfamily FPDF\+::\+Multi\+Cell (\begin{DoxyParamCaption}\item[{}]{\$w,  }\item[{}]{\$h,  }\item[{}]{\$txt,  }\item[{}]{\$border = {\ttfamily 0},  }\item[{}]{\$align = {\ttfamily \textquotesingle{}J\textquotesingle{}},  }\item[{}]{\$fill = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 661 of file fpdf.\+php.
+
+
+
+References \$c\+Margin, \$cw, \$l\+Margin, \$w, \$x, \+\_\+out(), Cell(), and Error().
+
+
+
+Referenced by Alchimie\+BAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}\+PDF\textbackslash{}\+Table().
+
+\mbox{\label{classFPDF_ae5700d4b1acede42262d383d9986de90}} 
+\index{FPDF@{FPDF}!Output@{Output}}
+\index{Output@{Output}!FPDF@{FPDF}}
+\doxysubsubsection{Output()}
+{\footnotesize\ttfamily FPDF\+::\+Output (\begin{DoxyParamCaption}\item[{}]{\$dest = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$name = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$is\+UTF8 = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 985 of file fpdf.\+php.
+
+
+
+References \$buffer, \$name, \+\_\+checkoutput(), \+\_\+httpencode(), Close(), and Error().
+
+\mbox{\label{classFPDF_af97a0239f79f597b5c88cc68b385f7af}} 
+\index{FPDF@{FPDF}!PageNo@{PageNo}}
+\index{PageNo@{PageNo}!FPDF@{FPDF}}
+\doxysubsubsection{PageNo()}
+{\footnotesize\ttfamily FPDF\+::\+Page\+No (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 366 of file fpdf.\+php.
+
+
+
+References \$page.
+
+
+
+Referenced by Alchimie\+BAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}\+PDF\textbackslash{}\+Footer(), and Alchimie\+BAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}\+PDF\textbackslash{}\+Header().
+
+\mbox{\label{classFPDF_af6b45f243c32ec04f1be28823b0cf15c}} 
+\index{FPDF@{FPDF}!Rect@{Rect}}
+\index{Rect@{Rect}!FPDF@{FPDF}}
+\doxysubsubsection{Rect()}
+{\footnotesize\ttfamily FPDF\+::\+Rect (\begin{DoxyParamCaption}\item[{}]{\$x,  }\item[{}]{\$y,  }\item[{}]{\$w,  }\item[{}]{\$h,  }\item[{}]{\$style = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 431 of file fpdf.\+php.
+
+
+
+References \$h, \$w, \$x, \$y, and \+\_\+out().
+
+\mbox{\label{classFPDF_a2448f729ffdee950dca638910a31a206}} 
+\index{FPDF@{FPDF}!SetAuthor@{SetAuthor}}
+\index{SetAuthor@{SetAuthor}!FPDF@{FPDF}}
+\doxysubsubsection{SetAuthor()}
+{\footnotesize\ttfamily FPDF\+::\+Set\+Author (\begin{DoxyParamCaption}\item[{}]{\$author,  }\item[{}]{\$is\+UTF8 = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 234 of file fpdf.\+php.
+
+
+
+References \+\_\+\+UTF8encode().
+
+\mbox{\label{classFPDF_a55c2e62a11e10dd7bc0c8aa089ba1c5e}} 
+\index{FPDF@{FPDF}!SetAutoPageBreak@{SetAutoPageBreak}}
+\index{SetAutoPageBreak@{SetAutoPageBreak}!FPDF@{FPDF}}
+\doxysubsubsection{SetAutoPageBreak()}
+{\footnotesize\ttfamily FPDF\+::\+Set\+Auto\+Page\+Break (\begin{DoxyParamCaption}\item[{}]{\$auto,  }\item[{}]{\$margin = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 198 of file fpdf.\+php.
+
+
+
+Referenced by \+\_\+\+\_\+construct().
+
+\mbox{\label{classFPDF_ab56cc065fff6c44c473c7f0428876486}} 
+\index{FPDF@{FPDF}!SetCompression@{SetCompression}}
+\index{SetCompression@{SetCompression}!FPDF@{FPDF}}
+\doxysubsubsection{SetCompression()}
+{\footnotesize\ttfamily FPDF\+::\+Set\+Compression (\begin{DoxyParamCaption}\item[{}]{\$compress }\end{DoxyParamCaption})}
+
+
+
+Definition at line 219 of file fpdf.\+php.
+
+
+
+References \$compress.
+
+
+
+Referenced by \+\_\+\+\_\+construct().
+
+\mbox{\label{classFPDF_ad528c02fc9104993d5b8c4d3f4a5ae00}} 
+\index{FPDF@{FPDF}!SetCreator@{SetCreator}}
+\index{SetCreator@{SetCreator}!FPDF@{FPDF}}
+\doxysubsubsection{SetCreator()}
+{\footnotesize\ttfamily FPDF\+::\+Set\+Creator (\begin{DoxyParamCaption}\item[{}]{\$creator,  }\item[{}]{\$is\+UTF8 = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 252 of file fpdf.\+php.
+
+
+
+References \+\_\+\+UTF8encode().
+
+\mbox{\label{classFPDF_aa0695aab6e2889198e94a48b87ddaae6}} 
+\index{FPDF@{FPDF}!SetDisplayMode@{SetDisplayMode}}
+\index{SetDisplayMode@{SetDisplayMode}!FPDF@{FPDF}}
+\doxysubsubsection{SetDisplayMode()}
+{\footnotesize\ttfamily FPDF\+::\+Set\+Display\+Mode (\begin{DoxyParamCaption}\item[{}]{\$zoom,  }\item[{}]{\$layout = {\ttfamily \textquotesingle{}default\textquotesingle{}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 206 of file fpdf.\+php.
+
+
+
+References Error().
+
+
+
+Referenced by \+\_\+\+\_\+construct().
+
+\mbox{\label{classFPDF_a2699cc6ff46c7cf2953e5e740f456d75}} 
+\index{FPDF@{FPDF}!SetDrawColor@{SetDrawColor}}
+\index{SetDrawColor@{SetDrawColor}!FPDF@{FPDF}}
+\doxysubsubsection{SetDrawColor()}
+{\footnotesize\ttfamily FPDF\+::\+Set\+Draw\+Color (\begin{DoxyParamCaption}\item[{}]{\$r,  }\item[{}]{\$g = {\ttfamily null},  }\item[{}]{\$b = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 372 of file fpdf.\+php.
+
+
+
+References \+\_\+out().
+
+\mbox{\label{classFPDF_ac01941b00b99afca24dec97591665a3c}} 
+\index{FPDF@{FPDF}!SetFillColor@{SetFillColor}}
+\index{SetFillColor@{SetFillColor}!FPDF@{FPDF}}
+\doxysubsubsection{SetFillColor()}
+{\footnotesize\ttfamily FPDF\+::\+Set\+Fill\+Color (\begin{DoxyParamCaption}\item[{}]{\$r,  }\item[{}]{\$g = {\ttfamily null},  }\item[{}]{\$b = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 383 of file fpdf.\+php.
+
+
+
+References \$\+Text\+Color, and \+\_\+out().
+
+
+
+Referenced by Alchimie\+BAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}\+PDF\textbackslash{}\+Table().
+
+\mbox{\label{classFPDF_a82acf7b1322a634829b56bb209045e1c}} 
+\index{FPDF@{FPDF}!SetFont@{SetFont}}
+\index{SetFont@{SetFont}!FPDF@{FPDF}}
+\doxysubsubsection{SetFont()}
+{\footnotesize\ttfamily FPDF\+::\+Set\+Font (\begin{DoxyParamCaption}\item[{}]{\$family,  }\item[{}]{\$style = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$size = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 475 of file fpdf.\+php.
+
+
+
+References \$\+Font\+Family, \$\+Font\+Size\+Pt, \$k, \+\_\+out(), Add\+Font(), and Error().
+
+
+
+Referenced by Add\+Page(), Alchimie\+BAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}\+PDF\textbackslash{}\+Footer(), Alchimie\+BAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}\+PDF\textbackslash{}\+Header(), and Alchimie\+BAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}\+PDF\textbackslash{}\+Table().
+
+\mbox{\label{classFPDF_a47d041deb672f69250c936a234eead14}} 
+\index{FPDF@{FPDF}!SetFontSize@{SetFontSize}}
+\index{SetFontSize@{SetFontSize}!FPDF@{FPDF}}
+\doxysubsubsection{SetFontSize()}
+{\footnotesize\ttfamily FPDF\+::\+Set\+Font\+Size (\begin{DoxyParamCaption}\item[{}]{\$size }\end{DoxyParamCaption})}
+
+
+
+Definition at line 525 of file fpdf.\+php.
+
+
+
+References \$k, and \+\_\+out().
+
+\mbox{\label{classFPDF_a97c034e7f4c04395a54f09f582544a97}} 
+\index{FPDF@{FPDF}!SetKeywords@{SetKeywords}}
+\index{SetKeywords@{SetKeywords}!FPDF@{FPDF}}
+\doxysubsubsection{SetKeywords()}
+{\footnotesize\ttfamily FPDF\+::\+Set\+Keywords (\begin{DoxyParamCaption}\item[{}]{\$keywords,  }\item[{}]{\$is\+UTF8 = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 246 of file fpdf.\+php.
+
+
+
+References \+\_\+\+UTF8encode().
+
+\mbox{\label{classFPDF_a64306dab17b5156dbb09151818ebf98b}} 
+\index{FPDF@{FPDF}!SetLeftMargin@{SetLeftMargin}}
+\index{SetLeftMargin@{SetLeftMargin}!FPDF@{FPDF}}
+\doxysubsubsection{SetLeftMargin()}
+{\footnotesize\ttfamily FPDF\+::\+Set\+Left\+Margin (\begin{DoxyParamCaption}\item[{}]{\$margin }\end{DoxyParamCaption})}
+
+
+
+Definition at line 178 of file fpdf.\+php.
+
+\mbox{\label{classFPDF_ac8e8290a814b06303c1dfff06ee24acb}} 
+\index{FPDF@{FPDF}!SetLineWidth@{SetLineWidth}}
+\index{SetLineWidth@{SetLineWidth}!FPDF@{FPDF}}
+\doxysubsubsection{SetLineWidth()}
+{\footnotesize\ttfamily FPDF\+::\+Set\+Line\+Width (\begin{DoxyParamCaption}\item[{}]{\$width }\end{DoxyParamCaption})}
+
+
+
+Definition at line 417 of file fpdf.\+php.
+
+
+
+References \+\_\+out().
+
+\mbox{\label{classFPDF_ab0137580cd5c01b4a48f4aec276706d4}} 
+\index{FPDF@{FPDF}!SetLink@{SetLink}}
+\index{SetLink@{SetLink}!FPDF@{FPDF}}
+\doxysubsubsection{SetLink()}
+{\footnotesize\ttfamily FPDF\+::\+Set\+Link (\begin{DoxyParamCaption}\item[{}]{\$link,  }\item[{}]{\$y = {\ttfamily 0},  }\item[{}]{\$page = {\ttfamily -\/1} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 544 of file fpdf.\+php.
+
+
+
+References \$page, and \$y.
+
+\mbox{\label{classFPDF_a03ee8480b6a0b9362820d225c309f603}} 
+\index{FPDF@{FPDF}!SetMargins@{SetMargins}}
+\index{SetMargins@{SetMargins}!FPDF@{FPDF}}
+\doxysubsubsection{SetMargins()}
+{\footnotesize\ttfamily FPDF\+::\+Set\+Margins (\begin{DoxyParamCaption}\item[{}]{\$left,  }\item[{}]{\$top,  }\item[{}]{\$right = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 168 of file fpdf.\+php.
+
+
+
+Referenced by \+\_\+\+\_\+construct().
+
+\mbox{\label{classFPDF_a1008ef2dbf448c60dd2f9324bcc6601a}} 
+\index{FPDF@{FPDF}!SetRightMargin@{SetRightMargin}}
+\index{SetRightMargin@{SetRightMargin}!FPDF@{FPDF}}
+\doxysubsubsection{SetRightMargin()}
+{\footnotesize\ttfamily FPDF\+::\+Set\+Right\+Margin (\begin{DoxyParamCaption}\item[{}]{\$margin }\end{DoxyParamCaption})}
+
+
+
+Definition at line 192 of file fpdf.\+php.
+
+\mbox{\label{classFPDF_a29e614b472d76809a7f24d8382b2aec8}} 
+\index{FPDF@{FPDF}!SetSubject@{SetSubject}}
+\index{SetSubject@{SetSubject}!FPDF@{FPDF}}
+\doxysubsubsection{SetSubject()}
+{\footnotesize\ttfamily FPDF\+::\+Set\+Subject (\begin{DoxyParamCaption}\item[{}]{\$subject,  }\item[{}]{\$is\+UTF8 = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 240 of file fpdf.\+php.
+
+
+
+References \+\_\+\+UTF8encode().
+
+\mbox{\label{classFPDF_a59f12883ff2b60013eb0fe2c8c7e2dd5}} 
+\index{FPDF@{FPDF}!SetTextColor@{SetTextColor}}
+\index{SetTextColor@{SetTextColor}!FPDF@{FPDF}}
+\doxysubsubsection{SetTextColor()}
+{\footnotesize\ttfamily FPDF\+::\+Set\+Text\+Color (\begin{DoxyParamCaption}\item[{}]{\$r,  }\item[{}]{\$g = {\ttfamily null},  }\item[{}]{\$b = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 395 of file fpdf.\+php.
+
+
+
+References \$\+Text\+Color.
+
+
+
+Referenced by Alchimie\+BAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}\+PDF\textbackslash{}\+Header(), and Alchimie\+BAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}\+PDF\textbackslash{}\+Table().
+
+\mbox{\label{classFPDF_a8a8a4c77944aae4ac0219fefbe53b494}} 
+\index{FPDF@{FPDF}!SetTitle@{SetTitle}}
+\index{SetTitle@{SetTitle}!FPDF@{FPDF}}
+\doxysubsubsection{SetTitle()}
+{\footnotesize\ttfamily FPDF\+::\+Set\+Title (\begin{DoxyParamCaption}\item[{}]{\$title,  }\item[{}]{\$is\+UTF8 = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 228 of file fpdf.\+php.
+
+
+
+References \+\_\+\+UTF8encode().
+
+\mbox{\label{classFPDF_aeb7511c3d686e2aa9f9496f1b1ec147f}} 
+\index{FPDF@{FPDF}!SetTopMargin@{SetTopMargin}}
+\index{SetTopMargin@{SetTopMargin}!FPDF@{FPDF}}
+\doxysubsubsection{SetTopMargin()}
+{\footnotesize\ttfamily FPDF\+::\+Set\+Top\+Margin (\begin{DoxyParamCaption}\item[{}]{\$margin }\end{DoxyParamCaption})}
+
+
+
+Definition at line 186 of file fpdf.\+php.
+
+\mbox{\label{classFPDF_a2bfd055c0ed78a7929fa17ba64f9cf65}} 
+\index{FPDF@{FPDF}!SetX@{SetX}}
+\index{SetX@{SetX}!FPDF@{FPDF}}
+\doxysubsubsection{SetX()}
+{\footnotesize\ttfamily FPDF\+::\+SetX (\begin{DoxyParamCaption}\item[{}]{\$x }\end{DoxyParamCaption})}
+
+
+
+Definition at line 952 of file fpdf.\+php.
+
+
+
+References \$x.
+
+
+
+Referenced by Alchimie\+BAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}\+PDF\textbackslash{}\+Header(), Set\+XY(), and Alchimie\+BAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}\+PDF\textbackslash{}\+Table().
+
+\mbox{\label{classFPDF_a2c191daee30b7ea3a66696bd0be92a3e}} 
+\index{FPDF@{FPDF}!SetXY@{SetXY}}
+\index{SetXY@{SetXY}!FPDF@{FPDF}}
+\doxysubsubsection{SetXY()}
+{\footnotesize\ttfamily FPDF\+::\+Set\+XY (\begin{DoxyParamCaption}\item[{}]{\$x,  }\item[{}]{\$y }\end{DoxyParamCaption})}
+
+
+
+Definition at line 978 of file fpdf.\+php.
+
+
+
+References \$x, Set\+X(), and Set\+Y().
+
+
+
+Referenced by Alchimie\+BAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}\+PDF\textbackslash{}\+Table().
+
+\mbox{\label{classFPDF_a4768e6a2e16609de970c365bb9f25ed8}} 
+\index{FPDF@{FPDF}!SetY@{SetY}}
+\index{SetY@{SetY}!FPDF@{FPDF}}
+\doxysubsubsection{SetY()}
+{\footnotesize\ttfamily FPDF\+::\+SetY (\begin{DoxyParamCaption}\item[{}]{\$y,  }\item[{}]{\$resetX = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 967 of file fpdf.\+php.
+
+
+
+References \$l\+Margin, and \$y.
+
+
+
+Referenced by Alchimie\+BAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}\+PDF\textbackslash{}\+Footer(), and Set\+XY().
+
+\mbox{\label{classFPDF_af3354d9f93d576837fba5b157a1a7e37}} 
+\index{FPDF@{FPDF}!Text@{Text}}
+\index{Text@{Text}!FPDF@{FPDF}}
+\doxysubsubsection{Text()}
+{\footnotesize\ttfamily FPDF\+::\+Text (\begin{DoxyParamCaption}\item[{}]{\$x,  }\item[{}]{\$y,  }\item[{}]{\$txt }\end{DoxyParamCaption})}
+
+
+
+Definition at line 560 of file fpdf.\+php.
+
+
+
+References \$x, \$y, \+\_\+escape(), \+\_\+out(), and Error().
+
+\mbox{\label{classFPDF_a75beddaabec9e3d2b8939bd46f99e615}} 
+\index{FPDF@{FPDF}!Write@{Write}}
+\index{Write@{Write}!FPDF@{FPDF}}
+\doxysubsubsection{Write()}
+{\footnotesize\ttfamily FPDF\+::\+Write (\begin{DoxyParamCaption}\item[{}]{\$h,  }\item[{}]{\$txt,  }\item[{}]{\$link = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 776 of file fpdf.\+php.
+
+
+
+References \$c\+Margin, \$cw, \$h, \$l\+Margin, \$w, \$x, Cell(), and Error().
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\label{classFPDF_a8ca11347db37499aaf473e390db7459b}} 
+\index{FPDF@{FPDF}!\$AliasNbPages@{\$AliasNbPages}}
+\index{\$AliasNbPages@{\$AliasNbPages}!FPDF@{FPDF}}
+\doxysubsubsection{\$AliasNbPages}
+{\footnotesize\ttfamily FPDF\+::\$\+Alias\+Nb\+Pages\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 64 of file fpdf.\+php.
+
+\mbox{\label{classFPDF_ad196be21405b44433e08efedf63fcf27}} 
+\index{FPDF@{FPDF}!\$AutoPageBreak@{\$AutoPageBreak}}
+\index{\$AutoPageBreak@{\$AutoPageBreak}!FPDF@{FPDF}}
+\doxysubsubsection{\$AutoPageBreak}
+{\footnotesize\ttfamily FPDF\+::\$\+Auto\+Page\+Break\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 60 of file fpdf.\+php.
+
+
+
+Referenced by Accept\+Page\+Break().
+
+\mbox{\label{classFPDF_a45f713138b48185ffb8d6952158275b6}} 
+\index{FPDF@{FPDF}!\$bMargin@{\$bMargin}}
+\index{\$bMargin@{\$bMargin}!FPDF@{FPDF}}
+\doxysubsubsection{\$bMargin}
+{\footnotesize\ttfamily FPDF\+::\$b\+Margin\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 34 of file fpdf.\+php.
+
+
+
+Referenced by \+\_\+beginpage().
+
+\mbox{\label{classFPDF_aa5e639d922350949dc1a58a4597c58bb}} 
+\index{FPDF@{FPDF}!\$buffer@{\$buffer}}
+\index{\$buffer@{\$buffer}!FPDF@{FPDF}}
+\doxysubsubsection{\$buffer}
+{\footnotesize\ttfamily FPDF\+::\$buffer\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 16 of file fpdf.\+php.
+
+
+
+Referenced by Output().
+
+\mbox{\label{classFPDF_af1ed9a0f6a3449b164c20c7623b0d61e}} 
+\index{FPDF@{FPDF}!\$cmaps@{\$cmaps}}
+\index{\$cmaps@{\$cmaps}!FPDF@{FPDF}}
+\doxysubsubsection{\$cmaps}
+{\footnotesize\ttfamily FPDF\+::\$cmaps\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 44 of file fpdf.\+php.
+
+\mbox{\label{classFPDF_af17b206c29beaba34856e916a2baf227}} 
+\index{FPDF@{FPDF}!\$cMargin@{\$cMargin}}
+\index{\$cMargin@{\$cMargin}!FPDF@{FPDF}}
+\doxysubsubsection{\$cMargin}
+{\footnotesize\ttfamily FPDF\+::\$c\+Margin\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 35 of file fpdf.\+php.
+
+
+
+Referenced by Cell(), Multi\+Cell(), and Write().
+
+\mbox{\label{classFPDF_ae9a2ff1c3ff43210435b4276e579498a}} 
+\index{FPDF@{FPDF}!\$ColorFlag@{\$ColorFlag}}
+\index{\$ColorFlag@{\$ColorFlag}!FPDF@{FPDF}}
+\doxysubsubsection{\$ColorFlag}
+{\footnotesize\ttfamily FPDF\+::\$\+Color\+Flag\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 54 of file fpdf.\+php.
+
+
+
+Referenced by Add\+Page().
+
+\mbox{\label{classFPDF_a6effca6f281458983c61647878f6dc18}} 
+\index{FPDF@{FPDF}!\$compress@{\$compress}}
+\index{\$compress@{\$compress}!FPDF@{FPDF}}
+\doxysubsubsection{\$compress}
+{\footnotesize\ttfamily FPDF\+::\$compress\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 19 of file fpdf.\+php.
+
+
+
+Referenced by Set\+Compression().
+
+\mbox{\label{classFPDF_a59722e9eb7f9a67dbe330d93723204a6}} 
+\index{FPDF@{FPDF}!\$CoreFonts@{\$CoreFonts}}
+\index{\$CoreFonts@{\$CoreFonts}!FPDF@{FPDF}}
+\doxysubsubsection{\$CoreFonts}
+{\footnotesize\ttfamily FPDF\+::\$\+Core\+Fonts\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 40 of file fpdf.\+php.
+
+\mbox{\label{classFPDF_aae9f841b1768dc9c2cc815e061e14cb6}} 
+\index{FPDF@{FPDF}!\$CreationDate@{\$CreationDate}}
+\index{\$CreationDate@{\$CreationDate}!FPDF@{FPDF}}
+\doxysubsubsection{\$CreationDate}
+{\footnotesize\ttfamily FPDF\+::\$\+Creation\+Date\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 68 of file fpdf.\+php.
+
+\mbox{\label{classFPDF_a40250e931a9dd32601bbe2a5a1eaf492}} 
+\index{FPDF@{FPDF}!\$CurOrientation@{\$CurOrientation}}
+\index{\$CurOrientation@{\$CurOrientation}!FPDF@{FPDF}}
+\doxysubsubsection{\$CurOrientation}
+{\footnotesize\ttfamily FPDF\+::\$\+Cur\+Orientation\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 23 of file fpdf.\+php.
+
+\mbox{\label{classFPDF_a1d6aba267d684bb14898c66ab6ecc292}} 
+\index{FPDF@{FPDF}!\$CurPageSize@{\$CurPageSize}}
+\index{\$CurPageSize@{\$CurPageSize}!FPDF@{FPDF}}
+\doxysubsubsection{\$CurPageSize}
+{\footnotesize\ttfamily FPDF\+::\$\+Cur\+Page\+Size\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 26 of file fpdf.\+php.
+
+\mbox{\label{classFPDF_a48fd94c929ceac390039ac4928fd8110}} 
+\index{FPDF@{FPDF}!\$CurrentFont@{\$CurrentFont}}
+\index{\$CurrentFont@{\$CurrentFont}!FPDF@{FPDF}}
+\doxysubsubsection{\$CurrentFont}
+{\footnotesize\ttfamily FPDF\+::\$\+Current\+Font\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 48 of file fpdf.\+php.
+
+\mbox{\label{classFPDF_a0c059ffdbd096efbdb18f84c114f15df}} 
+\index{FPDF@{FPDF}!\$CurRotation@{\$CurRotation}}
+\index{\$CurRotation@{\$CurRotation}!FPDF@{FPDF}}
+\doxysubsubsection{\$CurRotation}
+{\footnotesize\ttfamily FPDF\+::\$\+Cur\+Rotation\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 27 of file fpdf.\+php.
+
+\mbox{\label{classFPDF_ad1640384fda9ee53cf7295eb823a31dc}} 
+\index{FPDF@{FPDF}!\$DefOrientation@{\$DefOrientation}}
+\index{\$DefOrientation@{\$DefOrientation}!FPDF@{FPDF}}
+\doxysubsubsection{\$DefOrientation}
+{\footnotesize\ttfamily FPDF\+::\$\+Def\+Orientation\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 22 of file fpdf.\+php.
+
+
+
+Referenced by \+\_\+\+\_\+construct(), and \+\_\+beginpage().
+
+\mbox{\label{classFPDF_a25da1996ae79613866cd98df244b43ba}} 
+\index{FPDF@{FPDF}!\$DefPageSize@{\$DefPageSize}}
+\index{\$DefPageSize@{\$DefPageSize}!FPDF@{FPDF}}
+\doxysubsubsection{\$DefPageSize}
+{\footnotesize\ttfamily FPDF\+::\$\+Def\+Page\+Size\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 25 of file fpdf.\+php.
+
+
+
+Referenced by \+\_\+beginpage().
+
+\mbox{\label{classFPDF_a80a2ec9b8a4e1104bc093c0856766db3}} 
+\index{FPDF@{FPDF}!\$DrawColor@{\$DrawColor}}
+\index{\$DrawColor@{\$DrawColor}!FPDF@{FPDF}}
+\doxysubsubsection{\$DrawColor}
+{\footnotesize\ttfamily FPDF\+::\$\+Draw\+Color\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 51 of file fpdf.\+php.
+
+
+
+Referenced by Add\+Page().
+
+\mbox{\label{classFPDF_a55823b6bca0de6b39b91c706e4684cc3}} 
+\index{FPDF@{FPDF}!\$encodings@{\$encodings}}
+\index{\$encodings@{\$encodings}!FPDF@{FPDF}}
+\doxysubsubsection{\$encodings}
+{\footnotesize\ttfamily FPDF\+::\$encodings\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 43 of file fpdf.\+php.
+
+\mbox{\label{classFPDF_a75f15d0e648b984c9209c32388912aeb}} 
+\index{FPDF@{FPDF}!\$FillColor@{\$FillColor}}
+\index{\$FillColor@{\$FillColor}!FPDF@{FPDF}}
+\doxysubsubsection{\$FillColor}
+{\footnotesize\ttfamily FPDF\+::\$\+Fill\+Color\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 52 of file fpdf.\+php.
+
+
+
+Referenced by Add\+Page().
+
+\mbox{\label{classFPDF_a5f8c02cd5e40614758f3ffc421e06b78}} 
+\index{FPDF@{FPDF}!\$FontFamily@{\$FontFamily}}
+\index{\$FontFamily@{\$FontFamily}!FPDF@{FPDF}}
+\doxysubsubsection{\$FontFamily}
+{\footnotesize\ttfamily FPDF\+::\$\+Font\+Family\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 45 of file fpdf.\+php.
+
+
+
+Referenced by Add\+Page(), and Set\+Font().
+
+\mbox{\label{classFPDF_a84252c77b8f99df59e282bb23e7c9194}} 
+\index{FPDF@{FPDF}!\$FontFiles@{\$FontFiles}}
+\index{\$FontFiles@{\$FontFiles}!FPDF@{FPDF}}
+\doxysubsubsection{\$FontFiles}
+{\footnotesize\ttfamily FPDF\+::\$\+Font\+Files\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 42 of file fpdf.\+php.
+
+\mbox{\label{classFPDF_ab3884861f6396ba263c88adc1644f61f}} 
+\index{FPDF@{FPDF}!\$fontpath@{\$fontpath}}
+\index{\$fontpath@{\$fontpath}!FPDF@{FPDF}}
+\doxysubsubsection{\$fontpath}
+{\footnotesize\ttfamily FPDF\+::\$fontpath\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 39 of file fpdf.\+php.
+
+
+
+Referenced by Add\+Font().
+
+\mbox{\label{classFPDF_ad9fe36831d63d0ef57539a0cccef2b49}} 
+\index{FPDF@{FPDF}!\$fonts@{\$fonts}}
+\index{\$fonts@{\$fonts}!FPDF@{FPDF}}
+\doxysubsubsection{\$fonts}
+{\footnotesize\ttfamily FPDF\+::\$fonts\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 41 of file fpdf.\+php.
+
+\mbox{\label{classFPDF_ab99639f298b8daefa72e6fbc487eeae6}} 
+\index{FPDF@{FPDF}!\$FontSize@{\$FontSize}}
+\index{\$FontSize@{\$FontSize}!FPDF@{FPDF}}
+\doxysubsubsection{\$FontSize}
+{\footnotesize\ttfamily FPDF\+::\$\+Font\+Size\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 50 of file fpdf.\+php.
+
+\mbox{\label{classFPDF_ad7b6864ec7f83300c00ae1a1c9123c0b}} 
+\index{FPDF@{FPDF}!\$FontSizePt@{\$FontSizePt}}
+\index{\$FontSizePt@{\$FontSizePt}!FPDF@{FPDF}}
+\doxysubsubsection{\$FontSizePt}
+{\footnotesize\ttfamily FPDF\+::\$\+Font\+Size\+Pt\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 49 of file fpdf.\+php.
+
+
+
+Referenced by Add\+Page(), and Set\+Font().
+
+\mbox{\label{classFPDF_a20531c00b4f38558ee888a16e16ef768}} 
+\index{FPDF@{FPDF}!\$FontStyle@{\$FontStyle}}
+\index{\$FontStyle@{\$FontStyle}!FPDF@{FPDF}}
+\doxysubsubsection{\$FontStyle}
+{\footnotesize\ttfamily FPDF\+::\$\+Font\+Style\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 46 of file fpdf.\+php.
+
+\mbox{\label{classFPDF_a6bb420fc8cb8cf3d2218bb9148394999}} 
+\index{FPDF@{FPDF}!\$h@{\$h}}
+\index{\$h@{\$h}!FPDF@{FPDF}}
+\doxysubsubsection{\$h}
+{\footnotesize\ttfamily FPDF\+::\$h}
+
+
+
+Definition at line 30 of file fpdf.\+php.
+
+
+
+Referenced by \+\_\+parsepngstream(), Cell(), Get\+Page\+Height(), Image(), Link(), Ln(), Rect(), and Write().
+
+\mbox{\label{classFPDF_ac49ef47de69b357309f22c19231863e8}} 
+\index{FPDF@{FPDF}!\$hPt@{\$hPt}}
+\index{\$hPt@{\$hPt}!FPDF@{FPDF}}
+\doxysubsubsection{\$hPt}
+{\footnotesize\ttfamily FPDF\+::\$h\+Pt}
+
+
+
+Definition at line 29 of file fpdf.\+php.
+
+\mbox{\label{classFPDF_a33f2f41bb7d329c0ea53017ec21fd53e}} 
+\index{FPDF@{FPDF}!\$iconv@{\$iconv}}
+\index{\$iconv@{\$iconv}!FPDF@{FPDF}}
+\doxysubsubsection{\$iconv}
+{\footnotesize\ttfamily FPDF\+::\$iconv\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 20 of file fpdf.\+php.
+
+\mbox{\label{classFPDF_afc8b2e219390a60499ed3d6a28b31f2d}} 
+\index{FPDF@{FPDF}!\$images@{\$images}}
+\index{\$images@{\$images}!FPDF@{FPDF}}
+\doxysubsubsection{\$images}
+{\footnotesize\ttfamily FPDF\+::\$images\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 57 of file fpdf.\+php.
+
+\mbox{\label{classFPDF_a9550396e618abf65f024fb07b4c31bdd}} 
+\index{FPDF@{FPDF}!\$InFooter@{\$InFooter}}
+\index{\$InFooter@{\$InFooter}!FPDF@{FPDF}}
+\doxysubsubsection{\$InFooter}
+{\footnotesize\ttfamily FPDF\+::\$\+In\+Footer\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 63 of file fpdf.\+php.
+
+\mbox{\label{classFPDF_ad826d8f87302ffc1b53c3af9b32509e2}} 
+\index{FPDF@{FPDF}!\$InHeader@{\$InHeader}}
+\index{\$InHeader@{\$InHeader}!FPDF@{FPDF}}
+\doxysubsubsection{\$InHeader}
+{\footnotesize\ttfamily FPDF\+::\$\+In\+Header\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 62 of file fpdf.\+php.
+
+\mbox{\label{classFPDF_adadc589358125e9865dc6565722b7a08}} 
+\index{FPDF@{FPDF}!\$k@{\$k}}
+\index{\$k@{\$k}!FPDF@{FPDF}}
+\doxysubsubsection{\$k}
+{\footnotesize\ttfamily FPDF\+::\$k\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 21 of file fpdf.\+php.
+
+
+
+Referenced by \+\_\+\+\_\+construct(), \+\_\+beginpage(), Cell(), Image(), Set\+Font(), and Set\+Font\+Size().
+
+\mbox{\label{classFPDF_a95a0a41b723b698af4b1e4a08e443388}} 
+\index{FPDF@{FPDF}!\$lasth@{\$lasth}}
+\index{\$lasth@{\$lasth}!FPDF@{FPDF}}
+\doxysubsubsection{\$lasth}
+{\footnotesize\ttfamily FPDF\+::\$lasth\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 37 of file fpdf.\+php.
+
+
+
+Referenced by Ln().
+
+\mbox{\label{classFPDF_a8a1b8f011e83924e04fd4868e6a0fd25}} 
+\index{FPDF@{FPDF}!\$LayoutMode@{\$LayoutMode}}
+\index{\$LayoutMode@{\$LayoutMode}!FPDF@{FPDF}}
+\doxysubsubsection{\$LayoutMode}
+{\footnotesize\ttfamily FPDF\+::\$\+Layout\+Mode\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 66 of file fpdf.\+php.
+
+\mbox{\label{classFPDF_a563f4dec18a06abc382f2e31fe456fe8}} 
+\index{FPDF@{FPDF}!\$LineWidth@{\$LineWidth}}
+\index{\$LineWidth@{\$LineWidth}!FPDF@{FPDF}}
+\doxysubsubsection{\$LineWidth}
+{\footnotesize\ttfamily FPDF\+::\$\+Line\+Width\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 38 of file fpdf.\+php.
+
+
+
+Referenced by Add\+Page().
+
+\mbox{\label{classFPDF_ad75c5e32c5417504ba4d351e0383869f}} 
+\index{FPDF@{FPDF}!\$links@{\$links}}
+\index{\$links@{\$links}!FPDF@{FPDF}}
+\doxysubsubsection{\$links}
+{\footnotesize\ttfamily FPDF\+::\$links\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 59 of file fpdf.\+php.
+
+\mbox{\label{classFPDF_a52016e769b24e87eae66b3f3a7e9eb97}} 
+\index{FPDF@{FPDF}!\$lMargin@{\$lMargin}}
+\index{\$lMargin@{\$lMargin}!FPDF@{FPDF}}
+\doxysubsubsection{\$lMargin}
+{\footnotesize\ttfamily FPDF\+::\$l\+Margin\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 31 of file fpdf.\+php.
+
+
+
+Referenced by \+\_\+beginpage(), Cell(), Ln(), Multi\+Cell(), Set\+Y(), and Write().
+
+\mbox{\label{classFPDF_a50f76504973b7e2c53d99e8364500c99}} 
+\index{FPDF@{FPDF}!\$metadata@{\$metadata}}
+\index{\$metadata@{\$metadata}!FPDF@{FPDF}}
+\doxysubsubsection{\$metadata}
+{\footnotesize\ttfamily FPDF\+::\$metadata\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 67 of file fpdf.\+php.
+
+\mbox{\label{classFPDF_a718a78c2c592d0a027429947df12d161}} 
+\index{FPDF@{FPDF}!\$n@{\$n}}
+\index{\$n@{\$n}!FPDF@{FPDF}}
+\doxysubsubsection{\$n}
+{\footnotesize\ttfamily FPDF\+::\$n\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 14 of file fpdf.\+php.
+
+
+
+Referenced by \+\_\+parsepngstream(), and Add\+Link().
+
+\mbox{\label{classFPDF_a15347dda89239d5fa79ead40a72e0e34}} 
+\index{FPDF@{FPDF}!\$offsets@{\$offsets}}
+\index{\$offsets@{\$offsets}!FPDF@{FPDF}}
+\doxysubsubsection{\$offsets}
+{\footnotesize\ttfamily FPDF\+::\$offsets\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 15 of file fpdf.\+php.
+
+\mbox{\label{classFPDF_ab36ea1d04d26856c68ed3021b56eec5b}} 
+\index{FPDF@{FPDF}!\$page@{\$page}}
+\index{\$page@{\$page}!FPDF@{FPDF}}
+\doxysubsubsection{\$page}
+{\footnotesize\ttfamily FPDF\+::\$page\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 13 of file fpdf.\+php.
+
+
+
+Referenced by \+\_\+beginpage(), Link(), Page\+No(), and Set\+Link().
+
+\mbox{\label{classFPDF_a1a0fd03d8f95b0119fed813fe5c980a8}} 
+\index{FPDF@{FPDF}!\$PageBreakTrigger@{\$PageBreakTrigger}}
+\index{\$PageBreakTrigger@{\$PageBreakTrigger}!FPDF@{FPDF}}
+\doxysubsubsection{\$PageBreakTrigger}
+{\footnotesize\ttfamily FPDF\+::\$\+Page\+Break\+Trigger\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 61 of file fpdf.\+php.
+
+\mbox{\label{classFPDF_a02eaef1f2b452f10b1a6f297c200e622}} 
+\index{FPDF@{FPDF}!\$PageInfo@{\$PageInfo}}
+\index{\$PageInfo@{\$PageInfo}!FPDF@{FPDF}}
+\doxysubsubsection{\$PageInfo}
+{\footnotesize\ttfamily FPDF\+::\$\+Page\+Info\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 28 of file fpdf.\+php.
+
+\mbox{\label{classFPDF_a3e93616a74e983712775cb72a00fed38}} 
+\index{FPDF@{FPDF}!\$PageLinks@{\$PageLinks}}
+\index{\$PageLinks@{\$PageLinks}!FPDF@{FPDF}}
+\doxysubsubsection{\$PageLinks}
+{\footnotesize\ttfamily FPDF\+::\$\+Page\+Links\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 58 of file fpdf.\+php.
+
+\mbox{\label{classFPDF_a43708e8b1a7d9c88f08982c4473d7767}} 
+\index{FPDF@{FPDF}!\$pages@{\$pages}}
+\index{\$pages@{\$pages}!FPDF@{FPDF}}
+\doxysubsubsection{\$pages}
+{\footnotesize\ttfamily FPDF\+::\$pages\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 17 of file fpdf.\+php.
+
+\mbox{\label{classFPDF_a5d794ad25d8bbf69f42452deb7e1a2be}} 
+\index{FPDF@{FPDF}!\$PDFVersion@{\$PDFVersion}}
+\index{\$PDFVersion@{\$PDFVersion}!FPDF@{FPDF}}
+\doxysubsubsection{\$PDFVersion}
+{\footnotesize\ttfamily FPDF\+::\$\+PDFVersion\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 69 of file fpdf.\+php.
+
+\mbox{\label{classFPDF_a380553db1fe34ac31eab846ec98a366a}} 
+\index{FPDF@{FPDF}!\$rMargin@{\$rMargin}}
+\index{\$rMargin@{\$rMargin}!FPDF@{FPDF}}
+\doxysubsubsection{\$rMargin}
+{\footnotesize\ttfamily FPDF\+::\$r\+Margin\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 33 of file fpdf.\+php.
+
+\mbox{\label{classFPDF_a8aef065fb2791fd919608521a801b7d3}} 
+\index{FPDF@{FPDF}!\$state@{\$state}}
+\index{\$state@{\$state}!FPDF@{FPDF}}
+\doxysubsubsection{\$state}
+{\footnotesize\ttfamily FPDF\+::\$state\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 18 of file fpdf.\+php.
+
+\mbox{\label{classFPDF_a8cfbaabd6e5ec70a7d074323f2295a41}} 
+\index{FPDF@{FPDF}!\$StdPageSizes@{\$StdPageSizes}}
+\index{\$StdPageSizes@{\$StdPageSizes}!FPDF@{FPDF}}
+\doxysubsubsection{\$StdPageSizes}
+{\footnotesize\ttfamily FPDF\+::\$\+Std\+Page\+Sizes\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 24 of file fpdf.\+php.
+
+\mbox{\label{classFPDF_a258b7f98af80620e2d2425f75c1734ac}} 
+\index{FPDF@{FPDF}!\$TextColor@{\$TextColor}}
+\index{\$TextColor@{\$TextColor}!FPDF@{FPDF}}
+\doxysubsubsection{\$TextColor}
+{\footnotesize\ttfamily FPDF\+::\$\+Text\+Color\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 53 of file fpdf.\+php.
+
+
+
+Referenced by Add\+Page(), Set\+Fill\+Color(), and Set\+Text\+Color().
+
+\mbox{\label{classFPDF_a89d24fb15623f31293ef11860ec53a77}} 
+\index{FPDF@{FPDF}!\$tMargin@{\$tMargin}}
+\index{\$tMargin@{\$tMargin}!FPDF@{FPDF}}
+\doxysubsubsection{\$tMargin}
+{\footnotesize\ttfamily FPDF\+::\$t\+Margin\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 32 of file fpdf.\+php.
+
+
+
+Referenced by \+\_\+beginpage().
+
+\mbox{\label{classFPDF_a2d65d65ac5a4d1f173a2d61bfc7ca621}} 
+\index{FPDF@{FPDF}!\$underline@{\$underline}}
+\index{\$underline@{\$underline}!FPDF@{FPDF}}
+\doxysubsubsection{\$underline}
+{\footnotesize\ttfamily FPDF\+::\$underline\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 47 of file fpdf.\+php.
+
+\mbox{\label{classFPDF_adcb78dac68c4b261fab2a9c03de77177}} 
+\index{FPDF@{FPDF}!\$w@{\$w}}
+\index{\$w@{\$w}!FPDF@{FPDF}}
+\doxysubsubsection{\$w}
+{\footnotesize\ttfamily FPDF\+::\$w\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 30 of file fpdf.\+php.
+
+
+
+Referenced by \+\_\+dounderline(), \+\_\+parsepngstream(), Cell(), Get\+Page\+Width(), Get\+String\+Width(), Alchimie\+BAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}\+PDF\textbackslash{}\+Header(), Image(), Link(), Multi\+Cell(), Alchimie\+BAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}\+PDF\textbackslash{}\+Nb\+Lines(), Rect(), and Write().
+
+\mbox{\label{classFPDF_a297d000e17861cbd536f23eb037df75f}} 
+\index{FPDF@{FPDF}!\$WithAlpha@{\$WithAlpha}}
+\index{\$WithAlpha@{\$WithAlpha}!FPDF@{FPDF}}
+\doxysubsubsection{\$WithAlpha}
+{\footnotesize\ttfamily FPDF\+::\$\+With\+Alpha\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 55 of file fpdf.\+php.
+
+\mbox{\label{classFPDF_a7b22f93934a55c4d60d730ae69d94b6c}} 
+\index{FPDF@{FPDF}!\$wPt@{\$wPt}}
+\index{\$wPt@{\$wPt}!FPDF@{FPDF}}
+\doxysubsubsection{\$wPt}
+{\footnotesize\ttfamily FPDF\+::\$w\+Pt\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 29 of file fpdf.\+php.
+
+\mbox{\label{classFPDF_a05ee8f35c8f7e1d15680d28bb40eddf6}} 
+\index{FPDF@{FPDF}!\$ws@{\$ws}}
+\index{\$ws@{\$ws}!FPDF@{FPDF}}
+\doxysubsubsection{\$ws}
+{\footnotesize\ttfamily FPDF\+::\$ws\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 56 of file fpdf.\+php.
+
+
+
+Referenced by Cell().
+
+\mbox{\label{classFPDF_a84095b43bfc305f0b52c02075cb8674c}} 
+\index{FPDF@{FPDF}!\$x@{\$x}}
+\index{\$x@{\$x}!FPDF@{FPDF}}
+\doxysubsubsection{\$x}
+{\footnotesize\ttfamily FPDF\+::\$x\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 36 of file fpdf.\+php.
+
+
+
+Referenced by \+\_\+dounderline(), Cell(), Get\+X(), Image(), Link(), Multi\+Cell(), Rect(), Set\+X(), Set\+XY(), Text(), and Write().
+
+\mbox{\label{classFPDF_a9183f42c12c75728174c0e36aefc3144}} 
+\index{FPDF@{FPDF}!\$y@{\$y}}
+\index{\$y@{\$y}!FPDF@{FPDF}}
+\doxysubsubsection{\$y}
+{\footnotesize\ttfamily FPDF\+::\$y}
+
+
+
+Definition at line 36 of file fpdf.\+php.
+
+
+
+Referenced by \+\_\+dounderline(), Cell(), Get\+Y(), Image(), Link(), Rect(), Set\+Link(), Set\+Y(), and Text().
+
+\mbox{\label{classFPDF_afc97ebf2f645908e261c641fbf48be92}} 
+\index{FPDF@{FPDF}!\$ZoomMode@{\$ZoomMode}}
+\index{\$ZoomMode@{\$ZoomMode}!FPDF@{FPDF}}
+\doxysubsubsection{\$ZoomMode}
+{\footnotesize\ttfamily FPDF\+::\$\+Zoom\+Mode\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 65 of file fpdf.\+php.
+
+\mbox{\label{classFPDF_a7345a5b3138619c768e9077cd399312d}} 
+\index{FPDF@{FPDF}!VERSION@{VERSION}}
+\index{VERSION@{VERSION}!FPDF@{FPDF}}
+\doxysubsubsection{VERSION}
+{\footnotesize\ttfamily const FPDF\+::\+VERSION = \textquotesingle{}1.\+86\textquotesingle{}}
+
+
+
+Definition at line 12 of file fpdf.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+main/pdf/fpdf/\textbf{ fpdf.\+php}\end{DoxyCompactItemize}

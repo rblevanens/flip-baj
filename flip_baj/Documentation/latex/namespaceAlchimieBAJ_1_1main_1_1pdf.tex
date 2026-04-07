@@ -1,0 +1,101 @@
+\doxysection{Alchimie\+BAJ\textbackslash{}main\textbackslash{}pdf Namespace Reference}
+\label{namespaceAlchimieBAJ_1_1main_1_1pdf}\index{AlchimieBAJ\textbackslash{}main\textbackslash{}pdf@{AlchimieBAJ\textbackslash{}main\textbackslash{}pdf}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \textbf{ PDF}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Generer\+Facture} (\$id\+\_\+vendeur)
+\item 
+\textbf{ Generer\+Justificatif} (\$id\+\_\+acheteur)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ if}(is\+\_\+null(\$pdo)) \textbf{ \$sql} = \char`\"{}SELECT DISTINCT id\+\_\+utilisateur FROM \`{}al\+\_\+bourse\+\_\+liste\`{} WHERE id\+\_\+utilisateur$>$0 AND statut IN (2,3,4,5,6,7) AND annee=\char`\"{}.annee\+\_\+base
+\item 
+\textbf{ try}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{namespaceAlchimieBAJ_1_1main_1_1pdf_a655fb6f7edc900420816f1a16461aa6e}} 
+\index{AlchimieBAJ\textbackslash{}main\textbackslash{}pdf@{AlchimieBAJ\textbackslash{}main\textbackslash{}pdf}!GenererFacture@{GenererFacture}}
+\index{GenererFacture@{GenererFacture}!AlchimieBAJ\textbackslash{}main\textbackslash{}pdf@{AlchimieBAJ\textbackslash{}main\textbackslash{}pdf}}
+\doxysubsubsection{GenererFacture()}
+{\footnotesize\ttfamily Alchimie\+BAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}\+Generer\+Facture (\begin{DoxyParamCaption}\item[{}]{\$id\+\_\+vendeur }\end{DoxyParamCaption})}
+
+Génère une facture pour un vendeur donné. La facture est ensuite envoyée dans le dossier \$rep\+\_\+facture
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$id\+\_\+vendeur} & L\textquotesingle{}identifiant du vendeur pour lequel générer la facture. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 13 of file generer\+\_\+facture.\+php.
+
+
+
+References \$name, Alchimie\+BAJ\textbackslash{}main\textbackslash{}\$pdo, Alchimie\+BAJ\textbackslash{}main\textbackslash{}\$rep\+\_\+root, Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax\textbackslash{}\$res, Alchimie\+BAJ\textbackslash{}main\textbackslash{}\$\+SQL\+\_\+14\+\_\+pdfadd, Alchimie\+BAJ\textbackslash{}main\textbackslash{}\$\+SQL\+\_\+2\+\_\+getvendeur, Alchimie\+BAJ\textbackslash{}main\textbackslash{}\$\+SQL\+\_\+46\+\_\+get\+\_\+remboursement, Alchimie\+BAJ\textbackslash{}main\textbackslash{}\$\+SQL\+\_\+47\+\_\+get\+\_\+dons, Alchimie\+BAJ\textbackslash{}main\textbackslash{}\$\+SQL\+\_\+5\+\_\+1\+\_\+where\+Vendeur, Alchimie\+BAJ\textbackslash{}main\textbackslash{}\$\+SQL\+\_\+5\+\_\+6\+\_\+where\+Annee, Alchimie\+BAJ\textbackslash{}main\textbackslash{}\$\+SQL\+\_\+5\+\_\+7\+\_\+order\+By, Alchimie\+BAJ\textbackslash{}main\textbackslash{}\$\+SQL\+\_\+5\+\_\+getlistejeux, and Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax\textbackslash{}\$statement.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_1_1pdf_adb87ac5b3e55dd6ae8d119114e7cbf41}} 
+\index{AlchimieBAJ\textbackslash{}main\textbackslash{}pdf@{AlchimieBAJ\textbackslash{}main\textbackslash{}pdf}!GenererJustificatif@{GenererJustificatif}}
+\index{GenererJustificatif@{GenererJustificatif}!AlchimieBAJ\textbackslash{}main\textbackslash{}pdf@{AlchimieBAJ\textbackslash{}main\textbackslash{}pdf}}
+\doxysubsubsection{GenererJustificatif()}
+{\footnotesize\ttfamily Alchimie\+BAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}\+Generer\+Justificatif (\begin{DoxyParamCaption}\item[{}]{\$id\+\_\+acheteur }\end{DoxyParamCaption})}
+
+Génère un justificatif pour un acheteur donné. Le justificatif est ensuite envoyée dans \$rep\+\_\+justificatif
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$id\+\_\+acheteur} & L\textquotesingle{}identifiant de l\textquotesingle{}acheteur pour lequel générer le justificatif. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 13 of file generer\+\_\+justificatif.\+php.
+
+
+
+References \$name, Alchimie\+BAJ\textbackslash{}main\textbackslash{}\$pdo, Alchimie\+BAJ\textbackslash{}main\textbackslash{}\$rep\+\_\+root, Alchimie\+BAJ\textbackslash{}main\textbackslash{}\$\+SQL\+\_\+14\+\_\+pdfadd, Alchimie\+BAJ\textbackslash{}main\textbackslash{}\$\+SQL\+\_\+44\+\_\+getlistejeuxtransaction, Alchimie\+BAJ\textbackslash{}main\textbackslash{}\$\+SQL\+\_\+45\+\_\+get\+\_\+infos\+\_\+acheteur, Alchimie\+BAJ\textbackslash{}main\textbackslash{}\$\+SQL\+\_\+47\+\_\+get\+\_\+dons, and Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax\textbackslash{}\$statement.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\label{namespaceAlchimieBAJ_1_1main_1_1pdf_a891ce4918d659b3fc13910717572325f}} 
+\index{AlchimieBAJ\textbackslash{}main\textbackslash{}pdf@{AlchimieBAJ\textbackslash{}main\textbackslash{}pdf}!\$sql@{\$sql}}
+\index{\$sql@{\$sql}!AlchimieBAJ\textbackslash{}main\textbackslash{}pdf@{AlchimieBAJ\textbackslash{}main\textbackslash{}pdf}}
+\doxysubsubsection{\$sql}
+{\footnotesize\ttfamily while ( \$res=\$statement-\/$>$fetch()) Alchimie\+BAJ\+::main\+::pdf\textbackslash{}\$sql = \char`\"{}SELECT DISTINCT id\+\_\+utilisateur FROM \`{}al\+\_\+bourse\+\_\+liste\`{} WHERE id\+\_\+utilisateur$>$0 AND statut IN (2,3,4,5,6,7) AND annee=\char`\"{}.annee\+\_\+base}
+
+
+
+Definition at line 13 of file generer\+\_\+pdf.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_1_1pdf_ae1dcaa8cf230695154cf9fc6799b17f1}} 
+\index{AlchimieBAJ\textbackslash{}main\textbackslash{}pdf@{AlchimieBAJ\textbackslash{}main\textbackslash{}pdf}!try@{try}}
+\index{try@{try}!AlchimieBAJ\textbackslash{}main\textbackslash{}pdf@{AlchimieBAJ\textbackslash{}main\textbackslash{}pdf}}
+\doxysubsubsection{try}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\+::pdf\textbackslash{}try}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \$statement = \$pdo-\/>prepare(\$sql)}
+
+\end{DoxyCode}
+
+
+Definition at line 14 of file generer\+\_\+pdf.\+php.
+

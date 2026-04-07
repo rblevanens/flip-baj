@@ -1,0 +1,45 @@
+<?php
+namespace flip_baj\main\ajax;
+
+use PDOException;
+
+include ('../constantes.php');
+
+if (isset($_POST["id"])) {
+    $id = $_POST["id"];
+    $value = trim(strip_tags($_POST['value']));
+    include ('../pdo_connect.php');
+    if (is_null($pdo)) {
+        die('Could not connect to database!');
+    }
+    try {
+        $statement = $pdo->prepare($SQL_7_updateprixjeu);
+    } catch (PDOException $e) {
+        print "Erreur !: " . $e->getMessage() . "<br/>";
+        die();
+    }
+    if (! $statement) {
+        echo json_encode(array(
+            "message1" => $pdo->error,
+            "message2" => '0'
+        ));
+    }
+    if (! $statement->execute([
+        'vendu' => $value,
+        'id' => $id
+    ])) {
+        echo json_encode(array(
+            "message1" => $statement->error,
+            "message2" => '0'
+        ));
+    }
+
+    echo json_encode(array(
+        "message1" => $statement->affected_rows,
+        "message2" => '1'
+    ));
+
+    $statement = null;
+    $pdo = null;
+}
+?>

@@ -1,0 +1,22 @@
+\doxysection{main/ajax/jeuxliste-\/getenstockspeed.php File Reference}
+\label{jeuxliste-getenstockspeed_8php}\index{main/ajax/jeuxliste-\/getenstockspeed.php@{main/ajax/jeuxliste-\/getenstockspeed.php}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \textbf{ Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax}
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax\+::if} (!isset( \$\+\_\+\+SERVER[ \textquotesingle{}HTTP\+\_\+\+X\+\_\+\+REQUESTED\+\_\+\+WITH\textquotesingle{}])$\vert$$\vert$strtolower( \$\+\_\+\+SERVER[ \textquotesingle{}HTTP\+\_\+\+X\+\_\+\+REQUESTED\+\_\+\+WITH\textquotesingle{}]) !=\textquotesingle{}xmlhttprequest\textquotesingle{})
+\item 
+if(is\+\_\+null(\$pdo)) \textbf{ Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax\+::\$sql\+Conditions} = array()
+\item 
+\textbf{ Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax\+::\$sql\+Parameters} = array()
+\item 
+if(isset(\$\+\_\+\+POST[\textquotesingle{}id\+Vendeur\textquotesingle{}])) if(isset(\$\+\_\+\+POST[\textquotesingle{}id\+Statut\textquotesingle{}])) if(isset(\$\+\_\+\+POST[\textquotesingle{}vigilance\textquotesingle{}])) if(isset(\$\+\_\+\+POST[\textquotesingle{}code\+\_\+barre\textquotesingle{}])) if(isset(\$\+\_\+\+POST[\textquotesingle{}nom\+\_\+jeu\textquotesingle{}])) \textbf{ Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax\+::\$sql\+Conditions} [$\,$] = \$SQL\+\_\+5\+\_\+6\+\_\+where\+Annee
+\item 
+\textbf{ Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax\+::\$sql\+Query} = \$SQL\+\_\+5\+\_\+getlistejeux . implode(\textquotesingle{} AND \textquotesingle{}, \$sql\+Conditions) . \$SQL\+\_\+5\+\_\+7\+\_\+order\+By
+\item 
+while(\$jeu=\$statement-\/$>$fetch()) \textbf{ Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax\+::\$json\+\_\+data}
+\end{DoxyCompactItemize}

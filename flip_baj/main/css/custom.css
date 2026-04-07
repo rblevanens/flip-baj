@@ -1,0 +1,38 @@
+/* Permet d'avoir la même hauteur pour toutes les cartes*/
+.card-title {
+            min-height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+/* Rajoute la couleur bleu de background */
+.bg-bleu {
+	background-color:#0098d7;
+}
+/*Mets le champ de recherche à la suite de l'intitulé*/
+.dt-search{
+	float:right
+} 
+
+.modal-title{
+	line-height:1;
+}
+
+th{
+	background-color:#0d6efd !important;
+	color:white !important;
+}
+
+/*Classe des placeholder .editable*/
+.holder {
+  font-size: 0.7em;
+}
+
+.invalid-feedback {
+	display: visible
+}
+
+.text-decoration-none {
+	text-decoration: none !important
+}

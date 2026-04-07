@@ -1,0 +1,196 @@
+\doxysection{main/pdf/fpdf/font/makefont/makefont.php File Reference}
+\label{makefont_8php}\index{main/pdf/fpdf/font/makefont/makefont.php@{main/pdf/fpdf/font/makefont/makefont.php}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Read\+Map} (\$enc)
+\item 
+\textbf{ Read\+AFM} (\$file, \&\$map)
+\item 
+\textbf{ Make\+Font\+Descriptor} (\$fm, \$symbolic)
+\item 
+\textbf{ Make\+Width\+Array} (\$fm)
+\item 
+\textbf{ Make\+Font\+Encoding} (\$map)
+\item 
+\textbf{ Save\+To\+File} (\$file, \$s, \$mode)
+\item 
+\textbf{ Read\+Short} (\$f)
+\item 
+\textbf{ Read\+Long} (\$f)
+\item 
+\textbf{ Check\+TTF} (\$file)
+\item 
+\textbf{ Make\+Font} (\$fontfile, \$afmfile, \$enc=\textquotesingle{}cp1252\textquotesingle{}, \$patch=array(), \$type=\textquotesingle{}True\+Type\textquotesingle{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{makefont_8php_a77e282eb3da32ac811d34defeb16c071}} 
+\index{makefont.php@{makefont.php}!CheckTTF@{CheckTTF}}
+\index{CheckTTF@{CheckTTF}!makefont.php@{makefont.php}}
+\doxysubsubsection{CheckTTF()}
+{\footnotesize\ttfamily Check\+TTF (\begin{DoxyParamCaption}\item[{}]{\$file }\end{DoxyParamCaption})}
+
+
+
+Definition at line 253 of file makefont.\+php.
+
+
+
+References \$file, Read\+Long(), and Read\+Short().
+
+
+
+Referenced by Make\+Font().
+
+\mbox{\label{makefont_8php_a8ee25a4dbcc0f5237a1d8a2a63f61a32}} 
+\index{makefont.php@{makefont.php}!MakeFont@{MakeFont}}
+\index{MakeFont@{MakeFont}!makefont.php@{makefont.php}}
+\doxysubsubsection{MakeFont()}
+{\footnotesize\ttfamily Make\+Font (\begin{DoxyParamCaption}\item[{}]{\$fontfile,  }\item[{}]{\$afmfile,  }\item[{}]{\$enc = {\ttfamily \textquotesingle{}cp1252\textquotesingle{}},  }\item[{}]{\$patch = {\ttfamily array()},  }\item[{}]{\$type = {\ttfamily \textquotesingle{}TrueType\textquotesingle{}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 300 of file makefont.\+php.
+
+
+
+References \$diff, \$enc, \$file, Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax\textbackslash{}\$type, Check\+TTF(), Make\+Font\+Descriptor(), Make\+Font\+Encoding(), Make\+Width\+Array(), Read\+AFM(), Read\+Map(), and Save\+To\+File().
+
+\mbox{\label{makefont_8php_a6e3d2e58bb5546f47003a43606f89324}} 
+\index{makefont.php@{makefont.php}!MakeFontDescriptor@{MakeFontDescriptor}}
+\index{MakeFontDescriptor@{MakeFontDescriptor}!makefont.php@{makefont.php}}
+\doxysubsubsection{MakeFontDescriptor()}
+{\footnotesize\ttfamily Make\+Font\+Descriptor (\begin{DoxyParamCaption}\item[{}]{\$fm,  }\item[{}]{\$symbolic }\end{DoxyParamCaption})}
+
+
+
+Definition at line 137 of file makefont.\+php.
+
+
+
+References \$desc.
+
+
+
+Referenced by Make\+Font().
+
+\mbox{\label{makefont_8php_a6a51afba9135056d951a104d55f6af12}} 
+\index{makefont.php@{makefont.php}!MakeFontEncoding@{MakeFontEncoding}}
+\index{MakeFontEncoding@{MakeFontEncoding}!makefont.php@{makefont.php}}
+\doxysubsubsection{MakeFontEncoding()}
+{\footnotesize\ttfamily Make\+Font\+Encoding (\begin{DoxyParamCaption}\item[{}]{\$map }\end{DoxyParamCaption})}
+
+
+
+Definition at line 213 of file makefont.\+php.
+
+
+
+References Read\+Map().
+
+
+
+Referenced by Make\+Font().
+
+\mbox{\label{makefont_8php_a40178149f9fc4ceefe18e85a8ee72b5d}} 
+\index{makefont.php@{makefont.php}!MakeWidthArray@{MakeWidthArray}}
+\index{MakeWidthArray@{MakeWidthArray}!makefont.php@{makefont.php}}
+\doxysubsubsection{MakeWidthArray()}
+{\footnotesize\ttfamily Make\+Width\+Array (\begin{DoxyParamCaption}\item[{}]{\$fm }\end{DoxyParamCaption})}
+
+
+
+Definition at line 188 of file makefont.\+php.
+
+
+
+References \$cw.
+
+
+
+Referenced by Make\+Font().
+
+\mbox{\label{makefont_8php_a05153df7750f31a517f7fab3b0afb1a7}} 
+\index{makefont.php@{makefont.php}!ReadAFM@{ReadAFM}}
+\index{ReadAFM@{ReadAFM}!makefont.php@{makefont.php}}
+\doxysubsubsection{ReadAFM()}
+{\footnotesize\ttfamily Read\+AFM (\begin{DoxyParamCaption}\item[{}]{\$file,  }\item[{\&}]{\$map }\end{DoxyParamCaption})}
+
+
+
+Definition at line 36 of file makefont.\+php.
+
+
+
+References \$file, and Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax\textbackslash{}\$param.
+
+
+
+Referenced by Make\+Font().
+
+\mbox{\label{makefont_8php_a75e09243fcc909c5e7eee12a1a8443ce}} 
+\index{makefont.php@{makefont.php}!ReadLong@{ReadLong}}
+\index{ReadLong@{ReadLong}!makefont.php@{makefont.php}}
+\doxysubsubsection{ReadLong()}
+{\footnotesize\ttfamily Read\+Long (\begin{DoxyParamCaption}\item[{}]{\$f }\end{DoxyParamCaption})}
+
+
+
+Definition at line 247 of file makefont.\+php.
+
+
+
+Referenced by Check\+TTF().
+
+\mbox{\label{makefont_8php_ae90b352d148d853ac7cb8488be9d199f}} 
+\index{makefont.php@{makefont.php}!ReadMap@{ReadMap}}
+\index{ReadMap@{ReadMap}!makefont.php@{makefont.php}}
+\doxysubsubsection{ReadMap()}
+{\footnotesize\ttfamily Read\+Map (\begin{DoxyParamCaption}\item[{}]{\$enc }\end{DoxyParamCaption})}
+
+
+
+Definition at line 10 of file makefont.\+php.
+
+
+
+References \$enc, and \$file.
+
+
+
+Referenced by Make\+Font(), and Make\+Font\+Encoding().
+
+\mbox{\label{makefont_8php_a6d8bd1fd7e2f3ecdc21ef2b31566b4c0}} 
+\index{makefont.php@{makefont.php}!ReadShort@{ReadShort}}
+\index{ReadShort@{ReadShort}!makefont.php@{makefont.php}}
+\doxysubsubsection{ReadShort()}
+{\footnotesize\ttfamily Read\+Short (\begin{DoxyParamCaption}\item[{}]{\$f }\end{DoxyParamCaption})}
+
+
+
+Definition at line 241 of file makefont.\+php.
+
+
+
+Referenced by Check\+TTF().
+
+\mbox{\label{makefont_8php_abd2121a3e400e1df96d0dac02ade77a2}} 
+\index{makefont.php@{makefont.php}!SaveToFile@{SaveToFile}}
+\index{SaveToFile@{SaveToFile}!makefont.php@{makefont.php}}
+\doxysubsubsection{SaveToFile()}
+{\footnotesize\ttfamily Save\+To\+File (\begin{DoxyParamCaption}\item[{}]{\$file,  }\item[{}]{\$s,  }\item[{}]{\$mode }\end{DoxyParamCaption})}
+
+
+
+Definition at line 232 of file makefont.\+php.
+
+
+
+References \$file.
+
+
+
+Referenced by Make\+Font().
+

@@ -1,0 +1,28 @@
+\doxysection{main/ajax/jeux-\/get.php File Reference}
+\label{jeux-get_8php}\index{main/ajax/jeux-\/get.php@{main/ajax/jeux-\/get.php}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \textbf{ Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax}
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+if(is\+\_\+null(\$pdo)) \textbf{ Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax\+::\$term} = trim(strip\+\_\+tags(\$\+\_\+\+GET[\textquotesingle{}term\textquotesingle{}]))
+\item 
+\textbf{ Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax\+::\$exact} = trim(strip\+\_\+tags(\$\+\_\+\+GET[\textquotesingle{}exact\textquotesingle{}]))
+\item 
+else \textbf{ Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax\+::\$new\+Parameter} = \textquotesingle{}\%\textquotesingle{} . \$term . \textquotesingle{}\%\textquotesingle{}
+\item 
+\textbf{ Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax\+::\$total\+Data} = 0
+\item 
+\textbf{ Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax\+::\$a\+\_\+json} = array()
+\item 
+\textbf{ Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax\+::\$a\+\_\+json\+\_\+row} = array()
+\item 
+\textbf{ Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax\+::while} ( \$jeu=\$statement-\/$>$fetch())
+\item 
+\textbf{ Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax\+::\$statement} = null
+\item 
+\textbf{ Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax\+::\$pdo} = null
+\end{DoxyCompactItemize}

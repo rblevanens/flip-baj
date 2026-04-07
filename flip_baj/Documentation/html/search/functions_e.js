@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['savetofile_578',['SaveToFile',['../makefont_8php.html#abd2121a3e400e1df96d0dac02ade77a2',1,'makefont.php']]],
+  ['setauthor_579',['SetAuthor',['../classFPDF.html#a2448f729ffdee950dca638910a31a206',1,'FPDF']]],
+  ['setautopagebreak_580',['SetAutoPageBreak',['../classFPDF.html#a55c2e62a11e10dd7bc0c8aa089ba1c5e',1,'FPDF']]],
+  ['setcompression_581',['SetCompression',['../classFPDF.html#ab56cc065fff6c44c473c7f0428876486',1,'FPDF']]],
+  ['setcreator_582',['SetCreator',['../classFPDF.html#ad528c02fc9104993d5b8c4d3f4a5ae00',1,'FPDF']]],
+  ['setdisplaymode_583',['SetDisplayMode',['../classFPDF.html#aa0695aab6e2889198e94a48b87ddaae6',1,'FPDF']]],
+  ['setdrawcolor_584',['SetDrawColor',['../classFPDF.html#a2699cc6ff46c7cf2953e5e740f456d75',1,'FPDF']]],
+  ['setfillcolor_585',['SetFillColor',['../classFPDF.html#ac01941b00b99afca24dec97591665a3c',1,'FPDF']]],
+  ['setfont_586',['SetFont',['../classFPDF.html#a82acf7b1322a634829b56bb209045e1c',1,'FPDF']]],
+  ['setfontsize_587',['SetFontSize',['../classFPDF.html#a47d041deb672f69250c936a234eead14',1,'FPDF']]],
+  ['setkeywords_588',['SetKeywords',['../classFPDF.html#a97c034e7f4c04395a54f09f582544a97',1,'FPDF']]],
+  ['setleftmargin_589',['SetLeftMargin',['../classFPDF.html#a64306dab17b5156dbb09151818ebf98b',1,'FPDF']]],
+  ['setlinewidth_590',['SetLineWidth',['../classFPDF.html#ac8e8290a814b06303c1dfff06ee24acb',1,'FPDF']]],
+  ['setlink_591',['SetLink',['../classFPDF.html#ab0137580cd5c01b4a48f4aec276706d4',1,'FPDF']]],
+  ['setmargins_592',['SetMargins',['../classFPDF.html#a03ee8480b6a0b9362820d225c309f603',1,'FPDF']]],
+  ['setrightmargin_593',['SetRightMargin',['../classFPDF.html#a1008ef2dbf448c60dd2f9324bcc6601a',1,'FPDF']]],
+  ['setsubject_594',['SetSubject',['../classFPDF.html#a29e614b472d76809a7f24d8382b2aec8',1,'FPDF']]],
+  ['settextcolor_595',['SetTextColor',['../classFPDF.html#a59f12883ff2b60013eb0fe2c8c7e2dd5',1,'FPDF']]],
+  ['settitle_596',['SetTitle',['../classFPDF.html#a8a8a4c77944aae4ac0219fefbe53b494',1,'FPDF']]],
+  ['settopmargin_597',['SetTopMargin',['../classFPDF.html#aeb7511c3d686e2aa9f9496f1b1ec147f',1,'FPDF']]],
+  ['setx_598',['SetX',['../classFPDF.html#a2bfd055c0ed78a7929fa17ba64f9cf65',1,'FPDF']]],
+  ['setxy_599',['SetXY',['../classFPDF.html#a2c191daee30b7ea3a66696bd0be92a3e',1,'FPDF']]],
+  ['sety_600',['SetY',['../classFPDF.html#a4768e6a2e16609de970c365bb9f25ed8',1,'FPDF']]]
+];

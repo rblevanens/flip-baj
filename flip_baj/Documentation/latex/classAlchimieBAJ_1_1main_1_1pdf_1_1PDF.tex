@@ -1,0 +1,181 @@
+\doxysection{Alchimie\+BAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}PDF Class Reference}
+\label{classAlchimieBAJ_1_1main_1_1pdf_1_1PDF}\index{AlchimieBAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}PDF@{AlchimieBAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}PDF}}
+Inheritance diagram for Alchimie\+BAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}PDF\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classAlchimieBAJ_1_1main_1_1pdf_1_1PDF}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Header} ()
+\item 
+\textbf{ Footer} ()
+\item 
+\textbf{ Ecrire\+Sur\+Plusieurs\+Lignes} (\$entree, \$taille, \$nb\+\_\+lignes)
+\item 
+\textbf{ Nb\+Lines} (\$w, \$txt)
+\item 
+\textbf{ Table} (\$col\+\_\+titles, \$col\+\_\+widths, \$table\+\_\+content, \$titre=\textquotesingle{}\textquotesingle{}, \$decalage=10)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \$title} = \textquotesingle{}\textquotesingle{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 8 of file PDF.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{classAlchimieBAJ_1_1main_1_1pdf_1_1PDF_a7086557e73e67de4ffe4b4529e544e4a}} 
+\index{AlchimieBAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}PDF@{AlchimieBAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}PDF}!EcrireSurPlusieursLignes@{EcrireSurPlusieursLignes}}
+\index{EcrireSurPlusieursLignes@{EcrireSurPlusieursLignes}!AlchimieBAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}PDF@{AlchimieBAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}PDF}}
+\doxysubsubsection{EcrireSurPlusieursLignes()}
+{\footnotesize\ttfamily Alchimie\+BAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}\+PDF\+::\+Ecrire\+Sur\+Plusieurs\+Lignes (\begin{DoxyParamCaption}\item[{}]{\$entree,  }\item[{}]{\$taille,  }\item[{}]{\$nb\+\_\+lignes }\end{DoxyParamCaption})}
+
+Divise une entrée en plusieurs lignes si sa largeur dépasse la taille donnée.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$entree} & L\textquotesingle{}entrée à diviser en lignes. \\
+\hline
+integer & {\em \$taille} & La taille maximale des lignes. \\
+\hline
+integer & {\em \$nb\+\_\+lignes} & Le nombre de lignes avant l\textquotesingle{}écriture. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Le nombre de lignes après l\textquotesingle{}écriture. 
+\end{DoxyReturn}
+
+
+Definition at line 65 of file PDF.\+php.
+
+
+
+References FPDF\textbackslash{}\+Cell(), and FPDF\textbackslash{}\+Get\+String\+Width().
+
+\mbox{\label{classAlchimieBAJ_1_1main_1_1pdf_1_1PDF_a2f6c69cf826908022a585a11e5b0b286}} 
+\index{AlchimieBAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}PDF@{AlchimieBAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}PDF}!Footer@{Footer}}
+\index{Footer@{Footer}!AlchimieBAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}PDF@{AlchimieBAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}PDF}}
+\doxysubsubsection{Footer()}
+{\footnotesize\ttfamily Alchimie\+BAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}\+PDF\+::\+Footer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \textbf{ FPDF} \doxyref{}{p.}{classFPDF_aaa8da01869c5e5a75ff9150016dad08d}.
+
+
+
+Definition at line 44 of file PDF.\+php.
+
+
+
+References FPDF\textbackslash{}\+Cell(), FPDF\textbackslash{}\+Page\+No(), FPDF\textbackslash{}\+Set\+Font(), and FPDF\textbackslash{}\+Set\+Y().
+
+\mbox{\label{classAlchimieBAJ_1_1main_1_1pdf_1_1PDF_a147f445905d8cb1ca9d465f14576e04f}} 
+\index{AlchimieBAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}PDF@{AlchimieBAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}PDF}!Header@{Header}}
+\index{Header@{Header}!AlchimieBAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}PDF@{AlchimieBAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}PDF}}
+\doxysubsubsection{Header()}
+{\footnotesize\ttfamily Alchimie\+BAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}\+PDF\+::\+Header (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \textbf{ FPDF} \doxyref{}{p.}{classFPDF_ab1bedba6d1753b9e3f18ed3820743fd6}.
+
+
+
+Definition at line 12 of file PDF.\+php.
+
+
+
+References FPDF\textbackslash{}\$w, FPDF\textbackslash{}\+Add\+Font(), FPDF\textbackslash{}\+Cell(), FPDF\textbackslash{}\+Get\+String\+Width(), FPDF\textbackslash{}\+Image(), FPDF\textbackslash{}\+Ln(), FPDF\textbackslash{}\+Page\+No(), FPDF\textbackslash{}\+Set\+Font(), FPDF\textbackslash{}\+Set\+Text\+Color(), and FPDF\textbackslash{}\+Set\+X().
+
+\mbox{\label{classAlchimieBAJ_1_1main_1_1pdf_1_1PDF_a214a1d7a571abbfe0aeffe4d8aee2402}} 
+\index{AlchimieBAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}PDF@{AlchimieBAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}PDF}!NbLines@{NbLines}}
+\index{NbLines@{NbLines}!AlchimieBAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}PDF@{AlchimieBAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}PDF}}
+\doxysubsubsection{NbLines()}
+{\footnotesize\ttfamily Alchimie\+BAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}\+PDF\+::\+Nb\+Lines (\begin{DoxyParamCaption}\item[{}]{\$w,  }\item[{}]{\$txt }\end{DoxyParamCaption})}
+
+Calcule le nombre de lignes nécessaires pour afficher un texte donné dans une cellule.
+
+
+\begin{DoxyParams}[1]{Parameters}
+float & {\em \$w} & La largeur de la cellule. \\
+\hline
+string & {\em \$txt} & Le texte à afficher dans la cellule. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Le nombre de lignes nécessaires pour afficher le texte. 
+\end{DoxyReturn}
+
+
+Definition at line 104 of file PDF.\+php.
+
+
+
+References FPDF\textbackslash{}\$w, and FPDF\textbackslash{}\+Get\+String\+Width().
+
+
+
+Referenced by Alchimie\+BAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}\+PDF\textbackslash{}\+Table().
+
+\mbox{\label{classAlchimieBAJ_1_1main_1_1pdf_1_1PDF_ac6725e960fbc4dbed1747bf22f11d96b}} 
+\index{AlchimieBAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}PDF@{AlchimieBAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}PDF}!Table@{Table}}
+\index{Table@{Table}!AlchimieBAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}PDF@{AlchimieBAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}PDF}}
+\doxysubsubsection{Table()}
+{\footnotesize\ttfamily Alchimie\+BAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}\+PDF\+::\+Table (\begin{DoxyParamCaption}\item[{}]{\$col\+\_\+titles,  }\item[{}]{\$col\+\_\+widths,  }\item[{}]{\$table\+\_\+content,  }\item[{}]{\$titre = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{\$decalage = {\ttfamily 10} }\end{DoxyParamCaption})}
+
+Crée un tableau avec des en-\/têtes de colonnes personnalisés et des données pour chaque ligne. Les couleurs et la police sont définies pour chaque élément du tableau.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$col\+\_\+titles} & un tableau contenant les en-\/têtes pour chaque colonne du tableau \\
+\hline
+array & {\em \$col\+\_\+widths} & un tableau contenant les largeurs de colonne pour chaque colonne \\
+\hline
+array & {\em \$table\+\_\+content} & un tableau multidimensionnel contenant les données à afficher dans le tableau \\
+\hline
+string & {\em \$titre} & une chaine de caractères correspondant au titre à mettre sur le tableau (facultatif, par défaut \textquotesingle{}\textquotesingle{}) \\
+\hline
+int & {\em \$decalage} & un décalage optionnel pour aligner le tableau différemment (facultatif, par défaut 10) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 144 of file PDF.\+php.
+
+
+
+References FPDF\textbackslash{}\+Add\+Page(), FPDF\textbackslash{}\+Cell(), FPDF\textbackslash{}\+Get\+Page\+Height(), FPDF\textbackslash{}\+Get\+X(), FPDF\textbackslash{}\+Get\+Y(), FPDF\textbackslash{}\+Ln(), FPDF\textbackslash{}\+Multi\+Cell(), Alchimie\+BAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}\+PDF\textbackslash{}\+Nb\+Lines(), FPDF\textbackslash{}\+Set\+Fill\+Color(), FPDF\textbackslash{}\+Set\+Font(), FPDF\textbackslash{}\+Set\+Text\+Color(), FPDF\textbackslash{}\+Set\+X(), and FPDF\textbackslash{}\+Set\+XY().
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\label{classAlchimieBAJ_1_1main_1_1pdf_1_1PDF_a298a49b2c2ad32fc1301cc015a782d03}} 
+\index{AlchimieBAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}PDF@{AlchimieBAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}PDF}!\$title@{\$title}}
+\index{\$title@{\$title}!AlchimieBAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}PDF@{AlchimieBAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}PDF}}
+\doxysubsubsection{\$title}
+{\footnotesize\ttfamily Alchimie\+BAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}\+PDF\+::\$title = \textquotesingle{}\textquotesingle{}}
+
+
+
+Definition at line 10 of file PDF.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+main/pdf/\textbf{ PDF.\+php}\end{DoxyCompactItemize}

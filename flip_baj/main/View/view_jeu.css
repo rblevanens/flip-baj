@@ -1,0 +1,63 @@
+/* Page de css    */ 
+
+
+/* 
+        **********header************** 
+*/
+
+.mb-1 {
+	margin-bottom: .25rem !important
+}
+
+.bg-bleu {
+	background-color:#0098d7;
+}
+
+.text-white {
+	--bs-text-opacity: 1;
+	color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important
+}
+
+.d-flex {
+	display: flex !important
+}
+
+.justify-content-between {
+	justify-content: space-between !important
+}
+
+.align-items-center {
+	align-items: center !important
+}
+
+.col-8 {
+	flex: 0 0 auto;
+	width: 66.66666667%
+}
+
+/* 
+        **********Main************** 
+*/
+
+.View_jeux_nom{
+	width: 80%;
+	background-color:#0098d7;
+	border-style: solid;
+	border-color: black;
+	border-width: 2px 2px 0 2px; /* Haut, Droit, Bas, Gauche */
+}
+
+.View_jeux_qtt{
+	width: 20%;
+	background-color:#0098d7;
+	border-color: black;
+	border-width: 2px 2px 0 2px; /* Haut, Droit, Bas, Gauche */
+}
+
+tr > th{
+	text-align: center;
+}
+
+.h2_view_jeux{
+	margin : 15px 0 15px 0 ; 
+}

@@ -1,0 +1,47 @@
+appel vendeur OK : id = 211
+appel vendeur OK : id = 211
+appel vendeur OK : id = 69
+appel vendeur OK : id = 99
+appel vendeur OK : id = 216
+appel vendeur OK : id = 99
+appel vendeur OK : id = 99
+appel vendeur OK : id = 216
+appel vendeur OK : id = 216
+appel vendeur OK : id = 216
+appel vendeur OK : id = 216
+appel vendeur OK : id = 216
+appel vendeur OK : id = 99
+appel vendeur OK : id = 99
+appel vendeur OK : id = 99
+appel vendeur OK : id = 223
+appel vendeur OK : id = 213
+appel vendeur OK : id = 213
+appel vendeur OK : id = 195
+appel vendeur OK : id = 195
+appel vendeur OK : id = 195
+Résultat SQL : false
+POST reçu : Array
+(
+    [idrestitution] => 195
+)
+appel vendeur OK : id = 195
+Résultat SQL : false
+POST reçu : Array
+(
+    [id] => 1
+    [type] => vendeur
+)
+POST reçu : Array
+(
+    [idrestitution] => 195
+)
+POST reçu : Array
+(
+    [id] => 1
+    [type] => vendeur
+)
+POST reçu : Array
+(
+    [id] => 1
+    [type] => vendeur
+)

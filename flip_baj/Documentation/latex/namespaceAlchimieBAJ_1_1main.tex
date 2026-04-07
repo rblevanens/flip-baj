@@ -1,0 +1,1978 @@
+\doxysection{Alchimie\+BAJ\textbackslash{}main Namespace Reference}
+\label{namespaceAlchimieBAJ_1_1main}\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \textbf{ ajax}
+\item 
+ \textbf{ pdf}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ check\+Password} (\$password)
+\item 
+\textbf{ csv\+From\+Array} (\$data)
+\item 
+\textbf{ Verif\+Code\+Barre} (\$code\+Barre\+AVerifier)
+\item 
+\textbf{ Prix\+Rendu} (\$prix)
+\item 
+\textbf{ Prix\+Rendu2\+Prix} (\$prix\+Rendu)
+\item 
+\textbf{ Afficher\+Dons} (\$id)
+\item 
+\textbf{ Afficher\+Trans} (\$type)
+\item 
+\textbf{ Afficher\+Remb} (\$id)
+\item 
+\textbf{ get\+User} (\$id\+Du\+Vendeur)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ if}(isset(\$\+\_\+\+COOKIE[\textquotesingle{}loggedin\textquotesingle{}]) \&\& \$\+\_\+\+COOKIE[\textquotesingle{}loggedin\textquotesingle{}]===\textquotesingle{}true\textquotesingle{}) \textbf{ else}
+\item 
+$<$ div class=\char`\"{}modal-\/content\char`\"{}$>$$<$ div class=\char`\"{}modal-\/body\char`\"{}$>$$<$ div class=\char`\"{}form-\/group\char`\"{}$>$$<$ label for=\char`\"{}Montant\+Ajout\char`\"{}$>$ Montant ajouté en euros$<$ i $>$ Mettre un devant en cas de retrait$<$/i $>$$<$/label $>$$<$ input type=\char`\"{}number\char`\"{} class=\char`\"{}form-\/control\char`\"{} name=\char`\"{}Montant\+Ajout\char`\"{} id=\char`\"{}Montant\+Ajout\char`\"{}$>$$<$/div $>$$<$ div class=\char`\"{}form-\/group\char`\"{}$>$$<$ label for=\char`\"{}Mdp\+Ajout\+Trans\char`\"{}$>$ Mot de passe$<$/label $>$$<$ input type=\char`\"{}password\char`\"{} class=\char`\"{}form-\/control\char`\"{} name=\char`\"{}Mdp\+Ajout\+Trans\char`\"{} id=\char`\"{}Mdp\+Ajout\+Trans\char`\"{}$>$$<$/div $>$$<$ div class=\char`\"{}form-\/group mt-\/2\char`\"{}$>$$<$ button class=\char`\"{}btn btn-\/success\char`\"{} id=\char`\"{}Save\+Transaction\char`\"{}$>$ Confirmer$<$/button $>$$<$ button class=\char`\"{}btn btn-\/danger\char`\"{} id=\char`\"{}modal-\/close\char`\"{} data-\/bs-\/dismiss=\char`\"{}modal\char`\"{}$>$ Annuler$<$/button $>$$<$/div $>$$<$/div $>$$<$/div $>$$<$/div $>$$<$/div $>$$<$/div $>$$<$!-\/-\/ Section pour afficher les Jeux en vigilance -\/-\/$>$$<$ div class=\char`\"{}col-\/sm-\/9\char`\"{}$>$$<$ div class=\char`\"{}card\char`\"{}$>$$<$ div class=\char`\"{}card-\/header bg-\/primary text-\/white\char`\"{}$>$$<$ h3 class=\char`\"{}card-\/title\char`\"{}$>$ Jeux en vigilance$<$/h3 $>$$<$/div $>$$<$ div class=\char`\"{}card-\/body\char`\"{}$>$$<$ div class=\char`\"{}row\char`\"{}$>$$<$ div class=\char`\"{}col-\/sm-\/6\char`\"{}$>$$<$ h4 $>$ Alchimie$<$/h4 $>$$<$ div class=\char`\"{}table-\/responsive max-\/height-\/table\char`\"{}$>$$<$ table class=\char`\"{}table table-\/bordered table-\/striped\char`\"{} id=\char`\"{}tableau\+Jeux\+Alchimie\char`\"{}$>$$<$ thead $>$$<$ tr class=\char`\"{}bg-\/info text-\/black\char`\"{}$>$$<$ th $>$ Nom$<$/th $>$$<$ th $>$ Code$<$/th $>$$<$ th $>$ Prix$<$/th $>$$<$ th $>$ Statut$<$/th $>$$<$/tr $>$$<$/thead $>$$<$ tbody $>$$<$!-\/-\/ Les données seront ajoutées dynamiquement via AJAX -\/-\/$>$$<$/tbody $>$$<$/table $>$$<$/div $>$$<$/div $>$$<$ div class=\char`\"{}col-\/sm-\/6\char`\"{}$>$$<$ h4 $>$ Autres vendeurs$<$/h4 $>$$<$ div class=\char`\"{}table-\/responsive\char`\"{}$>$$<$ table class=\char`\"{}table table-\/bordered table-\/striped\char`\"{} id=\char`\"{}tableau\+Jeux\+Autres\char`\"{}$>$$<$ thead $>$$<$ tr class=\char`\"{}bg-\/info text-\/black\char`\"{}$>$$<$ th $>$ Nom$<$/th $>$$<$ th $>$ Code$<$/th $>$$<$ th $>$ Prix$<$/th $>$$<$ th $>$ Statut$<$/th $>$$<$/tr $>$$<$/thead $>$$<$ tbody $>$$<$!-\/-\/ Les données seront ajoutées dynamiquement via AJAX -\/-\/$>$$<$/tbody $>$$<$/table $>$$<$/div $>$$<$/div $>$$<$/div $>$$<$/div $>$$<$/div $>$$<$/div $>$$<$/div $>$$<$ div class=\char`\"{}row mt-\/4\char`\"{}$>$$<$!-\/-\/ Section pour importer des fichiers -\/-\/$>$$<$ div class=\char`\"{}col-\/sm-\/3\char`\"{}$>$$<$ div class=\char`\"{}card\char`\"{}$>$$<$ div class=\char`\"{}card-\/header bg-\/primary text-\/white\char`\"{}$>$$<$ h3 class=\char`\"{}card-\/title\char`\"{}$>$ Importation des tables$<$/h3 $>$$<$/div $>$$<$ div class=\char`\"{}card-\/body text-\/center\char`\"{}$>$$<$ form id=\char`\"{}insert\+Table\char`\"{} method=\char`\"{}post\char`\"{} class=\char`\"{}needs-\/validation\char`\"{} novalidate $>$$<$!-\/-\/ Champ pour télécharger le fichier pour la table al\+\_\+bourse\+\_\+users -\/-\/$>$$<$ div class=\char`\"{}mb-\/3\char`\"{}$>$$<$ label for=\char`\"{}file\+\_\+user\char`\"{}$>$ Fichier pour \textbf{ al\+\_\+bourse\+\_\+users}
+\item 
+\textbf{ if}(!defined(\textquotesingle{}annee\+\_\+base\textquotesingle{})) \textbf{ \$rep\+\_\+root} = \char`\"{}/var/www/alchimiedujeu.\+com/Alchimie\+BAJ/Alchimie\+BAJ/main\char`\"{}
+\item 
+\textbf{ \$rep\+\_\+facture} = \char`\"{}/pdf/pdf/facture\char`\"{}
+\item 
+\textbf{ \$rep\+\_\+justificatif} = \char`\"{}/pdf/pdf/justificatif\char`\"{}
+\item 
+\textbf{ \$id\+\_\+sac} = \char`\"{}-\/1\char`\"{}
+\item 
+\textbf{ \$\+SQL\+\_\+1\+\_\+selectionvendeur}
+\item 
+\textbf{ \$\+SQL\+\_\+2\+\_\+getvendeur}
+\item 
+\textbf{ \$\+SQL\+\_\+3\+\_\+getjeux}
+\item 
+\textbf{ \$\+SQL\+\_\+4\+\_\+checkcodebarre}
+\item 
+\textbf{ \$\+SQL\+\_\+5\+\_\+getlistejeux}
+\item 
+\textbf{ \$\+SQL\+\_\+5\+\_\+1\+\_\+where\+Vendeur} = \textquotesingle{} v\+\_\+bourse\+\_\+liste.\+id\+\_\+utilisateur = \+:id\+Vendeur\textquotesingle{}
+\item 
+\textbf{ \$\+SQL\+\_\+5\+\_\+2\+\_\+where\+Statut} = \textquotesingle{} v\+\_\+bourse\+\_\+liste.\+id\+\_\+statut = \+:id\+Statut\textquotesingle{}
+\item 
+\textbf{ \$\+SQL\+\_\+5\+\_\+3\+\_\+where\+Vigilance} = \textquotesingle{} v\+\_\+bourse\+\_\+liste.\+vigilance = \+:vigilance\textquotesingle{}
+\item 
+\textbf{ \$\+SQL\+\_\+5\+\_\+4\+\_\+where\+Code} = \textquotesingle{} v\+\_\+bourse\+\_\+liste.\+code\+\_\+barre LIKE CONCAT(\char`\"{}\%\char`\"{},\+:code\+\_\+barre,\char`\"{}\%\char`\"{})\textquotesingle{}
+\item 
+\textbf{ \$\+SQL\+\_\+5\+\_\+5\+\_\+where\+Nom} = \textquotesingle{} v\+\_\+bourse\+\_\+liste.\+nom\+\_\+jeu LIKE CONCAT(\char`\"{}\%\char`\"{},\+:nom\+\_\+jeu,\char`\"{}\%\char`\"{})\textquotesingle{}
+\item 
+\textbf{ \$\+SQL\+\_\+5\+\_\+6\+\_\+where\+Annee} = \textquotesingle{} v\+\_\+bourse\+\_\+liste.\+annee= \textquotesingle{}.annee\+\_\+base
+\item 
+\textbf{ \$\+SQL\+\_\+5\+\_\+7\+\_\+order\+By} = \textquotesingle{} ORDER BY v\+\_\+bourse\+\_\+liste.\+nom\+\_\+jeu\textquotesingle{}
+\item 
+\textbf{ \$\+SQL\+\_\+6\+\_\+setvigilance}
+\item 
+\textbf{ \$\+SQL\+\_\+7\+\_\+updateprixjeu}
+\item 
+\textbf{ \$\+SQL\+\_\+8\+\_\+argentencaisse\+\_\+get}
+\item 
+\textbf{ \$\+SQL\+\_\+9\+\_\+acheteurget}
+\item 
+\textbf{ \$\+SQL\+\_\+10\+\_\+insertjeu}
+\item 
+\textbf{ \$\+SQL\+\_\+11\+\_\+insertlistejeu}
+\item 
+\textbf{ \$\+SQL\+\_\+12\+\_\+dellistejeu}
+\item 
+\textbf{ \$\+SQL\+\_\+13\+\_\+updatestatutlistejeu}
+\item 
+\textbf{ \$\+SQL\+\_\+13\+\_\+01\+\_\+code} =\textquotesingle{}, code\+\_\+barre=\+:code\+\_\+barre\textquotesingle{}
+\item 
+\textbf{ \$\+SQL\+\_\+13\+\_\+02\+\_\+iddepot} =\textquotesingle{}, id\+\_\+depot=\+:id\+\_\+depot, date\+\_\+reception= \+:date\+\_\+reception\textquotesingle{}
+\item 
+\textbf{ \$\+SQL\+\_\+13\+\_\+04\+\_\+datesortie} =\textquotesingle{}, date\+\_\+sortie\+\_\+stock= \+:date\+\_\+sortie\textquotesingle{}
+\item 
+\textbf{ \$\+SQL\+\_\+13\+\_\+05\+\_\+whereid} =\textquotesingle{} WHERE id=\+:id\textquotesingle{}
+\item 
+\textbf{ \$\+SQL\+\_\+14\+\_\+pdfadd}
+\item 
+\textbf{ \$\+SQL\+\_\+15\+\_\+01\+\_\+get\+\_\+infos\+\_\+exemplaire}
+\item 
+\textbf{ \$\+SQL\+\_\+15\+\_\+02\+\_\+update\+\_\+liste}
+\item 
+\textbf{ \$\+SQL\+\_\+16\+\_\+getminpricelistejeux}
+\item 
+\textbf{ \$\+SQL\+\_\+17\+\_\+getargentdejapaye}
+\item 
+\textbf{ \$\+SQL\+\_\+18\+\_\+getlistejeuxtotalvente}
+\item 
+\textbf{ \$\+SQL\+\_\+19\+\_\+donadd}
+\item 
+\textbf{ \$\+SQL\+\_\+20\+\_\+getvendeurbyemail}
+\item 
+\textbf{ \$\+SQL\+\_\+20\+\_\+01\+\_\+getvendeurbyemail}
+\item 
+\textbf{ \$\+SQL\+\_\+20\+\_\+02\+\_\+getvendeurbynom}
+\item 
+\textbf{ \$\+SQL\+\_\+21\+\_\+getlistejeuxstock}
+\item 
+\textbf{ \$\+SQL\+\_\+21\+\_\+getlistejeuxstockspeed}
+\item 
+\textbf{ \$\+SQL\+\_\+22\+\_\+transactionadd}
+\item 
+\textbf{ \$\+SQL\+\_\+23\+\_\+transaction\+Update}
+\item 
+\textbf{ \$\+SQL\+\_\+24\+\_\+transactionlisteadd}
+\item 
+\textbf{ \$\+SQL\+\_\+24\+B\+\_\+transactionlistedel}
+\item 
+\textbf{ \$\+SQL\+\_\+25\+\_\+getlistevente}
+\item 
+\textbf{ \$\+SQL\+\_\+26\+\_\+get\+Infos\+Jeux}
+\item 
+\textbf{ \$\+SQL\+\_\+27\+\_\+get\+Infos\+Ventes}
+\item 
+\textbf{ \$\+SQL\+\_\+28\+\_\+get\+Infos\+Remb}
+\item 
+\textbf{ \$\+SQL\+\_\+29\+\_\+get\+Infos\+Dons}
+\item 
+\textbf{ \$\+SQL\+\_\+30\+\_\+journal\+Statut}
+\item 
+\textbf{ \$\+SQL\+\_\+31\+\_\+getacheteur}
+\item 
+\textbf{ \$\+SQL\+\_\+31\+\_\+byemail} = \char`\"{} email LIKE \+:email\char`\"{}
+\item 
+\textbf{ \$\+SQL\+\_\+31\+\_\+bynom} = \char`\"{} nom LIKE \+:nom\char`\"{}
+\item 
+\textbf{ \$\+SQL\+\_\+31\+\_\+byprenom} = \char`\"{} prenom LIKE \+:prenom\char`\"{}
+\item 
+\textbf{ \$\+SQL\+\_\+32\+\_\+acheteuradd}
+\item 
+\textbf{ \$\+SQL\+\_\+33\+\_\+acheteurupdate}
+\item 
+\textbf{ \$\+SQL\+\_\+34\+\_\+acheteurassoc}
+\item 
+\textbf{ \$\+SQL\+\_\+36\+\_\+remboursement\+\_\+add}
+\item 
+\textbf{ \$\+SQL\+\_\+37\+\_\+user\+\_\+add}
+\item 
+\textbf{ \$\+SQL\+\_\+37\+\_\+01\+\_\+al\+\_\+bourse\+\_\+users\+\_\+update}
+\item 
+\textbf{ \$\+SQL\+\_\+38\+\_\+unser\+\_\+name\+\_\+prenom\+\_\+checker}
+\item 
+\textbf{ \$\+SQL\+\_\+39\+\_\+creation\+\_\+acheteur}
+\item 
+\textbf{ \$\+SQL\+\_\+40\+\_\+modification\+\_\+acheteur}
+\item 
+\textbf{ \$\+SQL\+\_\+41\+\_\+attribution\+\_\+acheteur\+\_\+transaction}
+\item 
+\textbf{ \$\+SQL\+\_\+42\+\_\+check\+\_\+doublon\+\_\+nom}
+\item 
+\textbf{ \$\+SQL\+\_\+43\+\_\+get\+Trans}
+\item 
+\textbf{ \$\+SQL\+\_\+44\+\_\+getlistejeuxtransaction}
+\item 
+\textbf{ \$\+SQL\+\_\+45\+\_\+get\+\_\+infos\+\_\+acheteur}
+\item 
+\textbf{ \$\+SQL\+\_\+46\+\_\+get\+\_\+remboursement}
+\item 
+\textbf{ \$\+SQL\+\_\+47\+\_\+get\+\_\+dons}
+\item 
+\textbf{ \$zip\+File\+Name} = \textquotesingle{}export\+\_\+base\+\_\+\textquotesingle{}.date(\char`\"{}Y\+\_\+m\+\_\+d\+\_\+\+H\+\_\+i\+\_\+s\char`\"{}).\textquotesingle{}.zip\textquotesingle{}
+\item 
+\textbf{ \$temp\+Zip\+File} = tempnam(sys\+\_\+get\+\_\+temp\+\_\+dir(), \textquotesingle{}exported\+\_\+data\+\_\+\textquotesingle{})
+\item 
+\textbf{ \$zip} = new Zip\+Archive()
+\item 
+\textbf{ \$pdo} = new PDO(\textquotesingle{}mysql\+:host=localhost;dbname=Baj\textquotesingle{},\textquotesingle{}baj\textquotesingle{},\textquotesingle{}alchimie\textquotesingle{})
+\item 
+\textbf{ \$user}
+\item 
+\textbf{ if} (isset( \$\+\_\+\+GET[ \textquotesingle{}id\textquotesingle{}]))
+\item 
+\textbf{ if} (isset( \$\+\_\+\+GET[ \textquotesingle{}id\textquotesingle{}]))
+\item 
+€$<$/span $>$$<$/li $>$$<$ li class=\char`\"{}list-\/group-\/item d-\/flex justify-\/content-\/between align-\/items-\/center\char`\"{}$>$ Don à l montant\+\_\+don REMOTE\+\_\+\+ADDR icone cadeau dans la colonne action$<$/p $>$$<$ p $>$ Rendre un jeu au \textbf{ vendeur}
+\item 
+const \textbf{ TYPE\+\_\+\+RECEPTION} \char`\"{}reception\char`\"{}
+\item 
+const \textbf{ TYPE\+\_\+\+RESTITUTION} \char`\"{}restitution\char`\"{}
+\item 
+color \textbf{ \+\_\+\+\_\+pad0\+\_\+\+\_\+}
+\item 
+$<$/i $>$$<$ br $>$ Passer un jeu du stock à \textbf{ vendu}
+\item 
+color \textbf{ \+\_\+\+\_\+pad1\+\_\+\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{namespaceAlchimieBAJ_1_1main_ac9621a5edbfd9b1a27f24c5a67e6de8f}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!AfficherDons@{AfficherDons}}
+\index{AfficherDons@{AfficherDons}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{AfficherDons()}
+{\footnotesize\ttfamily Alchimie\+BAJ\textbackslash{}main\textbackslash{}\+Afficher\+Dons (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})}
+
+Cette fonction prend en argument l\textquotesingle{}id d\textquotesingle{}un vendeur et renvoie du code HTML pour afficher la liste des dons qui lui sont associés. 
+\begin{DoxyParams}{Parameters}
+{\em \{} & Integer \} id -\/ Id du vendeur as integer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\{HTMLElement\} ret -\/ Liste en HTML des dons. 
+\end{DoxyReturn}
+
+
+Definition at line 71 of file utils.\+php.
+
+
+
+References Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax\textbackslash{}\$annee, Alchimie\+BAJ\textbackslash{}main\textbackslash{}\$pdo, Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax\textbackslash{}\$ret, Alchimie\+BAJ\textbackslash{}main\textbackslash{}\$\+SQL\+\_\+47\+\_\+get\+\_\+dons, and Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax\textbackslash{}\$statement.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_abc7576b5f5ebb56f869115e38312405f}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!AfficherRemb@{AfficherRemb}}
+\index{AfficherRemb@{AfficherRemb}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{AfficherRemb()}
+{\footnotesize\ttfamily Alchimie\+BAJ\textbackslash{}main\textbackslash{}\+Afficher\+Remb (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})}
+
+Cette fonction prend en argument l\textquotesingle{}id d\textquotesingle{}un vendeur et renvoie du code HTML pour afficher la liste des remboursements qui lui sont associés. 
+\begin{DoxyParams}{Parameters}
+{\em \{} & Integer \} id -\/ Id du vendeur as integer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\{HTMLElement\} ret -\/ Liste en HTML des remboursements. 
+\end{DoxyReturn}
+
+
+Definition at line 159 of file utils.\+php.
+
+
+
+References Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax\textbackslash{}\$annee, Alchimie\+BAJ\textbackslash{}main\textbackslash{}\$pdo, Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax\textbackslash{}\$ret, Alchimie\+BAJ\textbackslash{}main\textbackslash{}\$\+SQL\+\_\+46\+\_\+get\+\_\+remboursement, and Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax\textbackslash{}\$statement.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_adb24fd8115d144e318633dd25dc1553a}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!AfficherTrans@{AfficherTrans}}
+\index{AfficherTrans@{AfficherTrans}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{AfficherTrans()}
+{\footnotesize\ttfamily Alchimie\+BAJ\textbackslash{}main\textbackslash{}\+Afficher\+Trans (\begin{DoxyParamCaption}\item[{}]{\$type }\end{DoxyParamCaption})}
+
+
+
+Definition at line 113 of file utils.\+php.
+
+
+
+References Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax\textbackslash{}\$annee, Alchimie\+BAJ\textbackslash{}main\textbackslash{}\$pdo, Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax\textbackslash{}\$ret, Alchimie\+BAJ\textbackslash{}main\textbackslash{}\$\+SQL\+\_\+43\+\_\+get\+Trans, Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax\textbackslash{}\$statement, and Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax\textbackslash{}\$type.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_ad82794c8486c02b4b01964fa6e5adcbe}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!checkPassword@{checkPassword}}
+\index{checkPassword@{checkPassword}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{checkPassword()}
+{\footnotesize\ttfamily Alchimie\+BAJ\textbackslash{}main\textbackslash{}check\+Password (\begin{DoxyParamCaption}\item[{}]{\$password }\end{DoxyParamCaption})}
+
+Vérifie si le mot de passe correspond à celui attendu.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$password} & Le mot de passe à vérifier. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool True si le mot de passe est correct, sinon False. 
+\end{DoxyReturn}
+
+
+Definition at line 16 of file admin.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_a2a36d58ccedbc0ab88985ca090005ec2}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!csvFromArray@{csvFromArray}}
+\index{csvFromArray@{csvFromArray}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{csvFromArray()}
+{\footnotesize\ttfamily Alchimie\+BAJ\textbackslash{}main\textbackslash{}csv\+From\+Array (\begin{DoxyParamCaption}\item[{}]{\$data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 49 of file export-\/base.\+php.
+
+
+
+References Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax\textbackslash{}\$data.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_a2cf4aa020d6577e2a6ec3acfdd470979}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!getUser@{getUser}}
+\index{getUser@{getUser}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{getUser()}
+{\footnotesize\ttfamily Alchimie\+BAJ\textbackslash{}main\textbackslash{}get\+User (\begin{DoxyParamCaption}\item[{}]{\$id\+Du\+Vendeur }\end{DoxyParamCaption})}
+
+Récupère et retourne l\textquotesingle{}utilisateur correspondant à l\textquotesingle{}ID spécifié. 
+\begin{DoxyParams}{Parameters}
+{\em id\+Du\+Vendeur} & integer L\textquotesingle{}identifiant de l\textquotesingle{}utilisateur à récupérer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array Un tableau associatif contenant les informations de l\textquotesingle{}utilisateur ou un message d\textquotesingle{}erreur. Le tableau retourné a la structure suivante \+: \{ \char`\"{}message1\char`\"{} string =$>$ Soit un message d\textquotesingle{}erreur, soit un tableau contenant les informations de l\textquotesingle{}utilisateur, \char`\"{}message2\char`\"{} boolean =$>$ 0 en cas d\textquotesingle{}erreur de traitement, 1 en cas de succès 
+\end{DoxyReturn}
+
+
+Definition at line 207 of file utils.\+php.
+
+
+
+References Alchimie\+BAJ\textbackslash{}main\textbackslash{}\$pdo, Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax\textbackslash{}\$ret, Alchimie\+BAJ\textbackslash{}main\textbackslash{}\$\+SQL\+\_\+2\+\_\+getvendeur, Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax\textbackslash{}\$statement, and Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax\textbackslash{}\$total\+Data.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_a47dbff756bb6a83fecc608bd53ae2d2d}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!PrixRendu@{PrixRendu}}
+\index{PrixRendu@{PrixRendu}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{PrixRendu()}
+{\footnotesize\ttfamily Alchimie\+BAJ\textbackslash{}main\textbackslash{}\+Prix\+Rendu (\begin{DoxyParamCaption}\item[{}]{\$prix }\end{DoxyParamCaption})}
+
+Calcule le prix rendu à partir du prix initial.
+
+
+\begin{DoxyParams}{Parameters}
+{\em prix} & integer Le prix initial. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer Le prix rendu en minorant de 1/6 le prix initial. 
+\end{DoxyReturn}
+
+
+Definition at line 46 of file utils.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_a8edeb5ee6b9cfd5e9d7f975960427a1d}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!PrixRendu2Prix@{PrixRendu2Prix}}
+\index{PrixRendu2Prix@{PrixRendu2Prix}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{PrixRendu2Prix()}
+{\footnotesize\ttfamily Alchimie\+BAJ\textbackslash{}main\textbackslash{}\+Prix\+Rendu2\+Prix (\begin{DoxyParamCaption}\item[{}]{\$prix\+Rendu }\end{DoxyParamCaption})}
+
+Calcule le prix initial à partir du prix rendu.
+
+
+\begin{DoxyParams}{Parameters}
+{\em prix\+Rendu} & integer Le prix rendu. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer Le prix initial, prix rendu avec une majoration de 20\% arrondi à l\textquotesingle{}entier supérieur. 
+\end{DoxyReturn}
+
+
+Definition at line 59 of file utils.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_abd720dcb6018ab3647fd529ba47cbd83}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!VerifCodeBarre@{VerifCodeBarre}}
+\index{VerifCodeBarre@{VerifCodeBarre}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{VerifCodeBarre()}
+{\footnotesize\ttfamily Alchimie\+BAJ\textbackslash{}main\textbackslash{}\+Verif\+Code\+Barre (\begin{DoxyParamCaption}\item[{}]{\$code\+Barre\+AVerifier }\end{DoxyParamCaption})}
+
+Vérifie si le code-\/barre est valide et le formate si nécessaire.
+
+
+\begin{DoxyParams}{Parameters}
+{\em code\+Barre\+AVerifier} & integer Le code-\/barre à vérifier. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string Le code-\/barre vérifié et formaté, ou une chaîne vide si le code-\/barre n\textquotesingle{}est pas valide. 
+\end{DoxyReturn}
+
+
+Definition at line 12 of file utils.\+php.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\label{namespaceAlchimieBAJ_1_1main_a0e633c02d84a19a70250d301fe92176f}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$id\_sac@{\$id\_sac}}
+\index{\$id\_sac@{\$id\_sac}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$id\_sac}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$id\+\_\+sac = \char`\"{}-\/1\char`\"{}}
+
+
+
+Definition at line 15 of file constantes.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_ac04dd34a64bfad433b3c6c81de06f0fc}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$pdo@{\$pdo}}
+\index{\$pdo@{\$pdo}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$pdo}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$pdo = new PDO(\textquotesingle{}mysql\+:host=localhost;dbname=Baj\textquotesingle{},\textquotesingle{}baj\textquotesingle{},\textquotesingle{}alchimie\textquotesingle{})}
+
+
+
+Definition at line 4 of file pdo\+\_\+connect.\+php.
+
+
+
+Referenced by Alchimie\+BAJ\textbackslash{}main\textbackslash{}\+Afficher\+Dons(), Alchimie\+BAJ\textbackslash{}main\textbackslash{}\+Afficher\+Remb(), Alchimie\+BAJ\textbackslash{}main\textbackslash{}\+Afficher\+Trans(), Alchimie\+BAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}\+Generer\+Facture(), Alchimie\+BAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}\+Generer\+Justificatif(), and Alchimie\+BAJ\textbackslash{}main\textbackslash{}get\+User().
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_a284cff0f087481fc2d2e80a20735bcc5}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$rep\_facture@{\$rep\_facture}}
+\index{\$rep\_facture@{\$rep\_facture}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$rep\_facture}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$rep\+\_\+facture = \char`\"{}/pdf/pdf/facture\char`\"{}}
+
+
+
+Definition at line 12 of file constantes.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_a83a2858e2f4ce2d76dcb23cd1f0e2c25}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$rep\_justificatif@{\$rep\_justificatif}}
+\index{\$rep\_justificatif@{\$rep\_justificatif}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$rep\_justificatif}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$rep\+\_\+justificatif = \char`\"{}/pdf/pdf/justificatif\char`\"{}}
+
+
+
+Definition at line 13 of file constantes.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_a7403a66e73edfef695e65cf832516957}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$rep\_root@{\$rep\_root}}
+\index{\$rep\_root@{\$rep\_root}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$rep\_root}
+{\footnotesize\ttfamily \textbf{ if} (!defined( \textquotesingle{}annee\+\_\+base\textquotesingle{})) Alchimie\+BAJ\+::main\textbackslash{}\$rep\+\_\+root = \char`\"{}/var/www/alchimiedujeu.\+com/Alchimie\+BAJ/Alchimie\+BAJ/main\char`\"{}}
+
+
+
+Definition at line 11 of file constantes.\+php.
+
+
+
+Referenced by Alchimie\+BAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}\+Generer\+Facture(), and Alchimie\+BAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}\+Generer\+Justificatif().
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_a33bcf73352ecca0299dd60ef172586f7}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_10\_insertjeu@{\$SQL\_10\_insertjeu}}
+\index{\$SQL\_10\_insertjeu@{\$SQL\_10\_insertjeu}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_10\_insertjeu}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+10\+\_\+insertjeu}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= }
+\DoxyCodeLine{\textcolor{stringliteral}{'INSERT INTO al\_bourse\_jeux (nom) }}
+\DoxyCodeLine{\textcolor{stringliteral}{VALUES (:nom\_jeu)'}}
+
+\end{DoxyCode}
+
+
+Definition at line 149 of file constantes.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_a633bf547ee462ccbc655af542ad0449b}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_11\_insertlistejeu@{\$SQL\_11\_insertlistejeu}}
+\index{\$SQL\_11\_insertlistejeu@{\$SQL\_11\_insertlistejeu}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_11\_insertlistejeu}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+11\+\_\+insertlistejeu}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= }
+\DoxyCodeLine{\textcolor{stringliteral}{'INSERT INTO al\_bourse\_liste (id\_utilisateur, nom\_jeu, prix, code\_barre, statut, vigilance, id\_depot, date\_reception, annee) }}
+\DoxyCodeLine{\textcolor{stringliteral}{ VALUES (:idVendeurEdition,:nom\_jeu,:vendu,:codebarre,:statut,:vigilance,:ip,:date\_reception,:annee)'}}
+
+\end{DoxyCode}
+
+
+Definition at line 154 of file constantes.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_aaad3d424af9a90301ca62f208cb26e74}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_12\_dellistejeu@{\$SQL\_12\_dellistejeu}}
+\index{\$SQL\_12\_dellistejeu@{\$SQL\_12\_dellistejeu}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_12\_dellistejeu}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+12\+\_\+dellistejeu}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= }
+\DoxyCodeLine{\textcolor{stringliteral}{'DELETE }}
+\DoxyCodeLine{\textcolor{stringliteral}{FROM al\_bourse\_liste }}
+\DoxyCodeLine{\textcolor{stringliteral}{WHERE id=:id'}}
+
+\end{DoxyCode}
+
+
+Definition at line 159 of file constantes.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_a31ce25aba478ca565aa4809b6249682f}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_13\_01\_code@{\$SQL\_13\_01\_code}}
+\index{\$SQL\_13\_01\_code@{\$SQL\_13\_01\_code}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_13\_01\_code}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+13\+\_\+01\+\_\+code =\textquotesingle{}, code\+\_\+barre=\+:code\+\_\+barre\textquotesingle{}}
+
+
+
+Definition at line 169 of file constantes.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_a528ab4c3b3e92dcf7c6814b9cd472c75}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_13\_02\_iddepot@{\$SQL\_13\_02\_iddepot}}
+\index{\$SQL\_13\_02\_iddepot@{\$SQL\_13\_02\_iddepot}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_13\_02\_iddepot}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+13\+\_\+02\+\_\+iddepot =\textquotesingle{}, id\+\_\+depot=\+:id\+\_\+depot, date\+\_\+reception= \+:date\+\_\+reception\textquotesingle{}}
+
+
+
+Definition at line 170 of file constantes.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_aa229da57abdb3eb9e216e64956387966}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_13\_04\_datesortie@{\$SQL\_13\_04\_datesortie}}
+\index{\$SQL\_13\_04\_datesortie@{\$SQL\_13\_04\_datesortie}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_13\_04\_datesortie}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+13\+\_\+04\+\_\+datesortie =\textquotesingle{}, date\+\_\+sortie\+\_\+stock= \+:date\+\_\+sortie\textquotesingle{}}
+
+
+
+Definition at line 171 of file constantes.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_ac4b4a69cd858549dfba0771075d99a37}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_13\_05\_whereid@{\$SQL\_13\_05\_whereid}}
+\index{\$SQL\_13\_05\_whereid@{\$SQL\_13\_05\_whereid}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_13\_05\_whereid}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+13\+\_\+05\+\_\+whereid =\textquotesingle{} WHERE id=\+:id\textquotesingle{}}
+
+
+
+Definition at line 172 of file constantes.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_a9b33eacd35f08f8cf75d21bb4419bfc2}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_13\_updatestatutlistejeu@{\$SQL\_13\_updatestatutlistejeu}}
+\index{\$SQL\_13\_updatestatutlistejeu@{\$SQL\_13\_updatestatutlistejeu}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_13\_updatestatutlistejeu}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+13\+\_\+updatestatutlistejeu}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\textcolor{stringliteral}{'UPDATE al\_bourse\_liste}}
+\DoxyCodeLine{\textcolor{stringliteral}{SET statut = :statut'}}
+
+\end{DoxyCode}
+
+
+Definition at line 166 of file constantes.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_ac474cbdde4549f3eb7a473d501c259bf}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_14\_pdfadd@{\$SQL\_14\_pdfadd}}
+\index{\$SQL\_14\_pdfadd@{\$SQL\_14\_pdfadd}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_14\_pdfadd}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+14\+\_\+pdfadd}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \textcolor{stringliteral}{"{}INSERT INTO `al\_bourse\_pdf`(`id\_utilisateur`, `nom\_fichier`, `type`, `annee`) }}
+\DoxyCodeLine{\textcolor{stringliteral}{                                        VALUES (:id\_utilisateur,:nom\_fichier,:type,"{}}.annee\_base.\textcolor{stringliteral}{"{})"{}}}
+
+\end{DoxyCode}
+
+
+Definition at line 174 of file constantes.\+php.
+
+
+
+Referenced by Alchimie\+BAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}\+Generer\+Facture(), and Alchimie\+BAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}\+Generer\+Justificatif().
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_a443305705fa557a25f722737c7d43cad}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_15\_01\_get\_infos\_exemplaire@{\$SQL\_15\_01\_get\_infos\_exemplaire}}
+\index{\$SQL\_15\_01\_get\_infos\_exemplaire@{\$SQL\_15\_01\_get\_infos\_exemplaire}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_15\_01\_get\_infos\_exemplaire}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+15\+\_\+01\+\_\+get\+\_\+infos\+\_\+exemplaire}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= }
+\DoxyCodeLine{\textcolor{stringliteral}{"{}SELECT}}
+\DoxyCodeLine{\textcolor{stringliteral}{`id`,}}
+\DoxyCodeLine{\textcolor{stringliteral}{`id\_utilisateur`,}}
+\DoxyCodeLine{\textcolor{stringliteral}{`nom\_jeu`,}}
+\DoxyCodeLine{\textcolor{stringliteral}{`prix` as vendu,}}
+\DoxyCodeLine{\textcolor{stringliteral}{`code\_barre`,}}
+\DoxyCodeLine{\textcolor{stringliteral}{`statut`,}}
+\DoxyCodeLine{\textcolor{stringliteral}{`vigilance`,}}
+\DoxyCodeLine{\textcolor{stringliteral}{`date\_reception`,}}
+\DoxyCodeLine{\textcolor{stringliteral}{`annee`}}
+\DoxyCodeLine{\textcolor{stringliteral}{FROM}}
+\DoxyCodeLine{\textcolor{stringliteral}{`al\_bourse\_liste`}}
+\DoxyCodeLine{\textcolor{stringliteral}{WHERE}}
+\DoxyCodeLine{\textcolor{stringliteral}{`id` = :id"{}}}
+
+\end{DoxyCode}
+
+
+Definition at line 178 of file constantes.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_a1c210b57efe13084dadba5e24049b1f4}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_15\_02\_update\_liste@{\$SQL\_15\_02\_update\_liste}}
+\index{\$SQL\_15\_02\_update\_liste@{\$SQL\_15\_02\_update\_liste}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_15\_02\_update\_liste}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+15\+\_\+02\+\_\+update\+\_\+liste}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\textcolor{stringliteral}{"{}UPDATE}}
+\DoxyCodeLine{\textcolor{stringliteral}{    `al\_bourse\_liste`}}
+\DoxyCodeLine{\textcolor{stringliteral}{SET}}
+\DoxyCodeLine{\textcolor{stringliteral}{    `statut` = '6',}}
+\DoxyCodeLine{\textcolor{stringliteral}{    `date\_sortie\_stock` = :don\_le}}
+\DoxyCodeLine{\textcolor{stringliteral}{WHERE}}
+\DoxyCodeLine{\textcolor{stringliteral}{    `id` = :id"{}}}
+
+\end{DoxyCode}
+
+
+Definition at line 195 of file constantes.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_a1c6240d2e57d7d49afb891c3e8fc0042}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_16\_getminpricelistejeux@{\$SQL\_16\_getminpricelistejeux}}
+\index{\$SQL\_16\_getminpricelistejeux@{\$SQL\_16\_getminpricelistejeux}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_16\_getminpricelistejeux}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+16\+\_\+getminpricelistejeux}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= }
+\DoxyCodeLine{\textcolor{stringliteral}{'SELECT }}
+\DoxyCodeLine{\textcolor{stringliteral}{    min(vendu) as vendu }}
+\DoxyCodeLine{\textcolor{stringliteral}{FROM v\_bourse\_liste }}
+\DoxyCodeLine{\textcolor{stringliteral}{WHERE nom\_jeu = :nom\_jeu }}
+\DoxyCodeLine{\textcolor{stringliteral}{ORDER BY vendu asc'}}
+
+\end{DoxyCode}
+
+
+Definition at line 204 of file constantes.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_ac0a533eb03cb523099a21b3c53c57cdc}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_17\_getargentdejapaye@{\$SQL\_17\_getargentdejapaye}}
+\index{\$SQL\_17\_getargentdejapaye@{\$SQL\_17\_getargentdejapaye}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_17\_getargentdejapaye}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+17\+\_\+getargentdejapaye}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= }
+\DoxyCodeLine{\textcolor{stringliteral}{'SELECT}}
+\DoxyCodeLine{\textcolor{stringliteral}{    s2.don + s1.remb as total}}
+\DoxyCodeLine{\textcolor{stringliteral}{FROM}}
+\DoxyCodeLine{\textcolor{stringliteral}{    (}}
+\DoxyCodeLine{\textcolor{stringliteral}{    SELECT}}
+\DoxyCodeLine{\textcolor{stringliteral}{        id\_utilisateur,}}
+\DoxyCodeLine{\textcolor{stringliteral}{        SUM(montant\_don) AS don}}
+\DoxyCodeLine{\textcolor{stringliteral}{    FROM}}
+\DoxyCodeLine{\textcolor{stringliteral}{        al\_bourse\_dons}}
+\DoxyCodeLine{\textcolor{stringliteral}{    WHERE }}
+\DoxyCodeLine{\textcolor{stringliteral}{        YEAR(al\_bourse\_dons.date\_don)='}.annee\_base.\textcolor{stringliteral}{'}}
+\DoxyCodeLine{\textcolor{stringliteral}{    GROUP BY}}
+\DoxyCodeLine{\textcolor{stringliteral}{        id\_utilisateur}}
+\DoxyCodeLine{\textcolor{stringliteral}{) AS s2}}
+\DoxyCodeLine{\textcolor{stringliteral}{LEFT OUTER JOIN(}}
+\DoxyCodeLine{\textcolor{stringliteral}{    SELECT}}
+\DoxyCodeLine{\textcolor{stringliteral}{        id\_utilisateur,}}
+\DoxyCodeLine{\textcolor{stringliteral}{        SUM(montant\_remb) AS remb}}
+\DoxyCodeLine{\textcolor{stringliteral}{    FROM}}
+\DoxyCodeLine{\textcolor{stringliteral}{        al\_bourse\_remboursements}}
+\DoxyCodeLine{\textcolor{stringliteral}{    WHERE }}
+\DoxyCodeLine{\textcolor{stringliteral}{        YEAR(al\_bourse\_remboursements.date\_remb)='}.annee\_base.\textcolor{stringliteral}{'}}
+\DoxyCodeLine{\textcolor{stringliteral}{    GROUP BY}}
+\DoxyCodeLine{\textcolor{stringliteral}{        id\_utilisateur}}
+\DoxyCodeLine{\textcolor{stringliteral}{) AS s1}}
+\DoxyCodeLine{\textcolor{stringliteral}{ON}}
+\DoxyCodeLine{\textcolor{stringliteral}{    s1.id\_utilisateur = s2.id\_utilisateur}}
+\DoxyCodeLine{\textcolor{stringliteral}{WHERE}}
+\DoxyCodeLine{\textcolor{stringliteral}{    s1.id\_utilisateur = :id'}}
+
+\end{DoxyCode}
+
+
+Definition at line 213 of file constantes.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_ab518c97742e7c1d05fa1844c7361966d}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_18\_getlistejeuxtotalvente@{\$SQL\_18\_getlistejeuxtotalvente}}
+\index{\$SQL\_18\_getlistejeuxtotalvente@{\$SQL\_18\_getlistejeuxtotalvente}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_18\_getlistejeuxtotalvente}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+18\+\_\+getlistejeuxtotalvente}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= }
+\DoxyCodeLine{\textcolor{stringliteral}{'SELECT }}
+\DoxyCodeLine{\textcolor{stringliteral}{    SUM(rendu) as rendu }}
+\DoxyCodeLine{\textcolor{stringliteral}{FROM v\_bourse\_liste }}
+\DoxyCodeLine{\textcolor{stringliteral}{WHERE id\_utilisateur= :id }}
+\DoxyCodeLine{\textcolor{stringliteral}{    AND id\_statut = 3 }}
+\DoxyCodeLine{\textcolor{stringliteral}{    AND annee= :annee'}}
+
+\end{DoxyCode}
+
+
+Definition at line 244 of file constantes.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_ab518ab4c404d960340c1622413a4d946}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_19\_donadd@{\$SQL\_19\_donadd}}
+\index{\$SQL\_19\_donadd@{\$SQL\_19\_donadd}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_19\_donadd}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+19\+\_\+donadd}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= }
+\DoxyCodeLine{\textcolor{stringliteral}{"{}INSERT INTO al\_bourse\_dons(}}
+\DoxyCodeLine{\textcolor{stringliteral}{    id\_utilisateur,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    montant\_don,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    date\_don,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    type\_don}}
+\DoxyCodeLine{\textcolor{stringliteral}{)}}
+\DoxyCodeLine{\textcolor{stringliteral}{VALUES(}}
+\DoxyCodeLine{\textcolor{stringliteral}{    :idDuVendeur,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    :montant,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    :date,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    :type}}
+\DoxyCodeLine{\textcolor{stringliteral}{)"{}}}
+
+\end{DoxyCode}
+
+
+Definition at line 253 of file constantes.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_aeaab643bcb3d0a6b252be4145d1069ab}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_1\_selectionvendeur@{\$SQL\_1\_selectionvendeur}}
+\index{\$SQL\_1\_selectionvendeur@{\$SQL\_1\_selectionvendeur}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_1\_selectionvendeur}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+1\+\_\+selectionvendeur}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= }
+\DoxyCodeLine{\textcolor{stringliteral}{'SELECT distinct}}
+\DoxyCodeLine{\textcolor{stringliteral}{    al\_bourse\_users.id as idDuVendeur,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    al\_bourse\_users.nom as nom, }}
+\DoxyCodeLine{\textcolor{stringliteral}{    al\_bourse\_users.prenom as prenom,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    al\_bourse\_users.email as email,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    al\_bourse\_users.telephone as telephone,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    t.nbjeuxrendus,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    t.nbjeuxvendus,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    t.nbjeuxstock,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    t.nbjeuxdonnes,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    t.nbjeuxpasrecus}}
+\DoxyCodeLine{\textcolor{stringliteral}{FROM al\_bourse\_users}}
+\DoxyCodeLine{\textcolor{stringliteral}{    /* recup de la somme des jeux par type */}}
+\DoxyCodeLine{\textcolor{stringliteral}{    LEFT JOIN (select v\_bourse\_liste.id\_utilisateur as iduser,}}
+\DoxyCodeLine{\textcolor{stringliteral}{                      ANY\_VALUE (v\_bourse\_liste.id\_statut),}}
+\DoxyCodeLine{\textcolor{stringliteral}{                      v\_bourse\_liste.annee,}}
+\DoxyCodeLine{\textcolor{stringliteral}{                      SUM(CASE when v\_bourse\_liste.id\_statut="{}4"{} then 1 else 0 end) as nbjeuxrendus,   /*statut 4 : rendu*/}}
+\DoxyCodeLine{\textcolor{stringliteral}{                      SUM(CASE when v\_bourse\_liste.id\_statut="{}3"{} then 1 else 0 end) as nbjeuxvendus,   /*statut 3 : vendu*/}}
+\DoxyCodeLine{\textcolor{stringliteral}{                      SUM(CASE when v\_bourse\_liste.id\_statut="{}2"{} then 1 else 0 end) as nbjeuxstock,    /*statut 2 : en stock*/}}
+\DoxyCodeLine{\textcolor{stringliteral}{                      SUM(CASE when v\_bourse\_liste.id\_statut="{}6"{} then 1 else 0 end) as nbjeuxdonnes,   /*statut 6 : donné*/}}
+\DoxyCodeLine{\textcolor{stringliteral}{                      SUM(CASE when v\_bourse\_liste.id\_statut="{}1"{} then 1 else 0 end) as nbjeuxpasrecus  /*statut 1 : non reçu*/}}
+\DoxyCodeLine{\textcolor{stringliteral}{               FROM v\_bourse\_liste}}
+\DoxyCodeLine{\textcolor{stringliteral}{               WHERE v\_bourse\_liste.annee = '}.annee\_base.\textcolor{stringliteral}{'}}
+\DoxyCodeLine{\textcolor{stringliteral}{               GROUP BY v\_bourse\_liste.id\_utilisateur}}
+\DoxyCodeLine{\textcolor{stringliteral}{                ) as t on al\_bourse\_users.id=t.iduser}}
+\DoxyCodeLine{\textcolor{stringliteral}{ORDER BY nom, prenom'}}
+
+\end{DoxyCode}
+
+
+Definition at line 21 of file constantes.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_a61af68c361fee0ab23e7a9599ff4c78a}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_20\_01\_getvendeurbyemail@{\$SQL\_20\_01\_getvendeurbyemail}}
+\index{\$SQL\_20\_01\_getvendeurbyemail@{\$SQL\_20\_01\_getvendeurbyemail}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_20\_01\_getvendeurbyemail}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+20\+\_\+01\+\_\+getvendeurbyemail}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= }
+\DoxyCodeLine{\textcolor{stringliteral}{'SELECT }}
+\DoxyCodeLine{\textcolor{stringliteral}{    id,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    email }}
+\DoxyCodeLine{\textcolor{stringliteral}{FROM al\_bourse\_users }}
+\DoxyCodeLine{\textcolor{stringliteral}{WHERE email LIKE :email'}}
+
+\end{DoxyCode}
+
+
+Definition at line 284 of file constantes.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_ab102e73eb4c0debae7c3d6fd2410aca4}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_20\_02\_getvendeurbynom@{\$SQL\_20\_02\_getvendeurbynom}}
+\index{\$SQL\_20\_02\_getvendeurbynom@{\$SQL\_20\_02\_getvendeurbynom}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_20\_02\_getvendeurbynom}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+20\+\_\+02\+\_\+getvendeurbynom}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= }
+\DoxyCodeLine{\textcolor{stringliteral}{'SELECT }}
+\DoxyCodeLine{\textcolor{stringliteral}{    id,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    nom }}
+\DoxyCodeLine{\textcolor{stringliteral}{FROM al\_bourse\_users }}
+\DoxyCodeLine{\textcolor{stringliteral}{WHERE nom LIKE :nom'}}
+
+\end{DoxyCode}
+
+
+Definition at line 291 of file constantes.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_a91d18e4b351b3236faaeb2f5e8d378ac}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_20\_getvendeurbyemail@{\$SQL\_20\_getvendeurbyemail}}
+\index{\$SQL\_20\_getvendeurbyemail@{\$SQL\_20\_getvendeurbyemail}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_20\_getvendeurbyemail}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+20\+\_\+getvendeurbyemail}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= }
+\DoxyCodeLine{\textcolor{stringliteral}{'SELECT }}
+\DoxyCodeLine{\textcolor{stringliteral}{    `id`                    as idDuVendeur,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    `nom`                   as nom,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    `prenom`                as prenom,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    `email`                 as email,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    `telephone`             as telephone,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    `adresse`               as adresse,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    `code\_postal`           as code\_postal,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    `ville`                 as ville,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    `denomination\_sociale`  as denomination\_sociale,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    `siege\_social`          as siege\_social,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    `attestation\_signee`    as attestation\_signee}}
+\DoxyCodeLine{\textcolor{stringliteral}{FROM al\_bourse\_users }}
+\DoxyCodeLine{\textcolor{stringliteral}{WHERE email=:email'}}
+
+\end{DoxyCode}
+
+
+Definition at line 268 of file constantes.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_a0aa23eac208aea736205ba2c5f1655c5}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_21\_getlistejeuxstock@{\$SQL\_21\_getlistejeuxstock}}
+\index{\$SQL\_21\_getlistejeuxstock@{\$SQL\_21\_getlistejeuxstock}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_21\_getlistejeuxstock}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+21\+\_\+getlistejeuxstock}
+
+
+
+Definition at line 298 of file constantes.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_afead6992838c2649177d6f4c7e37ffef}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_21\_getlistejeuxstockspeed@{\$SQL\_21\_getlistejeuxstockspeed}}
+\index{\$SQL\_21\_getlistejeuxstockspeed@{\$SQL\_21\_getlistejeuxstockspeed}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_21\_getlistejeuxstockspeed}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+21\+\_\+getlistejeuxstockspeed}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= }
+\DoxyCodeLine{\textcolor{stringliteral}{'SELECT distinct }}
+\DoxyCodeLine{\textcolor{stringliteral}{    v\_bourse\_liste.id, }}
+\DoxyCodeLine{\textcolor{stringliteral}{    v\_bourse\_liste.id\_utilisateur, }}
+\DoxyCodeLine{\textcolor{stringliteral}{    v\_bourse\_liste.nom, }}
+\DoxyCodeLine{\textcolor{stringliteral}{    v\_bourse\_liste.prenom , }}
+\DoxyCodeLine{\textcolor{stringliteral}{    v\_bourse\_liste.nom\_jeu as nj, }}
+\DoxyCodeLine{\textcolor{stringliteral}{    v\_bourse\_liste.vendu as Vendu, }}
+\DoxyCodeLine{\textcolor{stringliteral}{    code\_barre,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    id\_statut,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    statut,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    date\_reception, }}
+\DoxyCodeLine{\textcolor{stringliteral}{    date\_sortie\_stock as date\_restitution }}
+\DoxyCodeLine{\textcolor{stringliteral}{FROM v\_bourse\_liste }}
+\DoxyCodeLine{\textcolor{stringliteral}{WHERE v\_bourse\_liste.id\_statut =:statut }}
+\DoxyCodeLine{\textcolor{stringliteral}{    AND v\_bourse\_liste.annee=:annee }}
+\DoxyCodeLine{\textcolor{stringliteral}{ORDER BY nj'}}
+
+\end{DoxyCode}
+
+
+Definition at line 330 of file constantes.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_a56ca4309baff4bd26a75a1c7cd68051e}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_22\_transactionadd@{\$SQL\_22\_transactionadd}}
+\index{\$SQL\_22\_transactionadd@{\$SQL\_22\_transactionadd}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_22\_transactionadd}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+22\+\_\+transactionadd}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\textcolor{stringliteral}{'INSERT INTO al\_bourse\_transactions(}}
+\DoxyCodeLine{\textcolor{stringliteral}{    type,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    montantTotal,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    montantPercu,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    montantRendu,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    paiement,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    date,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    ip,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    id\_acheteur}}
+\DoxyCodeLine{\textcolor{stringliteral}{)}}
+\DoxyCodeLine{\textcolor{stringliteral}{VALUES(}}
+\DoxyCodeLine{\textcolor{stringliteral}{    :type,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    :montantTotal,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    :montantPercu,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    :montantRendu,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    :paiement,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    :date,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    :ip,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    :id\_acheteur}}
+\DoxyCodeLine{\textcolor{stringliteral}{)'}}
+
+\end{DoxyCode}
+
+
+Definition at line 349 of file constantes.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_ab1702f4c3c3748de32c4c7655a04bd52}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_23\_transactionUpdate@{\$SQL\_23\_transactionUpdate}}
+\index{\$SQL\_23\_transactionUpdate@{\$SQL\_23\_transactionUpdate}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_23\_transactionUpdate}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+23\+\_\+transaction\+Update}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= }
+\DoxyCodeLine{\textcolor{stringliteral}{"{}UPDATE}}
+\DoxyCodeLine{\textcolor{stringliteral}{    `al\_bourse\_transactions`}}
+\DoxyCodeLine{\textcolor{stringliteral}{SET}}
+\DoxyCodeLine{\textcolor{stringliteral}{    `type`         = :type,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    `montantTotal` = :montantTotal,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    `montantPercu` = :montantPercu,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    `montantRendu` = :montantRendu,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    `montantDon`   = :montantDon,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    `paiement`     = :paiement,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    `date`         = :date,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    `ip`           = :ip}}
+\DoxyCodeLine{\textcolor{stringliteral}{WHERE}}
+\DoxyCodeLine{\textcolor{stringliteral}{    `id` = :id\_transaction"{}}}
+
+\end{DoxyCode}
+
+
+Definition at line 371 of file constantes.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_a384661606cf2ff37b99a2c6d9d5de70d}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_24\_transactionlisteadd@{\$SQL\_24\_transactionlisteadd}}
+\index{\$SQL\_24\_transactionlisteadd@{\$SQL\_24\_transactionlisteadd}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_24\_transactionlisteadd}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+24\+\_\+transactionlisteadd}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= }
+\DoxyCodeLine{\textcolor{stringliteral}{'INSERT INTO al\_bourse\_transaction\_liste (id\_transaction, id\_bourse\_liste) }}
+\DoxyCodeLine{\textcolor{stringliteral}{    VALUES (:id\_transaction, :id\_bourse\_liste)'}}
+
+\end{DoxyCode}
+
+
+Definition at line 386 of file constantes.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_a870735fef30d2bb2104a39f62cce0fbb}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_24B\_transactionlistedel@{\$SQL\_24B\_transactionlistedel}}
+\index{\$SQL\_24B\_transactionlistedel@{\$SQL\_24B\_transactionlistedel}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_24B\_transactionlistedel}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+24\+B\+\_\+transactionlistedel}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= }
+\DoxyCodeLine{\textcolor{stringliteral}{"{}DELETE FROM `al\_bourse\_transaction\_liste` WHERE id\_transaction= :id\_transaction AND id\_bourse\_liste= :id\_bourse\_liste"{}}}
+
+\end{DoxyCode}
+
+
+Definition at line 390 of file constantes.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_a5f11d950380df61eb948b5cd612844de}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_25\_getlistevente@{\$SQL\_25\_getlistevente}}
+\index{\$SQL\_25\_getlistevente@{\$SQL\_25\_getlistevente}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_25\_getlistevente}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+25\+\_\+getlistevente}
+
+
+
+Definition at line 393 of file constantes.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_a4e425d453aeedc8328c0f45f4fd98616}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_26\_getInfosJeux@{\$SQL\_26\_getInfosJeux}}
+\index{\$SQL\_26\_getInfosJeux@{\$SQL\_26\_getInfosJeux}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_26\_getInfosJeux}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+26\+\_\+get\+Infos\+Jeux}
+
+
+
+Definition at line 434 of file constantes.\+php.
+
+
+
+Referenced by Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax\textbackslash{}\+Get\+Stats().
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_a8d4f8f16f344716f89508a59c04c5b07}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_27\_getInfosVentes@{\$SQL\_27\_getInfosVentes}}
+\index{\$SQL\_27\_getInfosVentes@{\$SQL\_27\_getInfosVentes}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_27\_getInfosVentes}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+27\+\_\+get\+Infos\+Ventes}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\textcolor{stringliteral}{"{}SELECT}}
+\DoxyCodeLine{\textcolor{stringliteral}{    SUM(CASE WHEN paiement = 'cb' THEN montantTotal ELSE 0 END) AS TotalCB,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    SUM(CASE WHEN paiement = 'espèces' THEN montantTotal ELSE 0 END) AS TotalEspeces,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    SUM(CASE WHEN paiement = 'chèque' THEN montantTotal ELSE 0 END) AS TotalCheque,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    (}}
+\DoxyCodeLine{\textcolor{stringliteral}{        SELECT COUNT(*)}}
+\DoxyCodeLine{\textcolor{stringliteral}{        FROM al\_bourse\_transaction\_liste AS l}}
+\DoxyCodeLine{\textcolor{stringliteral}{        JOIN al\_bourse\_transactions AS t ON l.id\_transaction = t.id}}
+\DoxyCodeLine{\textcolor{stringliteral}{        WHERE l.id\_bourse\_liste = -\/1}}
+\DoxyCodeLine{\textcolor{stringliteral}{        AND t.type = 'vente'}}
+\DoxyCodeLine{\textcolor{stringliteral}{        AND YEAR(t.date) = :annee}}
+\DoxyCodeLine{\textcolor{stringliteral}{    ) AS nbSacs}}
+\DoxyCodeLine{\textcolor{stringliteral}{FROM}}
+\DoxyCodeLine{\textcolor{stringliteral}{    al\_bourse\_transactions}}
+\DoxyCodeLine{\textcolor{stringliteral}{WHERE}}
+\DoxyCodeLine{\textcolor{stringliteral}{    type = 'vente' AND YEAR(date) = :annee"{}}}
+
+\end{DoxyCode}
+
+
+Definition at line 475 of file constantes.\+php.
+
+
+
+Referenced by Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax\textbackslash{}\+Get\+Stats().
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_a731fa06edfe41c92c7d148af6f747197}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_28\_getInfosRemb@{\$SQL\_28\_getInfosRemb}}
+\index{\$SQL\_28\_getInfosRemb@{\$SQL\_28\_getInfosRemb}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_28\_getInfosRemb}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+28\+\_\+get\+Infos\+Remb}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\textcolor{stringliteral}{"{}SELECT}}
+\DoxyCodeLine{\textcolor{stringliteral}{    SUM(}}
+\DoxyCodeLine{\textcolor{stringliteral}{        CASE WHEN `type\_remb` = 'espèces' THEN `montant\_remb`}}
+\DoxyCodeLine{\textcolor{stringliteral}{    END}}
+\DoxyCodeLine{\textcolor{stringliteral}{) AS rembEspeces,}}
+\DoxyCodeLine{\textcolor{stringliteral}{SUM(}}
+\DoxyCodeLine{\textcolor{stringliteral}{    CASE WHEN `type\_remb` = 'chèque' THEN `montant\_remb`}}
+\DoxyCodeLine{\textcolor{stringliteral}{END}}
+\DoxyCodeLine{\textcolor{stringliteral}{) AS rembCheque,}}
+\DoxyCodeLine{\textcolor{stringliteral}{SUM(}}
+\DoxyCodeLine{\textcolor{stringliteral}{    CASE WHEN `type\_remb` = 'paypal' THEN `montant\_remb`}}
+\DoxyCodeLine{\textcolor{stringliteral}{END}}
+\DoxyCodeLine{\textcolor{stringliteral}{) AS rembPaypal,}}
+\DoxyCodeLine{\textcolor{stringliteral}{SUM(`montant\_remb`) AS totalRemb}}
+\DoxyCodeLine{\textcolor{stringliteral}{FROM}}
+\DoxyCodeLine{\textcolor{stringliteral}{    `al\_bourse\_remboursements`}}
+\DoxyCodeLine{\textcolor{stringliteral}{WHERE}}
+\DoxyCodeLine{\textcolor{stringliteral}{    YEAR(`date\_remb`) = :annee"{}}}
+
+\end{DoxyCode}
+
+
+Definition at line 495 of file constantes.\+php.
+
+
+
+Referenced by Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax\textbackslash{}\+Get\+Stats().
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_af55d0b41311bf1c8421d4770c6da5814}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_29\_getInfosDons@{\$SQL\_29\_getInfosDons}}
+\index{\$SQL\_29\_getInfosDons@{\$SQL\_29\_getInfosDons}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_29\_getInfosDons}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+29\+\_\+get\+Infos\+Dons}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= }
+\DoxyCodeLine{\textcolor{stringliteral}{"{}SELECT}}
+\DoxyCodeLine{\textcolor{stringliteral}{    SUM(`montant\_don`) AS totalDons}}
+\DoxyCodeLine{\textcolor{stringliteral}{FROM}}
+\DoxyCodeLine{\textcolor{stringliteral}{    `al\_bourse\_dons`}}
+\DoxyCodeLine{\textcolor{stringliteral}{WHERE}}
+\DoxyCodeLine{\textcolor{stringliteral}{    YEAR(`date\_don`) = :annee"{}}}
+
+\end{DoxyCode}
+
+
+Definition at line 516 of file constantes.\+php.
+
+
+
+Referenced by Alchimie\+BAJ\textbackslash{}main\textbackslash{}ajax\textbackslash{}\+Get\+Stats().
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_a6eeb04205cc8df183368ed374ac66114}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_2\_getvendeur@{\$SQL\_2\_getvendeur}}
+\index{\$SQL\_2\_getvendeur@{\$SQL\_2\_getvendeur}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_2\_getvendeur}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+2\+\_\+getvendeur}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= }
+\DoxyCodeLine{\textcolor{stringliteral}{'SELECT}}
+\DoxyCodeLine{\textcolor{stringliteral}{    `id`                    as idDuVendeur,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    `nom`                   as nom,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    `prenom`                as prenom,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    `email`                 as email,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    `telephone`             as telephone,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    `adresse`               as adresse,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    `code\_postal`           as code\_postal,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    `ville`                 as ville,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    `denomination\_sociale`  as denomination\_sociale,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    `siege\_social`          as siege\_social,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    `attestation\_signee`    as attestation\_signee}}
+\DoxyCodeLine{\textcolor{stringliteral}{FROM al\_bourse\_users}}
+\DoxyCodeLine{\textcolor{stringliteral}{WHERE `id`=:idDuVendeur'}}
+
+\end{DoxyCode}
+
+
+Definition at line 50 of file constantes.\+php.
+
+
+
+Referenced by Alchimie\+BAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}\+Generer\+Facture(), and Alchimie\+BAJ\textbackslash{}main\textbackslash{}get\+User().
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_abfcdd5b58172e2865ba60c4178ccd1de}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_30\_journalStatut@{\$SQL\_30\_journalStatut}}
+\index{\$SQL\_30\_journalStatut@{\$SQL\_30\_journalStatut}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_30\_journalStatut}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+30\+\_\+journal\+Statut}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= }
+\DoxyCodeLine{\textcolor{stringliteral}{"{}INSERT INTO al\_bourse\_journal\_statut (id\_liste, old\_id\_statut, new\_id\_statut, ip, date)}}
+\DoxyCodeLine{\textcolor{stringliteral}{                             VALUES (:id\_liste, :old\_id\_statut, :new\_id\_statut, :ip, :date)"{}}}
+
+\end{DoxyCode}
+
+
+Definition at line 524 of file constantes.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_a0802aa2339309b92581ac891ec03f03d}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_31\_byemail@{\$SQL\_31\_byemail}}
+\index{\$SQL\_31\_byemail@{\$SQL\_31\_byemail}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_31\_byemail}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+31\+\_\+byemail = \char`\"{} email LIKE \+:email\char`\"{}}
+
+
+
+Definition at line 530 of file constantes.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_acce4c852ae64314c33e265f759d68e65}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_31\_bynom@{\$SQL\_31\_bynom}}
+\index{\$SQL\_31\_bynom@{\$SQL\_31\_bynom}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_31\_bynom}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+31\+\_\+bynom = \char`\"{} nom LIKE \+:nom\char`\"{}}
+
+
+
+Definition at line 531 of file constantes.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_afb3a14191576ea212a4a56d913781e51}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_31\_byprenom@{\$SQL\_31\_byprenom}}
+\index{\$SQL\_31\_byprenom@{\$SQL\_31\_byprenom}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_31\_byprenom}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+31\+\_\+byprenom = \char`\"{} prenom LIKE \+:prenom\char`\"{}}
+
+
+
+Definition at line 532 of file constantes.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_acf34728464bc723b4b4240673de2ce21}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_31\_getacheteur@{\$SQL\_31\_getacheteur}}
+\index{\$SQL\_31\_getacheteur@{\$SQL\_31\_getacheteur}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_31\_getacheteur}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+31\+\_\+getacheteur}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= }
+\DoxyCodeLine{\textcolor{stringliteral}{"{}SELECT * FROM al\_bourse\_acheteur WHERE"{}}}
+
+\end{DoxyCode}
+
+
+Definition at line 528 of file constantes.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_a817823812853a27694536ce31426f6b8}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_32\_acheteuradd@{\$SQL\_32\_acheteuradd}}
+\index{\$SQL\_32\_acheteuradd@{\$SQL\_32\_acheteuradd}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_32\_acheteuradd}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+32\+\_\+acheteuradd}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= }
+\DoxyCodeLine{\textcolor{stringliteral}{"{}INSERT INTO `al\_bourse\_acheteur`(`nom`, `prenom`, `email`, `adresse`, `code\_postal`, `ville`, `raison\_sociale`, `siret`) }}
+\DoxyCodeLine{\textcolor{stringliteral}{                            VALUES (:nom, :prenom, :email, :adresse, :code\_postal, :ville, :raison\_sociale, :siret)"{}}}
+
+\end{DoxyCode}
+
+
+Definition at line 534 of file constantes.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_a89a139b77e08c5af0cf5907f5fac8225}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_33\_acheteurupdate@{\$SQL\_33\_acheteurupdate}}
+\index{\$SQL\_33\_acheteurupdate@{\$SQL\_33\_acheteurupdate}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_33\_acheteurupdate}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+33\+\_\+acheteurupdate}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= }
+\DoxyCodeLine{\textcolor{stringliteral}{"{}UPDATE}}
+\DoxyCodeLine{\textcolor{stringliteral}{    `al\_bourse\_acheteur`}}
+\DoxyCodeLine{\textcolor{stringliteral}{SET}}
+\DoxyCodeLine{\textcolor{stringliteral}{    `nom` = :nom,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    `prenom` = :prenom,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    `email` = :email,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    `adresse` = :adresse,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    `code\_postal` = :code\_postal,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    `ville` = :ville,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    `raison\_sociale` = :raison\_sociale,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    `siret` = :siret}}
+\DoxyCodeLine{\textcolor{stringliteral}{WHERE}}
+\DoxyCodeLine{\textcolor{stringliteral}{    `id`= :id\_acheteur"{}}}
+
+\end{DoxyCode}
+
+
+Definition at line 538 of file constantes.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_ac65fc218f99c4688469c1bc7eb74e9f7}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_34\_acheteurassoc@{\$SQL\_34\_acheteurassoc}}
+\index{\$SQL\_34\_acheteurassoc@{\$SQL\_34\_acheteurassoc}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_34\_acheteurassoc}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+34\+\_\+acheteurassoc}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= }
+\DoxyCodeLine{\textcolor{stringliteral}{"{}UPDATE}}
+\DoxyCodeLine{\textcolor{stringliteral}{    `al\_bourse\_transactions`}}
+\DoxyCodeLine{\textcolor{stringliteral}{SET}}
+\DoxyCodeLine{\textcolor{stringliteral}{    `id\_acheteur` = :id\_acheteur}}
+\DoxyCodeLine{\textcolor{stringliteral}{WHERE}}
+\DoxyCodeLine{\textcolor{stringliteral}{    `id` = :id\_transaction"{}}}
+
+\end{DoxyCode}
+
+
+Definition at line 553 of file constantes.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_a5964436780618f8ef2886d0da929d5a1}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_36\_remboursement\_add@{\$SQL\_36\_remboursement\_add}}
+\index{\$SQL\_36\_remboursement\_add@{\$SQL\_36\_remboursement\_add}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_36\_remboursement\_add}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+36\+\_\+remboursement\+\_\+add}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= }
+\DoxyCodeLine{\textcolor{stringliteral}{'INSERT INTO al\_bourse\_remboursements (id\_utilisateur, montant\_remb, date\_remb, type\_remb) }}
+\DoxyCodeLine{\textcolor{stringliteral}{    VALUES (:id\_utilisateur, :montant\_remb, :date\_remb, :type\_remb)'}}
+
+\end{DoxyCode}
+
+
+Definition at line 561 of file constantes.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_a8c72cff54d5ec633c9face7660cff2aa}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_37\_01\_al\_bourse\_users\_update@{\$SQL\_37\_01\_al\_bourse\_users\_update}}
+\index{\$SQL\_37\_01\_al\_bourse\_users\_update@{\$SQL\_37\_01\_al\_bourse\_users\_update}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_37\_01\_al\_bourse\_users\_update}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+37\+\_\+01\+\_\+al\+\_\+bourse\+\_\+users\+\_\+update}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\textcolor{stringliteral}{"{}UPDATE al\_bourse\_users }}
+\DoxyCodeLine{\textcolor{stringliteral}{    SET nom= :nom, }}
+\DoxyCodeLine{\textcolor{stringliteral}{        prenom= :prenom, }}
+\DoxyCodeLine{\textcolor{stringliteral}{        email= :email, }}
+\DoxyCodeLine{\textcolor{stringliteral}{        telephone= :telephone, }}
+\DoxyCodeLine{\textcolor{stringliteral}{        adresse= :adresse, }}
+\DoxyCodeLine{\textcolor{stringliteral}{        code\_postal= :code\_postal, }}
+\DoxyCodeLine{\textcolor{stringliteral}{        ville= :ville, }}
+\DoxyCodeLine{\textcolor{stringliteral}{        denomination\_sociale= :denomination\_sociale, }}
+\DoxyCodeLine{\textcolor{stringliteral}{        siege\_social= :siege\_social, }}
+\DoxyCodeLine{\textcolor{stringliteral}{        attestation\_signee= :attestation\_signee}}
+\DoxyCodeLine{\textcolor{stringliteral}{WHERE id= :id\_vendeur"{}}}
+
+\end{DoxyCode}
+
+
+Definition at line 569 of file constantes.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_ab3c9170fa6c04b78f0f57c58e744b540}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_37\_user\_add@{\$SQL\_37\_user\_add}}
+\index{\$SQL\_37\_user\_add@{\$SQL\_37\_user\_add}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_37\_user\_add}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+37\+\_\+user\+\_\+add}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= }
+\DoxyCodeLine{\textcolor{stringliteral}{"{}INSERT into al\_bourse\_users (nom, prenom, telephone, email, adresse, code\_postal, ville, denomination\_sociale, siege\_social, attestation\_signee) }}
+\DoxyCodeLine{\textcolor{stringliteral}{    VALUES (:nom, :prenom, :telephone, :email, :adresse, :code\_postal, :ville, :denomination\_sociale, :siege\_social, :attestation\_signee)"{}}}
+
+\end{DoxyCode}
+
+
+Definition at line 565 of file constantes.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_a46dc2dd9b70478d75ecf252c6da3fffb}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_38\_unser\_name\_prenom\_checker@{\$SQL\_38\_unser\_name\_prenom\_checker}}
+\index{\$SQL\_38\_unser\_name\_prenom\_checker@{\$SQL\_38\_unser\_name\_prenom\_checker}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_38\_unser\_name\_prenom\_checker}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+38\+\_\+unser\+\_\+name\+\_\+prenom\+\_\+checker}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= }
+\DoxyCodeLine{\textcolor{stringliteral}{"{}SELECT}}
+\DoxyCodeLine{\textcolor{stringliteral}{    nom,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    prenom}}
+\DoxyCodeLine{\textcolor{stringliteral}{FROM al\_bourse\_users}}
+\DoxyCodeLine{\textcolor{stringliteral}{WHERE nom= :nom }}
+\DoxyCodeLine{\textcolor{stringliteral}{    AND prenom= :prenom}}
+\DoxyCodeLine{\textcolor{stringliteral}{    AND id != :id"{}}}
+
+\end{DoxyCode}
+
+
+Definition at line 583 of file constantes.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_a61cd19e56cbf8f2ab6cdc9dde266207e}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_39\_creation\_acheteur@{\$SQL\_39\_creation\_acheteur}}
+\index{\$SQL\_39\_creation\_acheteur@{\$SQL\_39\_creation\_acheteur}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_39\_creation\_acheteur}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+39\+\_\+creation\+\_\+acheteur}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= }
+\DoxyCodeLine{\textcolor{stringliteral}{"{}INSERT INTO al\_bourse\_users (nom, prenom, email, adresse, code\_postal, ville)}}
+\DoxyCodeLine{\textcolor{stringliteral}{                VALUES (:nom, :prenom, :email, :adresse, :code\_postal, :ville)"{}}}
+
+\end{DoxyCode}
+
+
+Definition at line 592 of file constantes.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_a3ee09650d5b0111acdf6518df0ce2d9e}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_3\_getjeux@{\$SQL\_3\_getjeux}}
+\index{\$SQL\_3\_getjeux@{\$SQL\_3\_getjeux}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_3\_getjeux}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+3\+\_\+getjeux}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= }
+\DoxyCodeLine{\textcolor{stringliteral}{'SELECT }}
+\DoxyCodeLine{\textcolor{stringliteral}{   al\_bourse\_jeux.id  as id,}}
+\DoxyCodeLine{\textcolor{stringliteral}{   al\_bourse\_jeux.nom as nom}}
+\DoxyCodeLine{\textcolor{stringliteral}{FROM al\_bourse\_jeux }}
+\DoxyCodeLine{\textcolor{stringliteral}{WHERE nom LIKE :nom }}
+\DoxyCodeLine{\textcolor{stringliteral}{ORDER BY al\_bourse\_jeux.nom ASC'}}
+
+\end{DoxyCode}
+
+
+Definition at line 67 of file constantes.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_ab98f7a739cb85bffb6e92ed97a92349d}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_40\_modification\_acheteur@{\$SQL\_40\_modification\_acheteur}}
+\index{\$SQL\_40\_modification\_acheteur@{\$SQL\_40\_modification\_acheteur}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_40\_modification\_acheteur}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+40\+\_\+modification\+\_\+acheteur}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\textcolor{stringliteral}{"{}UPDATE al\_bourse\_users}}
+\DoxyCodeLine{\textcolor{stringliteral}{SET nom = ':nom',}}
+\DoxyCodeLine{\textcolor{stringliteral}{    prenom = ':prenom',}}
+\DoxyCodeLine{\textcolor{stringliteral}{    email = ':email',}}
+\DoxyCodeLine{\textcolor{stringliteral}{    adresse = ':adresse',}}
+\DoxyCodeLine{\textcolor{stringliteral}{    code\_postal = ':code\_postal',}}
+\DoxyCodeLine{\textcolor{stringliteral}{    ville = ':ville',}}
+\DoxyCodeLine{\textcolor{stringliteral}{WHERE id = :id\_acheteur"{}}}
+
+\end{DoxyCode}
+
+
+Definition at line 596 of file constantes.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_aaba5ec28d500e810e5c8380aad3b0e0e}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_41\_attribution\_acheteur\_transaction@{\$SQL\_41\_attribution\_acheteur\_transaction}}
+\index{\$SQL\_41\_attribution\_acheteur\_transaction@{\$SQL\_41\_attribution\_acheteur\_transaction}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_41\_attribution\_acheteur\_transaction}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+41\+\_\+attribution\+\_\+acheteur\+\_\+transaction}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= }
+\DoxyCodeLine{\textcolor{stringliteral}{"{}UPDATE al\_bourse\_transactions}}
+\DoxyCodeLine{\textcolor{stringliteral}{        SET id\_acheteur= :idAcheteur}}
+\DoxyCodeLine{\textcolor{stringliteral}{        WHERE id= :id\_transaction"{}}}
+
+\end{DoxyCode}
+
+
+Definition at line 606 of file constantes.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_af0f3daa41c483b0dd647ced99abe7612}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_42\_check\_doublon\_nom@{\$SQL\_42\_check\_doublon\_nom}}
+\index{\$SQL\_42\_check\_doublon\_nom@{\$SQL\_42\_check\_doublon\_nom}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_42\_check\_doublon\_nom}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+42\+\_\+check\+\_\+doublon\+\_\+nom}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= }
+\DoxyCodeLine{\textcolor{stringliteral}{"{}SELECT}}
+\DoxyCodeLine{\textcolor{stringliteral}{  nom}}
+\DoxyCodeLine{\textcolor{stringliteral}{FROM al\_bourse\_users}}
+\DoxyCodeLine{\textcolor{stringliteral}{WHERE nom= :nom"{}}}
+
+\end{DoxyCode}
+
+
+Definition at line 611 of file constantes.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_addd0d3f6897e1377b43eaa7ae128b57d}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_43\_getTrans@{\$SQL\_43\_getTrans}}
+\index{\$SQL\_43\_getTrans@{\$SQL\_43\_getTrans}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_43\_getTrans}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+43\+\_\+get\+Trans}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\textcolor{stringliteral}{"{}SELECT}}
+\DoxyCodeLine{\textcolor{stringliteral}{    `montantTotal` as montant\_total,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    `date`}}
+\DoxyCodeLine{\textcolor{stringliteral}{FROM}}
+\DoxyCodeLine{\textcolor{stringliteral}{    `al\_bourse\_transactions`}}
+\DoxyCodeLine{\textcolor{stringliteral}{WHERE}}
+\DoxyCodeLine{\textcolor{stringliteral}{    `type` = :type }}
+\DoxyCodeLine{\textcolor{stringliteral}{    AND YEAR(`date`) ="{}}.annee\_base}
+
+\end{DoxyCode}
+
+
+Definition at line 617 of file constantes.\+php.
+
+
+
+Referenced by Alchimie\+BAJ\textbackslash{}main\textbackslash{}\+Afficher\+Trans().
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_a138827ec3d598621733886b67864bb3e}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_44\_getlistejeuxtransaction@{\$SQL\_44\_getlistejeuxtransaction}}
+\index{\$SQL\_44\_getlistejeuxtransaction@{\$SQL\_44\_getlistejeuxtransaction}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_44\_getlistejeuxtransaction}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+44\+\_\+getlistejeuxtransaction}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\textcolor{stringliteral}{"{}SELECT}}
+\DoxyCodeLine{\textcolor{stringliteral}{    v\_bourse\_liste.code\_barre AS code\_barre,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    v\_bourse\_liste.nom\_jeu AS nom\_jeu,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    v\_bourse\_liste.vendu AS vendu,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    al\_bourse\_transactions.id AS id\_transaction,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    DATE\_FORMAT(al\_bourse\_transactions.date,'\%d/\%m/\%Y \%T') AS date\_paiement,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    al\_bourse\_transactions.paiement AS type\_paiement}}
+\DoxyCodeLine{\textcolor{stringliteral}{FROM}}
+\DoxyCodeLine{\textcolor{stringliteral}{            al\_bourse\_transactions}}
+\DoxyCodeLine{\textcolor{stringliteral}{    INNER JOIN}}
+\DoxyCodeLine{\textcolor{stringliteral}{            al\_bourse\_transaction\_liste }}
+\DoxyCodeLine{\textcolor{stringliteral}{        ON al\_bourse\_transactions.id = al\_bourse\_transaction\_liste.id\_transaction}}
+\DoxyCodeLine{\textcolor{stringliteral}{    INNER JOIN}}
+\DoxyCodeLine{\textcolor{stringliteral}{            v\_bourse\_liste}}
+\DoxyCodeLine{\textcolor{stringliteral}{        ON v\_bourse\_liste.id = al\_bourse\_transaction\_liste.id\_bourse\_liste}}
+\DoxyCodeLine{\textcolor{stringliteral}{WHERE}}
+\DoxyCodeLine{\textcolor{stringliteral}{al\_bourse\_transactions.id\_acheteur = :id\_acheteur}}
+\DoxyCodeLine{\textcolor{stringliteral}{AND al\_bourse\_transactions.type = 'vente'}}
+\DoxyCodeLine{\textcolor{stringliteral}{AND YEAR(al\_bourse\_transactions.date) ="{}}.annee\_base}
+
+\end{DoxyCode}
+
+
+Definition at line 627 of file constantes.\+php.
+
+
+
+Referenced by Alchimie\+BAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}\+Generer\+Justificatif().
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_afe6cc2ebd74f7242267614924f5b9474}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_45\_get\_infos\_acheteur@{\$SQL\_45\_get\_infos\_acheteur}}
+\index{\$SQL\_45\_get\_infos\_acheteur@{\$SQL\_45\_get\_infos\_acheteur}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_45\_get\_infos\_acheteur}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+45\+\_\+get\+\_\+infos\+\_\+acheteur}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= }
+\DoxyCodeLine{\textcolor{stringliteral}{"{}SELECT}}
+\DoxyCodeLine{\textcolor{stringliteral}{        al\_bourse\_acheteur.prenom,}}
+\DoxyCodeLine{\textcolor{stringliteral}{        al\_bourse\_acheteur.nom,}}
+\DoxyCodeLine{\textcolor{stringliteral}{        al\_bourse\_acheteur.adresse,}}
+\DoxyCodeLine{\textcolor{stringliteral}{        al\_bourse\_acheteur.code\_postal,}}
+\DoxyCodeLine{\textcolor{stringliteral}{        al\_bourse\_acheteur.ville,}}
+\DoxyCodeLine{\textcolor{stringliteral}{        al\_bourse\_acheteur.raison\_sociale,}}
+\DoxyCodeLine{\textcolor{stringliteral}{        al\_bourse\_acheteur.siret}}
+\DoxyCodeLine{\textcolor{stringliteral}{FROM}}
+\DoxyCodeLine{\textcolor{stringliteral}{        al\_bourse\_acheteur}}
+\DoxyCodeLine{\textcolor{stringliteral}{WHERE}}
+\DoxyCodeLine{\textcolor{stringliteral}{    al\_bourse\_acheteur.id = :id\_acheteur"{}}}
+
+\end{DoxyCode}
+
+
+Definition at line 648 of file constantes.\+php.
+
+
+
+Referenced by Alchimie\+BAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}\+Generer\+Justificatif().
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_a040f7eb71943e06bc40719e1d9bf075c}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_46\_get\_remboursement@{\$SQL\_46\_get\_remboursement}}
+\index{\$SQL\_46\_get\_remboursement@{\$SQL\_46\_get\_remboursement}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_46\_get\_remboursement}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+46\+\_\+get\+\_\+remboursement}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\textcolor{stringliteral}{"{}SELECT}}
+\DoxyCodeLine{\textcolor{stringliteral}{    `montant\_remb`,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    `date\_remb`,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    `type\_remb`}}
+\DoxyCodeLine{\textcolor{stringliteral}{FROM}}
+\DoxyCodeLine{\textcolor{stringliteral}{    `al\_bourse\_remboursements`}}
+\DoxyCodeLine{\textcolor{stringliteral}{WHERE}}
+\DoxyCodeLine{\textcolor{stringliteral}{    `id\_utilisateur` = :id}}
+\DoxyCodeLine{\textcolor{stringliteral}{    AND YEAR(`date\_remb`) = "{}}.annee\_base}
+
+\end{DoxyCode}
+
+
+Definition at line 662 of file constantes.\+php.
+
+
+
+Referenced by Alchimie\+BAJ\textbackslash{}main\textbackslash{}\+Afficher\+Remb(), and Alchimie\+BAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}\+Generer\+Facture().
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_aa9d0b14bcf607bbfca2350251c7ada57}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_47\_get\_dons@{\$SQL\_47\_get\_dons}}
+\index{\$SQL\_47\_get\_dons@{\$SQL\_47\_get\_dons}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_47\_get\_dons}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+47\+\_\+get\+\_\+dons}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\textcolor{stringliteral}{"{}SELECT}}
+\DoxyCodeLine{\textcolor{stringliteral}{    `montant\_don`,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    `date\_don`,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    `type\_don`}}
+\DoxyCodeLine{\textcolor{stringliteral}{FROM}}
+\DoxyCodeLine{\textcolor{stringliteral}{    `al\_bourse\_dons`}}
+\DoxyCodeLine{\textcolor{stringliteral}{WHERE}}
+\DoxyCodeLine{\textcolor{stringliteral}{    `id\_utilisateur` = :id }}
+\DoxyCodeLine{\textcolor{stringliteral}{    AND `type\_don` = :type}}
+\DoxyCodeLine{\textcolor{stringliteral}{    AND YEAR(`date\_don`) = "{}}.annee\_base}
+
+\end{DoxyCode}
+
+
+Definition at line 673 of file constantes.\+php.
+
+
+
+Referenced by Alchimie\+BAJ\textbackslash{}main\textbackslash{}\+Afficher\+Dons(), Alchimie\+BAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}\+Generer\+Facture(), and Alchimie\+BAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}\+Generer\+Justificatif().
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_a040d9516ef8f8e07816992a0872bb47b}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_4\_checkcodebarre@{\$SQL\_4\_checkcodebarre}}
+\index{\$SQL\_4\_checkcodebarre@{\$SQL\_4\_checkcodebarre}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_4\_checkcodebarre}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+4\+\_\+checkcodebarre}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= }
+\DoxyCodeLine{\textcolor{stringliteral}{'SELECT }}
+\DoxyCodeLine{\textcolor{stringliteral}{    code\_barre }}
+\DoxyCodeLine{\textcolor{stringliteral}{FROM v\_bourse\_liste }}
+\DoxyCodeLine{\textcolor{stringliteral}{WHERE code\_barre = :code\_barre}}
+\DoxyCodeLine{\textcolor{stringliteral}{    AND annee ='}.annee\_base}
+
+\end{DoxyCode}
+
+
+Definition at line 76 of file constantes.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_a9225acb063fbed0270dbf24f32b45178}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_5\_1\_whereVendeur@{\$SQL\_5\_1\_whereVendeur}}
+\index{\$SQL\_5\_1\_whereVendeur@{\$SQL\_5\_1\_whereVendeur}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_5\_1\_whereVendeur}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+5\+\_\+1\+\_\+where\+Vendeur = \textquotesingle{} v\+\_\+bourse\+\_\+liste.\+id\+\_\+utilisateur = \+:id\+Vendeur\textquotesingle{}}
+
+
+
+Definition at line 102 of file constantes.\+php.
+
+
+
+Referenced by Alchimie\+BAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}\+Generer\+Facture().
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_a982b199a8fd40fef287e4948432fc693}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_5\_2\_whereStatut@{\$SQL\_5\_2\_whereStatut}}
+\index{\$SQL\_5\_2\_whereStatut@{\$SQL\_5\_2\_whereStatut}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_5\_2\_whereStatut}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+5\+\_\+2\+\_\+where\+Statut = \textquotesingle{} v\+\_\+bourse\+\_\+liste.\+id\+\_\+statut = \+:id\+Statut\textquotesingle{}}
+
+
+
+Definition at line 103 of file constantes.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_a35d28a1f35c42d91cc928926209e906e}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_5\_3\_whereVigilance@{\$SQL\_5\_3\_whereVigilance}}
+\index{\$SQL\_5\_3\_whereVigilance@{\$SQL\_5\_3\_whereVigilance}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_5\_3\_whereVigilance}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+5\+\_\+3\+\_\+where\+Vigilance = \textquotesingle{} v\+\_\+bourse\+\_\+liste.\+vigilance = \+:vigilance\textquotesingle{}}
+
+
+
+Definition at line 104 of file constantes.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_a7293308a09ecaeb046e22ba52ced9edb}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_5\_4\_whereCode@{\$SQL\_5\_4\_whereCode}}
+\index{\$SQL\_5\_4\_whereCode@{\$SQL\_5\_4\_whereCode}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_5\_4\_whereCode}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+5\+\_\+4\+\_\+where\+Code = \textquotesingle{} v\+\_\+bourse\+\_\+liste.\+code\+\_\+barre LIKE CONCAT(\char`\"{}\%\char`\"{},\+:code\+\_\+barre,\char`\"{}\%\char`\"{})\textquotesingle{}}
+
+
+
+Definition at line 105 of file constantes.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_ab7e175d740feb739b98d61fa4f9620af}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_5\_5\_whereNom@{\$SQL\_5\_5\_whereNom}}
+\index{\$SQL\_5\_5\_whereNom@{\$SQL\_5\_5\_whereNom}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_5\_5\_whereNom}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+5\+\_\+5\+\_\+where\+Nom = \textquotesingle{} v\+\_\+bourse\+\_\+liste.\+nom\+\_\+jeu LIKE CONCAT(\char`\"{}\%\char`\"{},\+:nom\+\_\+jeu,\char`\"{}\%\char`\"{})\textquotesingle{}}
+
+
+
+Definition at line 106 of file constantes.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_ab845e15e6f0b6c8a3f42b12b2a10736c}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_5\_6\_whereAnnee@{\$SQL\_5\_6\_whereAnnee}}
+\index{\$SQL\_5\_6\_whereAnnee@{\$SQL\_5\_6\_whereAnnee}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_5\_6\_whereAnnee}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+5\+\_\+6\+\_\+where\+Annee = \textquotesingle{} v\+\_\+bourse\+\_\+liste.\+annee= \textquotesingle{}.annee\+\_\+base}
+
+
+
+Definition at line 107 of file constantes.\+php.
+
+
+
+Referenced by Alchimie\+BAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}\+Generer\+Facture().
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_ad51a0e4626a80a596233e864b9373698}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_5\_7\_orderBy@{\$SQL\_5\_7\_orderBy}}
+\index{\$SQL\_5\_7\_orderBy@{\$SQL\_5\_7\_orderBy}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_5\_7\_orderBy}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+5\+\_\+7\+\_\+order\+By = \textquotesingle{} ORDER BY v\+\_\+bourse\+\_\+liste.\+nom\+\_\+jeu\textquotesingle{}}
+
+
+
+Definition at line 108 of file constantes.\+php.
+
+
+
+Referenced by Alchimie\+BAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}\+Generer\+Facture().
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_a38a890cef9f022a9867e697847c42b6a}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_5\_getlistejeux@{\$SQL\_5\_getlistejeux}}
+\index{\$SQL\_5\_getlistejeux@{\$SQL\_5\_getlistejeux}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_5\_getlistejeux}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+5\+\_\+getlistejeux}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= }
+\DoxyCodeLine{\textcolor{stringliteral}{'SELECT distinct }}
+\DoxyCodeLine{\textcolor{stringliteral}{    v\_bourse\_liste.id,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    v\_bourse\_liste.id\_utilisateur,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    v\_bourse\_liste.nom,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    v\_bourse\_liste.prenom,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    v\_bourse\_liste.id\_statut,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    v\_bourse\_liste.statut,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    CASE v\_bourse\_liste.vigilance WHEN 0 THEN "{}Non"{} ELSE "{}Oui"{} END as vigilance,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    v\_bourse\_liste.nom\_jeu as nj,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    v\_bourse\_liste.vendu,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    (SELECT max(vendu) FROM v\_bourse\_liste WHERE nom\_jeu = nj ORDER BY vendu asc) as maxprix, }}
+\DoxyCodeLine{\textcolor{stringliteral}{    (SELECT min(vendu) FROM v\_bourse\_liste WHERE nom\_jeu = nj order by vendu asc) as minprix, }}
+\DoxyCodeLine{\textcolor{stringliteral}{    code\_barre,}}
+\DoxyCodeLine{\textcolor{stringliteral}{    date\_reception, }}
+\DoxyCodeLine{\textcolor{stringliteral}{    date\_sortie\_stock}}
+\DoxyCodeLine{\textcolor{stringliteral}{FROM v\_bourse\_liste }}
+\DoxyCodeLine{\textcolor{stringliteral}{WHERE '}}
+
+\end{DoxyCode}
+
+
+Definition at line 84 of file constantes.\+php.
+
+
+
+Referenced by Alchimie\+BAJ\textbackslash{}main\textbackslash{}pdf\textbackslash{}\+Generer\+Facture().
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_a7c846c153a0f392afb181b61b7c37074}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_6\_setvigilance@{\$SQL\_6\_setvigilance}}
+\index{\$SQL\_6\_setvigilance@{\$SQL\_6\_setvigilance}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_6\_setvigilance}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+6\+\_\+setvigilance}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= }
+\DoxyCodeLine{\textcolor{stringliteral}{'UPDATE al\_bourse\_liste}}
+\DoxyCodeLine{\textcolor{stringliteral}{SET vigilance=1 }}
+\DoxyCodeLine{\textcolor{stringliteral}{WHERE id=:id'}}
+
+\end{DoxyCode}
+
+
+Definition at line 110 of file constantes.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_a200851a90a42f374f0cd66e38cd866cc}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_7\_updateprixjeu@{\$SQL\_7\_updateprixjeu}}
+\index{\$SQL\_7\_updateprixjeu@{\$SQL\_7\_updateprixjeu}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_7\_updateprixjeu}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+7\+\_\+updateprixjeu}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= }
+\DoxyCodeLine{\textcolor{stringliteral}{'UPDATE al\_bourse\_liste}}
+\DoxyCodeLine{\textcolor{stringliteral}{SET prix=:vendu }}
+\DoxyCodeLine{\textcolor{stringliteral}{WHERE id=:id'}}
+
+\end{DoxyCode}
+
+
+Definition at line 115 of file constantes.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_a28cf18a83c8ffcdd810943454a8fb7eb}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_8\_argentencaisse\_get@{\$SQL\_8\_argentencaisse\_get}}
+\index{\$SQL\_8\_argentencaisse\_get@{\$SQL\_8\_argentencaisse\_get}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_8\_argentencaisse\_get}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+8\+\_\+argentencaisse\+\_\+get}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= }
+\DoxyCodeLine{\textcolor{stringliteral}{"{}SELECT}}
+\DoxyCodeLine{\textcolor{stringliteral}{    (SELECT}}
+\DoxyCodeLine{\textcolor{stringliteral}{        COALESCE(SUM(montantTotal), 0)}}
+\DoxyCodeLine{\textcolor{stringliteral}{    FROM}}
+\DoxyCodeLine{\textcolor{stringliteral}{        al\_bourse\_transactions}}
+\DoxyCodeLine{\textcolor{stringliteral}{    WHERE}}
+\DoxyCodeLine{\textcolor{stringliteral}{        YEAR(al\_bourse\_transactions.date) = "{}}.annee\_base.\textcolor{stringliteral}{"{}) }}
+\DoxyCodeLine{\textcolor{stringliteral}{ -\/ (SELECT}}
+\DoxyCodeLine{\textcolor{stringliteral}{        COALESCE(SUM(montant\_remb), 0)}}
+\DoxyCodeLine{\textcolor{stringliteral}{    FROM}}
+\DoxyCodeLine{\textcolor{stringliteral}{        al\_bourse\_remboursements}}
+\DoxyCodeLine{\textcolor{stringliteral}{    WHERE}}
+\DoxyCodeLine{\textcolor{stringliteral}{        YEAR(}}
+\DoxyCodeLine{\textcolor{stringliteral}{            al\_bourse\_remboursements.date\_remb}}
+\DoxyCodeLine{\textcolor{stringliteral}{        ) = "{}}.annee\_base.\textcolor{stringliteral}{"{})}}
+\DoxyCodeLine{\textcolor{stringliteral}{ + (SELECT}}
+\DoxyCodeLine{\textcolor{stringliteral}{        COALESCE(SUM(montant\_don), 0)}}
+\DoxyCodeLine{\textcolor{stringliteral}{    FROM}}
+\DoxyCodeLine{\textcolor{stringliteral}{        al\_bourse\_dons}}
+\DoxyCodeLine{\textcolor{stringliteral}{    WHERE}}
+\DoxyCodeLine{\textcolor{stringliteral}{        type\_don <> 'vente' AND YEAR(al\_bourse\_dons.date\_don) = "{}}.annee\_base.\textcolor{stringliteral}{"{}}}
+\DoxyCodeLine{\textcolor{stringliteral}{) AS Total"{}}}
+
+\end{DoxyCode}
+
+
+Definition at line 121 of file constantes.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_a71cca2b35987d70bb59e45667c6d8adc}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$SQL\_9\_acheteurget@{\$SQL\_9\_acheteurget}}
+\index{\$SQL\_9\_acheteurget@{\$SQL\_9\_acheteurget}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$SQL\_9\_acheteurget}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$\+SQL\+\_\+9\+\_\+acheteurget}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= }
+\DoxyCodeLine{\textcolor{stringliteral}{"{}SELECT * FROM al\_bourse\_acheteur WHERE id = :acheteurId"{}}}
+
+\end{DoxyCode}
+
+
+Definition at line 145 of file constantes.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_a1ea85e7bcf235592672c1be83d67c227}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$tempZipFile@{\$tempZipFile}}
+\index{\$tempZipFile@{\$tempZipFile}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$tempZipFile}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$temp\+Zip\+File = tempnam(sys\+\_\+get\+\_\+temp\+\_\+dir(), \textquotesingle{}exported\+\_\+data\+\_\+\textquotesingle{})}
+
+
+
+Definition at line 15 of file export-\/base.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_a77ae2101270770ca8d566a3938d9ed6b}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$user@{\$user}}
+\index{\$user@{\$user}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$user}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$user}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= array(}
+\DoxyCodeLine{    \textcolor{stringliteral}{"{}message1"{}} => \textcolor{stringliteral}{''},}
+\DoxyCodeLine{    \textcolor{stringliteral}{"{}message2"{}} => \textcolor{stringliteral}{''}}
+\DoxyCodeLine{)}
+
+\end{DoxyCode}
+
+
+Definition at line 6 of file receptionjeux.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_a3eb930024c674a1f7a0f7400d7686ff6}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$zip@{\$zip}}
+\index{\$zip@{\$zip}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$zip}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$zip = new Zip\+Archive()}
+
+
+
+Definition at line 16 of file export-\/base.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_a0379dc855cda7c1e1e930ea5f00e608c}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\$zipFileName@{\$zipFileName}}
+\index{\$zipFileName@{\$zipFileName}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\$zipFileName}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}\$zip\+File\+Name = \textquotesingle{}export\+\_\+base\+\_\+\textquotesingle{}.date(\char`\"{}Y\+\_\+m\+\_\+d\+\_\+\+H\+\_\+i\+\_\+s\char`\"{}).\textquotesingle{}.zip\textquotesingle{}}
+
+
+
+Definition at line 12 of file export-\/base.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_ae612587d12d65f5d4db01b034ae9affd}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\_\_pad0\_\_@{\_\_pad0\_\_}}
+\index{\_\_pad0\_\_@{\_\_pad0\_\_}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\_\_pad0\_\_}
+{\footnotesize\ttfamily color Alchimie\+BAJ\+::main\textbackslash{}\+\_\+\+\_\+pad0\+\_\+\+\_\+}
+
+
+
+Definition at line 106 of file ventedesjeux.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_abc5e00ca9cc4b499bae1b873f229e159}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!\_\_pad1\_\_@{\_\_pad1\_\_}}
+\index{\_\_pad1\_\_@{\_\_pad1\_\_}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{\_\_pad1\_\_}
+{\footnotesize\ttfamily color Alchimie\+BAJ\+::main\textbackslash{}\+\_\+\+\_\+pad1\+\_\+\+\_\+}
+
+
+
+Definition at line 137 of file ventedesjeux.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_a1d43481f1a332bc7ec538ccfdc7bcf3f}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!al\_bourse\_users@{al\_bourse\_users}}
+\index{al\_bourse\_users@{al\_bourse\_users}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{al\_bourse\_users}
+{\footnotesize\ttfamily $<$div class=\char`\"{}modal-\/content\char`\"{}$>$$<$div class=\char`\"{}modal-\/body\char`\"{}$>$$<$div class=\char`\"{}form-\/group\char`\"{}$>$$<$label for=\char`\"{}Montant\+Ajout\char`\"{}$>$ Montant ajouté en euros$<$i$>$ Mettre un devant en cas de retrait$<$/i$>$$<$/label$>$$<$input type=\char`\"{}number\char`\"{} class=\char`\"{}form-\/control\char`\"{} name=\char`\"{}Montant\+Ajout\char`\"{} id=\char`\"{}Montant\+Ajout\char`\"{}$>$$<$/div$>$$<$div class=\char`\"{}form-\/group\char`\"{}$>$$<$label for=\char`\"{}Mdp\+Ajout\+Trans\char`\"{}$>$ Mot de passe$<$/label$>$$<$input type=\char`\"{}password\char`\"{} class=\char`\"{}form-\/control\char`\"{} name=\char`\"{}Mdp\+Ajout\+Trans\char`\"{} id=\char`\"{}Mdp\+Ajout\+Trans\char`\"{}$>$$<$/div$>$$<$div class=\char`\"{}form-\/group mt-\/2\char`\"{}$>$$<$button class=\char`\"{}btn btn-\/success\char`\"{} id=\char`\"{}Save\+Transaction\char`\"{}$>$ Confirmer$<$/button$>$$<$button class=\char`\"{}btn btn-\/danger\char`\"{} id=\char`\"{}modal-\/close\char`\"{} data-\/bs-\/dismiss=\char`\"{}modal\char`\"{}$>$ Annuler$<$/button$>$$<$/div$>$$<$/div$>$$<$/div$>$$<$/div$>$$<$/div$>$$<$/div$>$$<$!-\/-\/ Section pour afficher les Jeux en vigilance -\/-\/$>$$<$div class=\char`\"{}col-\/sm-\/9\char`\"{}$>$$<$div class=\char`\"{}card\char`\"{}$>$$<$div class=\char`\"{}card-\/header bg-\/primary text-\/white\char`\"{}$>$$<$h3 class=\char`\"{}card-\/title\char`\"{}$>$ Jeux en vigilance$<$/h3$>$$<$/div$>$$<$div class=\char`\"{}card-\/body\char`\"{}$>$$<$div class=\char`\"{}row\char`\"{}$>$$<$div class=\char`\"{}col-\/sm-\/6\char`\"{}$>$$<$h4$>$ Alchimie$<$/h4$>$$<$div class=\char`\"{}table-\/responsive max-\/height-\/table\char`\"{}$>$$<$table class=\char`\"{}table table-\/bordered table-\/striped\char`\"{} id=\char`\"{}tableau\+Jeux\+Alchimie\char`\"{}$>$$<$thead$>$$<$tr class=\char`\"{}bg-\/info text-\/black\char`\"{}$>$$<$th$>$ Nom$<$/th$>$$<$th$>$ Code$<$/th$>$$<$th$>$ Prix$<$/th$>$$<$th$>$ Statut$<$/th$>$$<$/tr$>$$<$/thead$>$$<$tbody$>$$<$!-\/-\/ Les données seront ajoutées dynamiquement via AJAX -\/-\/$>$$<$/tbody$>$$<$/table$>$$<$/div$>$$<$/div$>$$<$div class=\char`\"{}col-\/sm-\/6\char`\"{}$>$$<$h4$>$ Autres vendeurs$<$/h4$>$$<$div class=\char`\"{}table-\/responsive\char`\"{}$>$$<$table class=\char`\"{}table table-\/bordered table-\/striped\char`\"{} id=\char`\"{}tableau\+Jeux\+Autres\char`\"{}$>$$<$thead$>$$<$tr class=\char`\"{}bg-\/info text-\/black\char`\"{}$>$$<$th$>$ Nom$<$/th$>$$<$th$>$ Code$<$/th$>$$<$th$>$ Prix$<$/th$>$$<$th$>$ Statut$<$/th$>$$<$/tr$>$$<$/thead$>$$<$tbody$>$$<$!-\/-\/ Les données seront ajoutées dynamiquement via AJAX -\/-\/$>$$<$/tbody$>$$<$/table$>$$<$/div$>$$<$/div$>$$<$/div$>$$<$/div$>$$<$/div$>$$<$/div$>$$<$/div$>$$<$div class=\char`\"{}row mt-\/4\char`\"{}$>$$<$!-\/-\/ Section pour importer des fichiers -\/-\/$>$$<$div class=\char`\"{}col-\/sm-\/3\char`\"{}$>$$<$div class=\char`\"{}card\char`\"{}$>$$<$div class=\char`\"{}card-\/header bg-\/primary text-\/white\char`\"{}$>$$<$h3 class=\char`\"{}card-\/title\char`\"{}$>$ Importation des tables$<$/h3$>$$<$/div$>$$<$div class=\char`\"{}card-\/body text-\/center\char`\"{}$>$$<$form id=\char`\"{}insert\+Table\char`\"{} method=\char`\"{}post\char`\"{} class=\char`\"{}needs-\/validation\char`\"{} novalidate$>$$<$!-\/-\/ Champ pour télécharger le fichier pour la table al\+\_\+bourse\+\_\+users -\/-\/$>$$<$div class=\char`\"{}mb-\/3\char`\"{}$>$$<$label for=\char`\"{}file\+\_\+user\char`\"{}$>$ Fichier pour Alchimie\+BAJ\+::main\textbackslash{}al\+\_\+bourse\+\_\+users}
+
+
+
+Definition at line 209 of file admin.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_aaa7ade2f2b1d9a935dcc93c9d625842f}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!else@{else}}
+\index{else@{else}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{else}
+{\footnotesize\ttfamily \textbf{ if} ( \$zip-\/$>$open( \$temp\+Zip\+File, Zip\+Archive\+::\+CREATE$\vert$Zip\+Archive\+::\+OVERWRITE)===TRUE) Alchimie\+BAJ\+::main\textbackslash{}else}
+
+
+
+Definition at line 34 of file admin.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_aefb26a52829047cfedd1697c2dd39b27}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!if@{if}}
+\index{if@{if}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{if\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\+::if (\begin{DoxyParamCaption}\item[{isset( \$\+\_\+\+GET[ \textquotesingle{}id\textquotesingle{}])}]{ }\end{DoxyParamCaption})}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    echo \textcolor{stringliteral}{'Erreur lors de la création du fichier ZIP'}}
+
+\end{DoxyCode}
+
+
+Definition at line 10 of file receptionjeux.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_aa901d6eea3965c8df2003756246b52b2}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!if@{if}}
+\index{if@{if}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{if\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Alchimie\+BAJ\+::main\textbackslash{}if(isset(\$\+\_\+\+GET[\textquotesingle{}id\textquotesingle{}])) (\begin{DoxyParamCaption}\item[{isset( \$\+\_\+\+GET[ \textquotesingle{}id\textquotesingle{}])}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 11 of file restitutiondesjeux.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_afa8d795dbad9385b5153f40d94d25b41}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!TYPE\_RECEPTION@{TYPE\_RECEPTION}}
+\index{TYPE\_RECEPTION@{TYPE\_RECEPTION}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{TYPE\_RECEPTION}
+{\footnotesize\ttfamily const Alchimie\+BAJ\+::main\textbackslash{}\+TYPE\+\_\+\+RECEPTION \char`\"{}reception\char`\"{}}
+
+
+
+Definition at line 6 of file selectionvendeur.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_a929dce075d12214f680bfb0cf8d2da1c}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!TYPE\_RESTITUTION@{TYPE\_RESTITUTION}}
+\index{TYPE\_RESTITUTION@{TYPE\_RESTITUTION}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{TYPE\_RESTITUTION}
+{\footnotesize\ttfamily const Alchimie\+BAJ\+::main\textbackslash{}\+TYPE\+\_\+\+RESTITUTION \char`\"{}restitution\char`\"{}}
+
+
+
+Definition at line 7 of file selectionvendeur.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_ac7b1aeaacc2568bf70d1153cfff45588}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!vendeur@{vendeur}}
+\index{vendeur@{vendeur}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{vendeur}
+{\footnotesize\ttfamily €$<$/span$>$$<$/li$>$$<$li class=\char`\"{}list-\/group-\/item d-\/flex justify-\/content-\/between align-\/items-\/center\char`\"{}$>$ Don à l montant\+\_\+don REMOTE\+\_\+\+ADDR icone cadeau dans la colonne action$<$/p$>$$<$p$>$ Rendre un jeu au Alchimie\+BAJ\+::main\textbackslash{}vendeur}
+
+
+
+Definition at line 284 of file restitutiondesjeux.\+php.
+
+\mbox{\label{namespaceAlchimieBAJ_1_1main_a19d5e9d9068da48ce01c5117431166ba}} 
+\index{AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}!vendu@{vendu}}
+\index{vendu@{vendu}!AlchimieBAJ\textbackslash{}main@{AlchimieBAJ\textbackslash{}main}}
+\doxysubsubsection{vendu}
+{\footnotesize\ttfamily $<$/i$>$$<$br$>$ Passer un jeu du stock à Alchimie\+BAJ\+::main\textbackslash{}vendu}
+
+
+
+Definition at line 107 of file ventedesjeux.\+php.
+
