@@ -28,11 +28,11 @@ $(document).ready(function() {
 		processing: true,
 		serverSide: false,
 		language: {
-			"url": "Json/fr-FR.json"
+			"url": "../main/Json/fr-FR.json"
 		},
 		ajax: {
 			type: 'POST',
-			url: 'ajax/jeuxliste-getenstockspeed.php',
+			url: '../main/ajax/jeuxliste-getenstockspeed.php',
 			data: function(data) {
 				var nom = $('#searchNom').val();
 				var code = $('#searchCode').val();
@@ -51,7 +51,7 @@ $(document).ready(function() {
 			{ data: "Vendu", name: "Vendu", title: "Prix", render: function(data, type, row) { return data + ' €'; } },
 			{
 				data: "Vendeur", name: "Vendeur", title: "Vendeur", render: function(data, type, row) {
-					return '<a data-jeu="' + row.DT_RowId + '" class="toFestival" href="receptionjeux.php?id=' + row.idvendeur + '">' + row.Vendeur + '</a>';
+					return '<a data-jeu="' + row.DT_RowId + '" class="toFestival" href="?page=reception&id=' + row.idvendeur + '">' + row.Vendeur + '</a>';
 				}
 			},
 			{ data: "date_reception", name: "date_reception", title: "Date de réception" },
@@ -106,7 +106,7 @@ $(document).ready(function() {
 	// Double-clic sur une ligne pour aller à la réception des jeux du vendeur
 	$('#jeuxenstock tbody').on('dblclick', 'tr', function() {
 		var numrow = $(this).attr('data-idvendeur');
-		$(location).attr('href', 'receptionjeux.php?id=' + numrow);
+		$(location).attr('href', '?page=reception&id=' + numrow);
 	});
 
 	// Fonction qui crypte le mot de passe en utilisant SHA-256.
@@ -154,7 +154,7 @@ $(document).ready(function() {
 					console.log("Mot de passe correct");
 					// Envoyer les données mises à jour au serveur
 					$.ajax({
-						url: 'ajax/jeuxliste-update.php',
+						url: '../main/ajax/jeuxliste-update.php',
 						type: 'POST',
 						data: { id: id, statut: nouvelleValeur, codebarre: code_barre, old_id_statut: statutActuel },
 						success: function(data) {

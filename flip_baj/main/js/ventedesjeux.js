@@ -7,7 +7,7 @@ $(document).ready(function() {
     if (id_transaction === '') {
         $.ajax({
             type: 'POST',
-            url: 'ajax/transaction-add.php',
+            url: '../main/ajax/transaction-add.php',
             data: {
                 type: "panier",
                 montantTotal: 0,
@@ -81,11 +81,11 @@ $(document).ready(function() {
         "processing": true,
         "serverSide": false,
         language: {
-            "url": "Json/fr-FR.json"
+            "url": "../main/Json/fr-FR.json"
         },
         "ajax": {
             'type': 'POST',
-            'url': 'ajax/jeuxliste-getenstockspeed.php',
+            'url': '../main/ajax/jeuxliste-getenstockspeed.php',
             'data': {
                 idStatut: STATUS_JEUX_EN_STOCK
             },
@@ -113,7 +113,7 @@ $(document).ready(function() {
         "processing": true,
         "serverSide": false,
         language: {
-            "url": "Json/fr-FR.json"
+            "url": "../main/Json/fr-FR.json"
         },
         "columns": [
             { "data": "Jeu", "name": "Jeu", "title": "Jeu" },
@@ -164,7 +164,7 @@ $('#jeuxenstock tbody').off('dblclick').on('dblclick', 'tr', function () {
 
     $.ajax({
         type: 'POST',
-        url: 'ajax/verifier-statut-jeu.php',
+        url: '../main/ajax/verifier-statut-jeu.php',
         data: {
             id: id,
             codebarre: code
@@ -260,7 +260,7 @@ $('#jeuxenstock tbody').off('dblclick').on('dblclick', 'tr', function () {
         if (id_transaction !== '') {
             $.ajax({
                 type: 'POST',
-                url: 'ajax/transaction-updatelive.php',
+                url: '../main/ajax/transaction-updatelive.php',
                 data: {
                     type: 'panier',
                     montantTotal: t,
@@ -290,7 +290,7 @@ $('#jeuxenvente tbody').on('click', 'a.delJeu', function () {
 
     $.ajax({
         type: 'POST',
-        url: 'ajax/jeuxliste-update.php',
+        url: '../main/ajax/jeuxliste-update.php',
         data: {
             id: id,
             statut: 2, // en stock
@@ -324,7 +324,7 @@ $('#jeuxenvente tbody').on('click', 'a.delJeu', function () {
         });
         $.ajax({
             type: 'POST',
-            url: 'ajax/transactionliste-add.php',
+            url: '../main/ajax/transactionliste-add.php',
             data: {
                 idliste: SAC_ID,
                 id_transaction: id_transaction
@@ -383,7 +383,7 @@ $('#jeuxenvente tbody').on('click', 'a.delJeu', function () {
             var argentEnCaisse = 0;
 
             $.ajax({
-                url: 'ajax/argentencaisse-get.php',
+                url: '../main/ajax/argentencaisse-get.php',
                 type: 'GET',
                 dataType: 'json',
                 async: false,
@@ -437,7 +437,7 @@ $('#jeuxenvente tbody').on('click', 'a.delJeu', function () {
     // Mise à jour de la transaction
     $.ajax({
         type: 'POST',
-        url: 'ajax/transaction-updatelive.php',
+        url: '../main/ajax/transaction-updatelive.php',
         data: {
             type: 'vente',
             montantTotal: $('#TotalJeuxVendus').data('total'),
@@ -472,7 +472,7 @@ $('#jeuxenvente tbody').on('click', 'a.delJeu', function () {
 
         $.ajax({
             type: 'POST',
-            url: 'ajax/jeuxliste-update.php',
+            url: '../main/ajax/jeuxliste-update.php',
             data: {
                 id: id,
                 statut: 3,  // VENDU
@@ -489,7 +489,7 @@ $('#jeuxenvente tbody').on('click', 'a.delJeu', function () {
         });
         $.ajax({
         type: 'POST',
-        url: 'ajax/transactionliste-add.php',
+        url: '../main/ajax/transactionliste-add.php',
         data: {
             idliste: id,
             id_transaction: id_transaction
@@ -508,7 +508,7 @@ $('#jeuxenvente tbody').on('click', 'a.delJeu', function () {
         if (montantDon !== 0) {
             $.ajax({
                 type: 'POST',
-                url: 'ajax/don-add.php',
+                url: '../main/ajax/don-add.php',
                 data: {
                     id: id_acheteur || 0,
                     montant_don: montantDon,
@@ -544,14 +544,14 @@ $('#jeuxenvente tbody').on('click', 'a.delJeu', function () {
         // Génération et envoi de la facture (si acheteur existant)
         if (id_acheteur) {
             $.ajax({
-                url: './pdf/generer_pdf.php',
+                url: '../main/pdf/generer_pdf.php',
                 type: 'GET',
                 data: { idacheteur: id_acheteur },
                 success: function () {
                     console.log(' Facture générée');
                     setTimeout(function () {
                         $.ajax({
-                            url: 'ajax/send-mail.php',
+                            url: '../main/ajax/send-mail.php',
                             type: 'POST',
                             data: { idacheteur: id_acheteur },
                             success: function () {
@@ -570,7 +570,7 @@ $('#jeuxenvente tbody').on('click', 'a.delJeu', function () {
         }
     
         // Tout est ok → redirection vers nouvelle vente
-        window.location.href = 'vente.php';
+        window.location.href = '?page=vente';
     });
     
     

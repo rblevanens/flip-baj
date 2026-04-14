@@ -1,5 +1,9 @@
 <?php
 
+use App\Controllers\HomeController;
+use App\Controllers\VenteController;
+use App\Controllers\VenteDesJeuxController;
+
 require_once __DIR__ . '/../vendor/autoload.php';
 
 $dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__));
@@ -10,17 +14,18 @@ $page = $_GET['page'] ?? 'home';
 // partie routeur ($page)
 switch ($page) {
     case 'home':
-        $controller = new \App\Controllers\HomeController();
+        $controller = new HomeController();
         $controller->index();
         break;
 
     case 'vente':
-        $controller = new \App\Controllers\VenteController();
+        $controller = new VenteController();
         $controller->index();
         break;
 
     case 'ventedesjeux':
-        require __DIR__ . '/../main/ventedesjeux.php';
+        $controller = new VenteDesJeuxController();
+        $controller->index();
         break;
 
     case 'reception':

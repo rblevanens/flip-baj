@@ -12,19 +12,19 @@
  * Les boutons "Modifier Acheteur" permettent de modifier l'acheteur associé à une transaction existante, tandis que les boutons "Ajouter Acheteur"
  * permettent d'ajouter un nouvel acheteur à une transaction.
  * Les fonctionnalités de modification et d'ajout d'acheteur sont gérées via la modale acheteur.
- * Les données sont chargées via une requête AJAX vers 'ajax/get-ventes.php'.
+ * Les données sont chargées via une requête AJAX vers '../main/ajax/get-ventes.php'.
  */
 
 $(document).ready(function() {
 	$("#showVente").click(function() {
-		window.location = 'ventedesjeux.php';
+		window.location = '?page=ventedesjeux';
 	});
 
 	// Initialiser le tableau DataTable
 	var table = $('#vendeurs').DataTable({
 		scrollY: 500,
 		language:{
-			url: "Json/fr-FR.json"
+			url: "../main/Json/fr-FR.json"
 		},
 		// Définir les colonnes
 		columns: [
@@ -63,7 +63,7 @@ $(document).ready(function() {
 		],
 		// Charger les données via AJAX
 		ajax: {
-			url: 'ajax/get-ventes.php',
+			url: '../main/ajax/get-ventes.php',
 			dataSrc: ''
 		}
 	});

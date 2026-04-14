@@ -67,7 +67,7 @@ $(document).ready(function() {
 		$(selector).autocomplete({
 			source: function(request, response) {
 				$.ajax({
-					url: 'ajax/user-get-autocomplete.php',
+					url: '../main/ajax/user-get-autocomplete.php',
 					type: 'POST',
 					data: { [requestDataKey]: request.term },
 					dataType: 'json',
@@ -204,7 +204,7 @@ $(document).ready(function() {
 		if (isValid) {
 			// Effectuer la requête Ajax pour enregistrer les données
 			$.ajax({
-				url: idAcheteur ? 'ajax/acheteur-update.php' : 'ajax/acheteur-add.php',
+				url: idAcheteur ? '../main/ajax/acheteur-update.php' : '../main/ajax/acheteur-add.php',
 				type: 'POST',
 				data: data,
 				dataType: 'json',
@@ -214,7 +214,7 @@ $(document).ready(function() {
 						$('#messageerreurformulairemodale').html('<p class="valid-feedback">' + (idAcheteur ? 'Acheteur mis à jour' : 'Acheteur créé') + '</p>');
 
 						// Rafraîchir la page si on est sur vente.php
-						if (window.location.href.indexOf("vente.php") > -1) {
+						if (window.location.href.indexOf("vente.php") > -1 || window.location.href.indexOf("page=vente") > -1) {
 							location.reload();
 						} else {
 							$('#showModal').html('Modifier l\'acheteur '+prenom+' '+nom+' '+email);
@@ -246,7 +246,7 @@ function openModificationAcheteurModal(idAcheteur, idTransaction) {
 	$('#messageerreurformulairemodale').html('');
 	// Requête Ajax pour récupérer les informations de l'acheteur
 	$.ajax({
-		url: 'ajax/acheteur-get.php',
+		url: '../main/ajax/acheteur-get.php',
 		type: 'POST',
 		data: { id: idAcheteur },
 		dataType: 'json',
