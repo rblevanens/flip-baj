@@ -17,11 +17,11 @@ include ('header.php');
 </ul>
 <main class="container">
 	<div class="row">
-		<h2 class="text-center mb-4">Liste des ventes</h2>
+		<h2 class="text-center mb-4">Liste des ventes - Vendre un jeu</h2>
 	</div>
 	<div class="row text-center">
 		<div>
-			<button id="showVente" class="btn btn-primary">Ajouter des jeux au panier</button>
+			<button id="showVente" class="btn btn-primary">Faire une vente</button>
 		</div>
 	</div>
 	<div class="row">

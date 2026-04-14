@@ -33,7 +33,7 @@ while ($row = $results->fetch(\PDO::FETCH_ASSOC)) {
 <main class="container">
 	<div class="row">
 		<div class="col">
-			<h2>Recherche de jeux</h2>
+			<h2>Recherche d'un jeu</h2>
 			<form id="searchForm" class="row g-3">
 				<div class="col-md-3">
 					<div class="form-floating">
