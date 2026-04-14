@@ -1,0 +1,18 @@
+{
+    "require": {
+        "nelexa/zip": "^4.0",
+        "vlucas/phpdotenv": "3.6"
+    },
+
+    "name": "alchimie/baj",
+    "description": "Bourse aux Jeux - FLIP",
+    "autoload": {
+        "psr-4": {
+            "App\\": "flip_baj/src/"
+        }
+    },
+    "require": {
+        "vlucas/phpdotenv": "^5.6"
+    }
+
+}

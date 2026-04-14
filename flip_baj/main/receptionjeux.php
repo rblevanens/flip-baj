@@ -18,12 +18,12 @@ if (isset($_GET['id'])) {
 }
 ?>
 
-<script type="text/javascript" src="js/datatables.min.js"></script>
-<script type="text/javascript" src="js/jquery.jeditable.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/utils.js"></script>
-<script type="text/javascript" src="js/modalevendeur.js"></script>
-<script type="text/javascript" src="js/receptionjeux.js"></script>
+<script type="text/javascript" src="../public/js/datatables.min.js"></script>
+<script type="text/javascript" src="../public/js/jquery.jeditable.js"></script>
+<script type="text/javascript" src="../public/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../public/js/utils.js"></script>
+<script type="text/javascript" src="../public/js/modalevendeur.js"></script>
+<script type="text/javascript" src="../public/js/receptionjeux.js"></script>
 
 <!-- Navigation -->
 <ul class="filariane ms-2">
@@ -46,8 +46,8 @@ if (isset($_GET['id'])) {
 				</div>
 				<div class="card-body">
 					<div class="d-flex align-items-center">
-						<img src="img/g6895.png" class="me-3" width="30" height="50"
-							alt="...">
+						<img src="../public/img/g6895.png" class="me-3" width="30" height="50"
+                             alt="...">
 						<div class="flex-grow-1">
 							<h5 class="mb-0"><?php echo $user['nom'].' '.$user['prenom'] ?></h5>
 							<div id="email"><?php echo $user['email'] ?></div>

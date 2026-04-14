@@ -5,11 +5,11 @@ include ('header.php');
 
 
 
-<script type="text/javascript" src="js/datatables.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/utils.js"></script>
-<script type="text/javascript" src="js/vente.js"></script>
-<script type="text/javascript" src="js/modaleacheteur.js"></script>
+<script type="text/javascript" src="../public/js/datatables.min.js"></script>
+<script type="text/javascript" src="../public/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../public/js/utils.js"></script>
+<script type="text/javascript" src="../public/js/vente.js"></script>
+<script type="text/javascript" src="../public/js/modaleacheteur.js"></script>
 
 <ul class="filariane ms-2">
 	<li><a href="index.php">Home</a></li>
