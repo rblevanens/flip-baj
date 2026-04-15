@@ -1,9 +1,9 @@
-<script type="text/javascript" src="../main/js/datatables.min.js"></script>
-<script type="text/javascript" src="../main/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="../main/js/utils.js"></script>
-<script type="text/javascript" src="../main/js/ventedesjeux.js"></script>
-<script type="text/javascript" src="../main/js/modaleacheteur.js"></script>
-<script type="text/javascript" src="../main/js/selectionacheteur.js"></script>
+<script type="text/javascript" src="js/datatables.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/utils.js"></script>
+<script type="text/javascript" src="js/ventedesjeux.js"></script>
+<script type="text/javascript" src="js/modaleacheteur.js"></script>
+<script type="text/javascript" src="js/selectionacheteur.js"></script>
 
 <ul class="filariane ms-2">
 	<li><a href="?page=home">Home</a></li>

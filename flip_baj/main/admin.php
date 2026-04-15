@@ -64,7 +64,7 @@ if (isset($_COOKIE['loggedin']) && $_COOKIE['loggedin'] === 'true') {
     // Si l'utilisateur n'est pas connecté, affiche le formulaire de connexion
     if (! isset($_COOKIE['loggedin']) || $_COOKIE['loggedin'] !== 'true') {
         ?>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../public/js/bootstrap.min.js"></script>
 <script type="text/javascript">
     var idVendeurEdition = <?php echo $idadminVision; ?>;
 </script>
@@ -99,9 +99,9 @@ if (isset($_COOKIE['loggedin']) && $_COOKIE['loggedin'] === 'true') {
 ?>
 
 
-<script type="text/javascript" src="js/datatables.min.js"></script>
-<script type="text/javascript" src="js/crypto-js.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../public/js/datatables.min.js"></script>
+<script type="text/javascript" src="../public/js/crypto-js.min.js"></script>
+<script type="text/javascript" src="../public/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/utils.js"></script>
 <script type="text/javascript" src="js/listejeux.js"></script>
 
