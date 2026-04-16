@@ -11,7 +11,7 @@ include ('../constantes.php');
 
     <!--  Javascript files -->
     <link rel="stylesheet" href="view_jeu.css">
-    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../../public/css/bootstrap.min.css" />
 
 </head>
 <body>
@@ -19,7 +19,7 @@ include ('../constantes.php');
 		class="mb-1 bg-bleu text-white d-flex justify-content-between align-items-center">
 		<div class="col-8">
 			<div class="">
-				<img src="../img/bulle-flip-2.png" width="90px" />
+				<img src="../../public/img/bulle-flip-2.png" width="90px" />
                 <a href="" class="text-decoration-none text-white">Bourse aux jeux</a>
 			</div>
 		</div>
