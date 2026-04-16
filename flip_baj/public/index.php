@@ -9,41 +9,27 @@ require_once __DIR__ . '/../vendor/autoload.php';
 $dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__));
 $dotenv->load();
 
-// Simple router logic
 $requestUri = $_SERVER['REQUEST_URI'];
 $requestPath = parse_url($requestUri, PHP_URL_PATH);
+
 $basePath = '/baj-flip/flip_baj/public/';
-
 $route = str_replace($basePath, '', $requestPath);
+$route = trim($route, '/');
 
-// Intercepte les appels vers /ajax/...
-if (strpos($route, 'ajax/') === 0) {
-    $ajaxFile = __DIR__ . '/../main/' . $route;
-    if (file_exists($ajaxFile)) {
-        require $ajaxFile;
+if (strpos($route, 'ajax/') === 0 || strpos($route, 'Json/') === 0) {
+    $file = __DIR__ . '/../main/' . $route;
+    if (file_exists($file)) {
+        if (strpos($route, 'Json/') === 0) header('Content-Type: application/json');
+        require $file;
     } else {
         http_response_code(404);
-        echo "Ajax file not found.";
+        echo "Ressource introuvable.";
     }
     exit;
 }
 
-// Intercepte les appels vers /Json/... (DataTables i18n)
-if (strpos($route, 'Json/') === 0) {
-    $jsonFile = __DIR__ . '/../main/' . $route;
-    if (file_exists($jsonFile)) {
-        header('Content-Type: application/json; charset=utf-8');
-        readfile($jsonFile);
-    } else {
-        http_response_code(404);
-        echo "Json file not found.";
-    }
-    exit;
-}
+$page = $route ?: 'home';
 
-$page = $_GET['page'] ?? 'home';
-
-// partie routeur ($page)
 switch ($page) {
     case 'home':
         $controller = new HomeController();
@@ -59,6 +45,7 @@ switch ($page) {
         $controller = new VenteDesJeuxController();
         $controller->index();
         break;
+
 
     case 'reception':
         require __DIR__ . '/../main/receptionjeux.php';
@@ -80,11 +67,9 @@ switch ($page) {
         require __DIR__ . '/../main/admin.php';
         break;
 
-    // Si on demande une page qui n'existe pas dans ce switch :
+    // --- ERREUR 404 ---
     default:
         http_response_code(404);
-        echo "<h1>Erreur 404 - Page introuvable</h1>";
-        echo "<p>La page demandée n'existe pas ou n'a pas encore été configurée dans le routeur.</p>";
-        echo "<a href='?page=home'>Retour à l'accueil</a>";
+        echo "Désolé, la page '$page' n'existe pas.";
         break;
 }
