@@ -5,8 +5,8 @@ include ('header.php');
 ?>
 
 <script type="text/javascript" src="../public/js/datatables.min.js"></script>
-<script type="text/javascript" src="../public/js/utils.js"></script>
-<script type="text/javascript" src="../public/js/stats.js"></script>
+<script type="text/javascript" src="js/utils.js"></script>
+<script type="text/javascript" src="js/stats.js"></script>
 <ul class="filariane ms-2">
 	<li><a href="index.php">Home</a></li>
 	<li><a href="#">Stats</a></li>

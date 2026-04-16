@@ -102,11 +102,11 @@ if (isset($_COOKIE['loggedin']) && $_COOKIE['loggedin'] === 'true') {
 <script type="text/javascript" src="../public/js/datatables.min.js"></script>
 <script type="text/javascript" src="../public/js/crypto-js.min.js"></script>
 <script type="text/javascript" src="../public/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="../public/js/utils.js"></script>
-<script type="text/javascript" src="../public/js/listejeux.js"></script>
+<script type="text/javascript" src="js/utils.js"></script>
+<script type="text/javascript" src="js/listejeux.js"></script>
 
 
-<script type="text/javascript" src="../public/js/admin.js"></script>
+<script type="text/javascript" src="js/admin.js"></script>
 
 <!-- Besoin pour ajouter un jeu -->
 
@@ -394,7 +394,7 @@ if (isset($_COOKIE['loggedin']) && $_COOKIE['loggedin'] === 'true') {
 	</div>
 	
 </main>
-<script src="../public/js/admin.js"></script>
+<script src="js/admin.js"></script>
 
 <?php
 include 'footer.php';

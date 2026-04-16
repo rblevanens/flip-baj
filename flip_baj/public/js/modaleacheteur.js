@@ -214,7 +214,7 @@ $(document).ready(function() {
 						$('#messageerreurformulairemodale').html('<p class="valid-feedback">' + (idAcheteur ? 'Acheteur mis à jour' : 'Acheteur créé') + '</p>');
 
 						// Rafraîchir la page si on est sur vente.php
-						if (window.location.href.indexOf("vente.php") > -1) {
+						if (window.location.href.indexOf("vente.php") > -1 || window.location.href.indexOf("page=vente") > -1) {
 							location.reload();
 						} else {
 							$('#showModal').html('Modifier l\'acheteur '+prenom+' '+nom+' '+email);

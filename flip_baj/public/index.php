@@ -1,25 +1,63 @@
 <?php
 
+use App\Controllers\HomeController;
+use App\Controllers\VenteController;
+use App\Controllers\VenteDesJeuxController;
+
 require_once __DIR__ . '/../vendor/autoload.php';
 
 $dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__));
 $dotenv->load();
+
+// Simple router logic
+$requestUri = $_SERVER['REQUEST_URI'];
+$requestPath = parse_url($requestUri, PHP_URL_PATH);
+$basePath = '/baj-flip/flip_baj/public/';
+
+$route = str_replace($basePath, '', $requestPath);
+
+// Intercepte les appels vers /ajax/...
+if (strpos($route, 'ajax/') === 0) {
+    $ajaxFile = __DIR__ . '/../main/' . $route;
+    if (file_exists($ajaxFile)) {
+        require $ajaxFile;
+    } else {
+        http_response_code(404);
+        echo "Ajax file not found.";
+    }
+    exit;
+}
+
+// Intercepte les appels vers /Json/... (DataTables i18n)
+if (strpos($route, 'Json/') === 0) {
+    $jsonFile = __DIR__ . '/../main/' . $route;
+    if (file_exists($jsonFile)) {
+        header('Content-Type: application/json; charset=utf-8');
+        readfile($jsonFile);
+    } else {
+        http_response_code(404);
+        echo "Json file not found.";
+    }
+    exit;
+}
 
 $page = $_GET['page'] ?? 'home';
 
 // partie routeur ($page)
 switch ($page) {
     case 'home':
-        // Pour l'instant, on se contente d'inclure votre ancien fichier
-        require __DIR__ . '/../main/index.php';
+        $controller = new HomeController();
+        $controller->index();
         break;
 
     case 'vente':
-        require __DIR__ . '/../main/vente.php';
+        $controller = new VenteController();
+        $controller->index();
         break;
 
     case 'ventedesjeux':
-        require __DIR__ . '/../main/ventedesjeux.php';
+        $controller = new VenteDesJeuxController();
+        $controller->index();
         break;
 
     case 'reception':

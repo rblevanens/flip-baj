@@ -472,7 +472,7 @@ $(document).ready(function() {
 	 */
 	$('#getpdf').on("click", function() {
 		if(confirm("Vous allez être redirigé vers la page de téléchargement")){
-			window.location.href = "../../main/pdf/generer_pdf.php";
+			window.location.href = "/FlipBAJ/flip_baj/main/pdf/generer_pdf.php";
 		}
 		
 

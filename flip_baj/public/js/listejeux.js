@@ -51,7 +51,7 @@ $(document).ready(function() {
 			{ data: "Vendu", name: "Vendu", title: "Prix", render: function(data, type, row) { return data + ' €'; } },
 			{
 				data: "Vendeur", name: "Vendeur", title: "Vendeur", render: function(data, type, row) {
-					return '<a data-jeu="' + row.DT_RowId + '" class="toFestival" href="receptionjeux.php?id=' + row.idvendeur + '">' + row.Vendeur + '</a>';
+					return '<a data-jeu="' + row.DT_RowId + '" class="toFestival" href="?page=reception&id=' + row.idvendeur + '">' + row.Vendeur + '</a>';
 				}
 			},
 			{ data: "date_reception", name: "date_reception", title: "Date de réception" },
@@ -106,7 +106,7 @@ $(document).ready(function() {
 	// Double-clic sur une ligne pour aller à la réception des jeux du vendeur
 	$('#jeuxenstock tbody').on('dblclick', 'tr', function() {
 		var numrow = $(this).attr('data-idvendeur');
-		$(location).attr('href', 'receptionjeux.php?id=' + numrow);
+		$(location).attr('href', '?page=reception&id=' + numrow);
 	});
 
 	// Fonction qui crypte le mot de passe en utilisant SHA-256.

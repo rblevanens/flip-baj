@@ -2,14 +2,18 @@
 namespace flip_baj\main\ajax;
 
 use PDOException, PDO;
+use App\Utils\Database;
 
+// Pour que l'autoloader fonctionne depuis ce script Ajax (qui est appelé directement)
+require_once __DIR__ . '/../../vendor/autoload.php';
 
 if (!isset($_SERVER['HTTP_X_REQUESTED_WITH']) or strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) != 'xmlhttprequest') {
     die();
 }
 
-include ('../pdo_connect.php');
 include ('../constantes.php');
+
+$pdo = Database::getInstance();
 
 if (is_null($pdo)) {
     die('Could not connect to the database!');

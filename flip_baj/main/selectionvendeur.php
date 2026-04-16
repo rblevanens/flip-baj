@@ -11,7 +11,7 @@ if (isset($_GET['t'])) {
 ?>
 <script type="text/javascript" src="../public/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="../public/js/datatables.min.js"></script>
-<script type="text/javascript" src="../public/js/utils.js"></script>
+<script type="text/javascript" src="js/utils.js"></script>
 
 <script type="text/javascript" src="../public/js/selectionvendeur.js"></script>
 <script type="text/javascript" src="../public/js/modalevendeur.js"></script>
