@@ -2,18 +2,24 @@
 
 namespace App\Controllers;
 
+use App\Models\Transaction;
+
 class VenteController {
+
     public function index() {
-        // Démarre la capture de la vue
         ob_start();
-        
-        // On inclut la nouvelle vue nettoyée
         require __DIR__ . '/../Views/vente.php';
-        
-        // Récupère le contenu généré par l'include
         $content = ob_get_clean();
-        
-        // Appelle le layout global
         require __DIR__ . '/../Views/layout.php';
+    }
+
+    public function getVentesAjax() {
+        header('Content-Type: application/json; charset=utf-8');
+
+        $transactionModel = new Transaction();
+        $ventes = $transactionModel->getAllVentes();
+
+        echo json_encode($ventes);
+        exit;
     }
 }

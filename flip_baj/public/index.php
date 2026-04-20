@@ -41,11 +41,19 @@ switch ($page) {
         $controller->index();
         break;
 
+    case 'api/ventes':
+        $controller = new \App\Controllers\VenteController();
+        $controller->getVentesAjax();
+        break;
+
     case 'ventedesjeux':
         $controller = new VenteDesJeuxController();
         $controller->index();
         break;
 
+    case 'selectionvendeur':
+        require __DIR__ . '/../main/selectionvendeur.php';
+        break;
 
     case 'reception':
         require __DIR__ . '/../main/receptionjeux.php';
