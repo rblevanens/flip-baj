@@ -63,7 +63,7 @@ $(document).ready(function() {
 		],
 		// Charger les données via AJAX
 		ajax: {
-			url: 'ajax/get-ventes.php',
+			url: 'index.php?page=api/ventes',
 			dataSrc: ''
 		}
 	});
