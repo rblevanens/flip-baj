@@ -4,7 +4,7 @@ include ('header.php');
 
 ?>
 
-<script type="text/javascript" src="js/datatables.min.js"></script>
+<script type="text/javascript" src="../public/js/datatables.min.js"></script>
 <script type="text/javascript" src="js/utils.js"></script>
 <script type="text/javascript" src="js/stats.js"></script>
 <ul class="filariane ms-2">

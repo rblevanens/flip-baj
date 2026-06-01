@@ -1,6 +1,7 @@
 node_modules/
 .idea
 .project
-vendor
+.env
+flip_baj/vendor
 flip_baj/main/tmp
 flip_baj/main/pdf/pdf

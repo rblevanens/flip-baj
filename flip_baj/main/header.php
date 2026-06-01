@@ -12,13 +12,13 @@ include ('constantes.php');
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-<link rel="shortcut icon" href="img/Logo_FdJ_tete.ico.gif" />
-<link rel="stylesheet" href="css/css-mint.css">
+<link rel="shortcut icon" href="../public/img/Logo_FdJ_tete.ico.gif" />
+<link rel="stylesheet" href="../public/css/css-mint.css">
 
-<link rel="stylesheet" href="css/datatables.min.css">
-<link rel="stylesheet" href="css/bootstrap.min.css" />
-<link rel="stylesheet" href="css/bootstrap-icons.css" />
-<link rel="stylesheet" href="css/custom.css">
+<link rel="stylesheet" href="../public/css/datatables.min.css">
+<link rel="stylesheet" href="../public/css/bootstrap.min.css" />
+<link rel="stylesheet" href="../public/css/bootstrap-icons.css" />
+<link rel="stylesheet" href="../public/css/custom.css">
 
 
 
@@ -38,8 +38,8 @@ include ('constantes.php');
 		class="mb-1 bg-bleu text-white d-flex justify-content-between align-items-center">
 		<div class="col-8">
 			<div class="">
-				<img src="img/bulle-flip-2.png" width="100px" /> <a href="index.php"
-					class="text-decoration-none text-white"> Bourse aux jeux </a>
+				<img src="../public/img/bulle-flip-2.png" width="100px" /> <a href="index.php"
+                                                                              class="text-decoration-none text-white"> Bourse aux jeux </a>
 			</div>
 		</div>
 		<div class="col-4 text-end">

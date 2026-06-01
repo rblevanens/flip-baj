@@ -17,9 +17,9 @@ while ($row = $results->fetch(\PDO::FETCH_ASSOC)) {
 
 
 ?>
-<script type="text/javascript" src="js/datatables.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/crypto-js.min.js"></script>
+<script type="text/javascript" src="../public/js/datatables.min.js"></script>
+<script type="text/javascript" src="../public/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../public/js/crypto-js.min.js"></script>
 <script type="text/javascript" src="js/utils.js"></script>
 <script type="text/javascript" src="js/listejeux.js"></script>
 

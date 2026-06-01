@@ -544,7 +544,7 @@ $('#jeuxenvente tbody').on('click', 'a.delJeu', function () {
         // Génération et envoi de la facture (si acheteur existant)
         if (id_acheteur) {
             $.ajax({
-                url: './pdf/generer_pdf.php',
+                url: 'pdf/generer_pdf.php',
                 type: 'GET',
                 data: { idacheteur: id_acheteur },
                 success: function () {
@@ -570,7 +570,7 @@ $('#jeuxenvente tbody').on('click', 'a.delJeu', function () {
         }
     
         // Tout est ok → redirection vers nouvelle vente
-        window.location.href = 'vente.php';
+        window.location.href = '?page=vente';
     });
     
     

@@ -18,12 +18,12 @@ if (isset($_GET['id'])) {
 }
 ?>
 
-<script type="text/javascript" src="js/datatables.min.js"></script>
-<script type="text/javascript" src="js/jquery.jeditable.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../public/js/datatables.min.js"></script>
+<script type="text/javascript" src="../public/js/jquery.jeditable.js"></script>
+<script type="text/javascript" src="../public/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/utils.js"></script>
-<script type="text/javascript" src="js/modalevendeur.js"></script>
-<script type="text/javascript" src="js/restitutiondesjeux.js"></script>
+<script type="text/javascript" src="../public/js/modalevendeur.js"></script>
+<script type="text/javascript" src="../public/js/restitutiondesjeux.js"></script>
 
 <!-- Navigation -->
 <ul class="filariane ms-2">
