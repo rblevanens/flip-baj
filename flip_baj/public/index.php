@@ -3,6 +3,9 @@
 use App\Controllers\HomeController;
 use App\Controllers\VenteController;
 use App\Controllers\VenteDesJeuxController;
+use App\Controllers\VendeurController;
+use App\Controllers\SelectionVendeurController;
+use App\Controllers\ListeJeuxController;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
@@ -23,8 +26,10 @@ if (strpos($route, 'ajax/') === 0 || strpos($route, 'Json/') === 0) {
     if (file_exists($file)) {
         if (strpos($route, 'Json/') === 0) {
             header('Content-Type: application/json');
+            readfile($file);
+        } else {
+            require $file;
         }
-        readfile($file); // Utiliser readfile() pour envoyer le contenu du fichier
     } else {
         http_response_code(404);
         echo "Ressource introuvable.";
@@ -61,7 +66,13 @@ switch ($page) {
         break;
 
     case 'selectionvendeur':
-        require __DIR__ . '/../main/selectionvendeur.php';
+        $controller = new SelectionVendeurController();
+        $controller->index();
+        break;
+
+    case 'listejeux':
+        $controller = new ListeJeuxController();
+        $controller->index();
         break;
 
     case 'reception':

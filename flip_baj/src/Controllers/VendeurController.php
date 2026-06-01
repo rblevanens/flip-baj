@@ -8,14 +8,18 @@ class VendeurController {
 
     public function getVendeursAjax() {
         header('Content-Type: application/json; charset=utf-8');
+        $annee = date("Y");
 
         $vendeurModel = new Vendeur();
-        $vendeurs = $vendeurModel->getAllVendeurs();
+        $data = $vendeurModel->getAllWithStats($annee);
 
-        echo json_encode([
-            "data" => $vendeurs
-        ], JSON_UNESCAPED_UNICODE);
-
+        $response = [
+            "draw" => isset($_POST['draw']) ? intval($_POST['draw']) : 0,
+            "recordsTotal" => count($data),
+            "data" => $data
+        ];
+        header('Content-Type: application/json');
+        echo json_encode($response);
         exit;
     }
 }

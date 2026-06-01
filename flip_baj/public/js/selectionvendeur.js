@@ -18,7 +18,7 @@ $(document).ready(function() {
             "url": "Json/fr-FR.json"
         },
         "ajax": {
-            "url": "index.php?page=api/vendeurs",
+            "url": "api/vendeurs", // Redirige vers le nouveau case de ton routeur
             "type": "POST"
         },
         "columns": [

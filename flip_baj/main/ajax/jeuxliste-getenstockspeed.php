@@ -1,19 +1,20 @@
 <?php
 namespace flip_baj\main\ajax;
 
-
-use PDOException; 
+use PDOException;
 use function flip_baj\main\PrixRendu;
 
 if (!isset($_SERVER['HTTP_X_REQUESTED_WITH']) || strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) != 'xmlhttprequest') {
     die();
 }
-include ('../constantes.php');
-include ('../utils.php');
-include ('../pdo_connect.php');
+
+include (__DIR__ . '/../constantes.php');
+include (__DIR__ . '/../utils.php');
+
+$pdo = \App\Utils\Database::getInstance();
 
 if (is_null($pdo)) {
-    die('Could not connect to the database!');
+    die(json_encode(["error" => "Erreur de connexion base de données"]));
 }
 
 $sqlConditions = array();
