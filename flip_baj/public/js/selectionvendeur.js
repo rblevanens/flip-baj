@@ -18,7 +18,7 @@ $(document).ready(function() {
             "url": "Json/fr-FR.json"
         },
         "ajax": {
-            "url": "ajax/vendeurs-get.php",
+            "url": "index.php?page=api/vendeurs",
             "type": "POST"
         },
         "columns": [

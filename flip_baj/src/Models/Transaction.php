@@ -24,10 +24,13 @@ class Transaction {
                     a.nom, 
                     a.prenom, 
                     a.email,
-                    -- Sous-requête pour compter le nombre de jeux dans cette transaction
-                    (SELECT COUNT(*) FROM al_bourse_transaction_liste tl WHERE tl.id_transaction = t.id) AS nbjeux
+                    (SELECT COUNT(*) FROM al_bourse_transaction_liste tl WHERE tl.id_transaction = t.id) AS nbjeux,
+                    GROUP_CONCAT(j.nom_jeu SEPARATOR ', ') AS jeux
                 FROM al_bourse_transactions t
                 LEFT JOIN al_bourse_acheteur a ON t.id_acheteur = a.id
+                LEFT JOIN al_bourse_transaction_liste tl ON t.id = tl.id_transaction
+                LEFT JOIN al_bourse_jeux j ON tl.id_jeu = j.id
+                GROUP BY t.id
                 ORDER BY t.date DESC";
 
         $stmt = $this->db->query($sql);
