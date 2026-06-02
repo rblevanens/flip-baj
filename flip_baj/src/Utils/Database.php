@@ -10,11 +10,15 @@ class Database {
 
     public static function getInstance() {
         if (self::$pdo === null) {
-            $user = 'root';
-            $pass = '';
+            // Utiliser les variables d'environnement pour la configuration de la base de données
+            $host = $_ENV['DB_HOST'] ?? 'localhost';
+            $dbname = $_ENV['DB_NAME'] ?? 'baj';
+            $user = $_ENV['DB_USER'] ?? 'root';
+            $pass = $_ENV['DB_PASS'] ?? '';
+
             try {
                 self::$pdo = new PDO(
-                    'mysql:host=localhost;dbname=baj;charset=utf8mb4',
+                    "mysql:host=$host;dbname=$dbname;charset=utf8mb4",
                     $user,
                     $pass,
                     [
@@ -23,9 +27,15 @@ class Database {
                     ]
                 );
             } catch (PDOException $e) {
-                // En environnement de développement, on peut afficher l'erreur.
-                // En production, il faudrait logger l'erreur et afficher un message générique.
-                die("Erreur de connexion à la base de données : " . $e->getMessage());
+                // Ne pas utiliser die() dans une application qui a des endpoints AJAX.
+                // Lancer une exception permet au code appelant de la gérer proprement.
+                // Par exemple, en retournant une réponse JSON avec un code d'erreur HTTP.
+                error_log("Database Connection Error: " . $e->getMessage());
+                // Pour le débogage, il peut être utile de voir l'erreur, mais en production,
+                // on renverrait une réponse générique.
+                http_response_code(500);
+                echo json_encode(['error' => 'Erreur de connexion à la base de données.']);
+                exit;
             }
         }
         return self::$pdo;

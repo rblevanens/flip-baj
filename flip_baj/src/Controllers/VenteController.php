@@ -19,7 +19,7 @@ class VenteController {
         $transactionModel = new Transaction();
         $ventes = $transactionModel->getAllVentes();
 
-        echo json_encode($ventes);
+        echo json_encode($ventes, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
         exit;
     }
 }
