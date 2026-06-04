@@ -340,7 +340,7 @@ $(document).ready(function() {
 		/* verifie en base si le code est deja pris */
 		$.ajax({
 			type: 'POST',
-			url: 'ajax/codebarre-checker.php',
+			url: 'api/check-codebarre',
 			data: { 'CodeBarreAjout': codebarre },
 			success: function(data) {
 				if (data.message2 == '0') serr = serr + data.message1;

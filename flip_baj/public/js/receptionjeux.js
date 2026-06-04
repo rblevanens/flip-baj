@@ -18,7 +18,7 @@ $(document).ready(function() {
 	// récupération du vendeur courant (id en paramètre d'URL)
 	$.ajax({
 		type: 'POST',
-		url: 'ajax/user-get.php',
+		url: 'api/get-user',
 		data: { 'id': $('#idVendeurEdition').val() },
 		success: function(data) {
 			if (data.message2 == '0') {
@@ -523,7 +523,7 @@ $(document).ready(function() {
 		/* verifie en base si le code est deja pris */
 		$.ajax({
 			type: 'POST',
-			url: 'ajax/codebarre-checker.php',
+			url: 'api/check-codebarre',
 			data: { 'CodeBarreAjout': codebarre },
 			success: function(data) {
 				if (data.message2 == '0') serr = serr + data.message1;
@@ -573,28 +573,24 @@ $(document).ready(function() {
 			console.log(jeu[0].label);
 			/* ajoute le jeu dans la liste du user en base */
 			$.ajax({
+				url: 'api/add-jeu',
 				type: 'POST',
-				url: 'ajax/jeuxliste-add.php',
-				data: {
-					idVendeurEdition: $('#idVendeurEdition').val(),
-					nom: jeu[0].label,
-					codebarre: $('#CodeBarreAjout').val(),
-					vigilance: $('#idVendeurEdition').val() == 1 ? 1 : 0,
-					statut: STATUS_JEUX_EN_STOCK,
-					vendu: $('#PrixAjout').val(),
-					ip: $('#ip').val()
-				},
-				success: function(data) {
-					console.log("Réponse AJAX :", data);
-				
-					if (data.message2 === '1') {
-						console.log('Jeu ajouté avec succès');
+				contentType: 'application/json',
+				data: JSON.stringify({
+					code_barre: $('#CodeBarreAjout').val(),
+					nom_jeu: $('#NomJeuAjout').val(),
+					prix: $('#PrixAjout').val(),
+					vigilance: 0, // Par défaut à 0 (Non) lors d'un ajout simple
+					id_vendeur: $('#idVendeurEdition').val()
+				}),
+				dataType: 'json',
+				success: function(response) {
+					if (response.success) {
 						tablejeuxenstock.ajax.reload();
 						$('#formulaireajoutjeu').trigger("reset");
 						$('#messageerreurformulaire').html('');
 					} else {
-						console.warn('Erreur retournée :', data.message1);
-						$('#messageerreurformulaire').html('<div class="alert alert-danger">' + data.message1 + '</div>');
+						alert(response.message);
 					}
 				},
 				error: function(xhr, status, error) {

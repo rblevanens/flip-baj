@@ -330,31 +330,33 @@ function documentReadyDeLaModale() {
 
 			// si id = update sinon insert
 			if ($('#idVendeurEdition').val() == '') {
-				$.post('ajax/user-add.php', sdata
-					, function(data) {
-						if (data.message2 == '1') {
-							$('#formulaire').trigger("reset");
-							$('#modal-body').hide();
-							$('#boutoncancel').hide();
-							$('#boutonsavevendeur').hide();
-							$('#messageerreurformulairemodale').html('');
-							$('#messageformulairemodale').html('<p class="bg-success">vendeur créé</p◊>');
-							$("#boutonfermer").show();
-							if (tParam && tParam === 'reception') {
-								location.href = 'receptionjeux.php?id=' + data.message1;
-							}
-							else if (tParam === 'restitution') {
-								location.href = 'restitutiondesjeux.php?id=' + data.message1;
-							}
-							else {
-								location.href = location.href;
-							}
+				// Appel API unique : le MVC sait s'il doit créer ou modifier !
+				$.post('api/save-vendeur', sdata, function(data) {
+					if (data.message2 == '1') {
+						$('#formulaire').trigger("reset");
+						$('#modal-body').hide();
+						$('#boutoncancel').hide();
+						$('#boutonsavevendeur').hide();
+						$('#messageerreurformulairemodale').html('');
+
+						let txtReussite = ($('#idVendeurEdition').val() == '') ? 'vendeur créé' : 'vendeur mis à jour';
+						$('#messageformulairemodale').html('<p class="bg-success">' + txtReussite + '</p>');
+						$("#boutonfermer").show();
+
+						if (tParam && tParam === 'reception') {
+							location.href = 'receptionjeux.php?id=' + data.message1;
 						}
-						if (data.message2 == '0') {
-							$('#messageerreurformulairemodale').html('<p class="bg-danger">Erreur base de données.' + data.message1 + '</p>');
+						else if (tParam === 'restitution') {
+							location.href = 'restitutiondesjeux.php?id=' + data.message1;
+						}
+						else {
+							location.reload();
 						}
 					}
-					, 'json');
+					if (data.message2 == '0') {
+						$('#messageerreurformulairemodale').html('<p class="bg-danger">' + data.message1 + '</p>');
+					}
+				}, 'json');
 			}
 			else {
 				$.post('ajax/user-update.php', sdata
@@ -425,9 +427,9 @@ function ouvreModaleModification(id) {
 	$('.invalid-feedback').html('');
 	$('#messageerreurformulairemodale').html('');
 	// recup le vendeur
-	$.post('ajax/user-get.php', { 'id': id }, function(data) {
-		//console.log(data);
-		var obj = jQuery.parseJSON(data);
+	$.post('api/get-user', { 'id': id }, function(data) {
+		// On s'assure de lire le JSON correctement que ce soit une string ou déjà un objet
+		var obj = typeof data === 'string' ? jQuery.parseJSON(data) : data;
 		if (obj.message2 == '1') {
 			$("#idVendeurEdition").val(obj.message1['id']);
 			$("#nomVendeurACreer").val(obj.message1['nom']);
