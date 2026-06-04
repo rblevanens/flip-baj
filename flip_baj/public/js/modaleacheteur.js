@@ -67,7 +67,7 @@ $(document).ready(function() {
 		$(selector).autocomplete({
 			source: function(request, response) {
 				$.ajax({
-					url: 'ajax/user-get-autocomplete.php',
+					url: 'api/search-acheteur',
 					type: 'POST',
 					data: { [requestDataKey]: request.term },
 					dataType: 'json',
@@ -204,7 +204,7 @@ $(document).ready(function() {
 		if (isValid) {
 			// Effectuer la requête Ajax pour enregistrer les données
 			$.ajax({
-				url: idAcheteur ? 'ajax/acheteur-update.php' : 'ajax/acheteur-add.php',
+				url: 'api/save-acheteur',
 				type: 'POST',
 				data: data,
 				dataType: 'json',
@@ -246,7 +246,7 @@ function openModificationAcheteurModal(idAcheteur, idTransaction) {
 	$('#messageerreurformulairemodale').html('');
 	// Requête Ajax pour récupérer les informations de l'acheteur
 	$.ajax({
-		url: 'ajax/acheteur-get.php',
+		url: 'api/get-acheteur',
 		type: 'POST',
 		data: { id: idAcheteur },
 		dataType: 'json',

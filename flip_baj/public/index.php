@@ -6,6 +6,10 @@ use App\Controllers\VenteDesJeuxController;
 use App\Controllers\VendeurController;
 use App\Controllers\SelectionVendeurController;
 use App\Controllers\ListeJeuxController;
+use App\Controllers\ReceptionController;
+use App\Controllers\RestitutionController;
+use App\Controllers\Api\JeuApiController;
+use App\Controllers\Api\TransactionApiController;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
@@ -76,15 +80,13 @@ switch ($page) {
         break;
 
     case 'reception':
-        require __DIR__ . '/../main/receptionjeux.php';
+        $controller = new ReceptionController();
+        $controller->index();
         break;
 
     case 'restitution':
-        require __DIR__ . '/../main/restitutiondesjeux.php';
-        break;
-
-    case 'listejeux':
-        require __DIR__ . '/../main/listejeux.php';
+        $controller = new RestitutionController();
+        $controller->index();
         break;
 
     case 'stats':
@@ -94,6 +96,67 @@ switch ($page) {
     case 'admin':
         require __DIR__ . '/../main/admin.php';
         break;
+
+    case 'api/check-codebarre':
+        $controller = new JeuApiController();
+        $controller->checkCodeBarre();
+        break;
+
+    case 'api/checkout':
+        $controller = new TransactionApiController();
+        $controller->checkout();
+        break;
+
+    case 'api/add-jeu':
+        $controller = new JeuApiController();
+        $controller->addJeu();
+        break;
+
+    case 'api/update-jeu':
+        $controller = new JeuApiController();
+        $controller->updateJeu();
+        break;
+
+    case 'api/restituer-jeu':
+        $controller = new JeuApiController();
+        $controller->restituerJeu();
+        break;
+
+    case 'api/cloturer-restitution':
+        $controller = new TransactionApiController();
+        $controller->cloturerRestitution();
+        break;
+
+    case 'api/get-user':
+        $controller = new UtilisateurApiController();
+        $controller->getUser();
+        break;
+
+    case 'api/get-acheteur':
+        $controller = new AcheteurApiController();
+        $controller->get();
+        break;
+
+    case 'api/search-acheteur':
+        $controller = new AcheteurApiController();
+        $controller->search();
+        break;
+
+    case 'api/save-acheteur':
+        $controller = new AcheteurApiController();
+        $controller->save();
+        break;
+
+    case 'api/check-vendeur':
+        $controller = new UtilisateurApiController();
+        $controller->checkVendeur();
+        break;
+
+    case 'api/save-vendeur':
+        $controller = new UtilisateurApiController();
+        $controller->saveVendeur();
+        break;
+
 
     // --- ERREUR 404 ---
     default:

@@ -1,35 +1,5 @@
-var id_transaction = '';
-var paiement = "nondefinit";
 
 $(document).ready(function() {
-
-    //Création de la transaction
-    if (id_transaction === '') {
-        $.ajax({
-            type: 'POST',
-            url: 'ajax/transaction-add.php',
-            data: {
-                type: "panier",
-                montantTotal: 0,
-                montantPercu: 0,
-                montantDon: 0,
-                montantRendu: 0,
-                paiement: paiement,
-                ip: $("#ip").val(),
-                id_phpbb_acheteur: ''
-            },
-            success: function(data) {
-                if (data.message2 === '1') {
-                    id_transaction = data.message1;
-                } else {
-                    alert('Erreur de base de données');
-                }
-            },
-            dataType: 'json',
-            async: false
-        });
-    }
-    
     // Gestionnaire d'événement 'beforeunload'
     $(window).bind('beforeunload', function(event) {
         var confirmationMessage = 'Êtes-vous sûr de vouloir quitter ? Si vous aviez une transaction en cours, merci de le signaler aux responsables';
@@ -414,164 +384,191 @@ $('#jeuxenvente tbody').on('click', 'a.delJeu', function () {
     
     
    $("#finaliserbutton").click(function () {
-    console.log("Bouton finaliser cliqué");
+       console.log("Bouton finaliser cliqué");
 
-    // Supprimer l'avertissement de modification non enregistrée
-    $(window).off('beforeunload');
+       // Supprimer l'avertissement de modification non enregistrée
+       $(window).off('beforeunload');
 
-    // Mise à jour des montants
-    majinfosmonetaires();
+       // Mise à jour des montants
+       majinfosmonetaires();
 
-    // Vérifications (paiement, montants, caisse...)
-    if (!checkinfosmonetaires()) return;
+       // Vérifications (paiement, montants, caisse...)
+       if (!checkinfosmonetaires()) return;
 
-    if (!AfficherPopUp("La vente va être enregistrée.\nConfirmer la finalisation ?", confirmation)) {
-        console.log("Vente annulée par l'utilisateur");
-        return;
-    }
+       if (!AfficherPopUp("La vente va être enregistrée.\nConfirmer la finalisation ?", confirmation)) {
+           console.log("Vente annulée par l'utilisateur");
+           return;
+       }
 
-    const montantDon = parseFloat($("#MontantDon").val()) || 0;
-    const id_acheteur = $('#idAcheteurModification').val();
-    let date = '';
+       const montantDon = parseFloat($("#MontantDon").val()) || 0;
+       const id_acheteur = $('#idAcheteurModification').val();
+       let date = '';
 
-    // Mise à jour de la transaction
-    $.ajax({
-        type: 'POST',
-        url: 'ajax/transaction-updatelive.php',
-        data: {
-            type: 'vente',
-            montantTotal: $('#TotalJeuxVendus').data('total'),
-            montantPercu: $("#MontantPercu").val() || '0',
-            montantDon: montantDon,
-            montantRendu: $("#MontantRendu").val() || '0',
-            paiement: paiement,
-            ip: $("#ip").val(),
-            id_phpbb_acheteur: id_acheteur,
-            id_transaction: id_transaction
-        },
-        success: function (data) {
-            if (data.message2 === '1') {
-                date = data.message1;
-            } else {
-                alert('Erreur lors de l\'enregistrement de la vente.');
-            }
-        },
-        dataType: 'json',
-        async: false
-    });
+       // Mise à jour de la transaction
+       $.ajax({
+           type: 'POST',
+           url: 'ajax/transaction-updatelive.php',
+           data: {
+               type: 'vente',
+               montantTotal: $('#TotalJeuxVendus').data('total'),
+               montantPercu: $("#MontantPercu").val() || '0',
+               montantDon: montantDon,
+               montantRendu: $("#MontantRendu").val() || '0',
+               paiement: paiement,
+               ip: $("#ip").val(),
+               id_phpbb_acheteur: id_acheteur,
+               id_transaction: id_transaction
+           },
+           success: function (data) {
+               if (data.message2 === '1') {
+                   date = data.message1;
+               } else {
+                   alert('Erreur lors de l\'enregistrement de la vente.');
+               }
+           },
+           dataType: 'json',
+           async: false
+       });
 
-    if (!date) {
-        console.log("Date vide : arrêt de la procédure");
-        return;
-    }
+       if (!date) {
+           console.log("Date vide : arrêt de la procédure");
+           return;
+       }
 
-    // Passer les jeux du panier en statut vendu
-    $('#jeuxenvente tbody tr').each(function () {
-        const id = $(this).data('dt_rowid');
-        const code = $(this).data('code');
+       // Passer les jeux du panier en statut vendu
+       $('#jeuxenvente tbody tr').each(function () {
+           const id = $(this).data('dt_rowid');
+           const code = $(this).data('code');
 
-        $.ajax({
-            type: 'POST',
-            url: 'ajax/jeuxliste-update.php',
-            data: {
-                id: id,
-                statut: 3,  // VENDU
-                old_id_statut: 5,  // PANIER
-                codebarre: code
-            },
-            dataType: 'json',
-            async: false,
-            success: function (result) {
-                if (result.message2 !== '1') {
-                    alert("Erreur lors du passage en vendu pour le jeu " + code);
-                }
-            }
-        });
-        $.ajax({
-        type: 'POST',
-        url: 'ajax/transactionliste-add.php',
-        data: {
-            idliste: id,
-            id_transaction: id_transaction
-        },
-        dataType: 'json',
-        async: false,
-        success: function (result) {
-            if (result.message2 !== '1') {
-                alert("Erreur lors de l'enregistrement du jeu dans la transaction " + id_transaction);
-            }
-        }
-    });
-    });
-    
-        //  Enregistrement du don si existant
-        if (montantDon !== 0) {
-            $.ajax({
-                type: 'POST',
-                url: 'ajax/don-add.php',
-                data: {
-                    id: id_acheteur || 0,
-                    montant_don: montantDon,
-                    type_don: 'vente'
-                },
-                success: function (data) {
-                    if (data.message2 !== '1') {
-                        alert(' Échec de l\'enregistrement du don.');
-                    }
-                },
-                dataType: 'json',
-                async: false
-            });
-        }
-    
-        if (!date) {
-            console.log(" Date vide : arrêt de la procédure");
-            return;
-        }
-    
-        //  Liste des jeux sélectionnés à vendre
-        let listeJeux = [];
-        $('#jeuxenvente tbody tr').each(function () {
-            listeJeux.push({
-                id: $(this).data('dt_rowid'),
-                code: $(this).data('code')
-            });
-        });
-    
-        //  Verrouillage et changement de statut des jeux
-        
-    
-        // Génération et envoi de la facture (si acheteur existant)
-        if (id_acheteur) {
-            $.ajax({
-                url: 'pdf/generer_pdf.php',
-                type: 'GET',
-                data: { idacheteur: id_acheteur },
-                success: function () {
-                    console.log(' Facture générée');
-                    setTimeout(function () {
-                        $.ajax({
-                            url: 'ajax/send-mail.php',
-                            type: 'POST',
-                            data: { idacheteur: id_acheteur },
-                            success: function () {
-                                console.log(' Email envoyé');
-                            },
-                            error: function (xhr, status, error) {
-                                console.error(' Erreur lors de l\'envoi de l\'email :', status, error);
-                            }
-                        });
-                    }, 15000);
-                },
-                error: function (xhr, status, error) {
-                    console.error(' Erreur lors de la génération du PDF :', status, error);
-                }
-            });
-        }
-    
-        // Tout est ok → redirection vers nouvelle vente
-        window.location.href = '?page=vente';
-    });
+           $.ajax({
+               type: 'POST',
+               url: 'ajax/jeuxliste-update.php',
+               data: {
+                   id: id,
+                   statut: 3,  // VENDU
+                   old_id_statut: 5,  // PANIER
+                   codebarre: code
+               },
+               dataType: 'json',
+               async: false,
+               success: function (result) {
+                   if (result.message2 !== '1') {
+                       alert("Erreur lors du passage en vendu pour le jeu " + code);
+                   }
+               }
+           });
+           $.ajax({
+               type: 'POST',
+               url: 'ajax/transactionliste-add.php',
+               data: {
+                   idliste: id,
+                   id_transaction: id_transaction
+               },
+               dataType: 'json',
+               async: false,
+               success: function (result) {
+                   if (result.message2 !== '1') {
+                       alert("Erreur lors de l'enregistrement du jeu dans la transaction " + id_transaction);
+                   }
+               }
+           });
+       });
+
+       //  Enregistrement du don si existant
+       if (montantDon !== 0) {
+           $.ajax({
+               type: 'POST',
+               url: 'ajax/don-add.php',
+               data: {
+                   id: id_acheteur || 0,
+                   montant_don: montantDon,
+                   type_don: 'vente'
+               },
+               success: function (data) {
+                   if (data.message2 !== '1') {
+                       alert(' Échec de l\'enregistrement du don.');
+                   }
+               },
+               dataType: 'json',
+               async: false
+           });
+       }
+
+       if (!date) {
+           console.log(" Date vide : arrêt de la procédure");
+           return;
+       }
+
+       //  Liste des jeux sélectionnés à vendre
+       let listeJeux = [];
+       $('#jeuxenvente tbody tr').each(function () {
+           listeJeux.push({
+               id: $(this).data('dt_rowid'),
+               code: $(this).data('code')
+           });
+       });
+
+       // 1. On récupère les IDs des jeux depuis l'interface
+       let jeuxIds = [];
+
+       // IMPORTANT : À adapter. Remplace ".ligne-jeu" par la vraie classe HTML des jeux dans ton panier
+       $('.ligne-jeu').each(function () {
+           let idJeu = $(this).data('id');
+           if (idJeu) {
+               jeuxIds.push(idJeu);
+           }
+       });
+
+       if (jeuxIds.length === 0) {
+           alert("Le panier est vide !");
+           return;
+       }
+
+       // 2. L'appel à la nouvelle architecture MVC
+       $.ajax({
+           url: "api/checkout",
+           type: "POST",
+           contentType: "application/json",
+           data: JSON.stringify({
+               id_acheteur: (typeof id_acheteur !== 'undefined' && id_acheteur !== '') ? id_acheteur : 1,
+               type_paiement: $('select[name="type_transaction"]').val(),
+               jeux_ids: jeuxIds
+           }),
+           dataType: "json",
+           success: function (response) {
+               if (response.success) {
+
+                   // --- TA LOGIQUE EXISTANTE DE FACTURE ET EMAIL QUE L'ON CONSERVE ---
+                   if (typeof id_acheteur !== 'undefined' && id_acheteur !== '') {
+                       $.ajax({
+                           url: 'pdf/generer_pdf.php',
+                           type: 'GET',
+                           data: {idacheteur: id_acheteur},
+                           success: function () {
+                               console.log('Facture générée');
+                               setTimeout(function () {
+                                   $.ajax({
+                                       url: 'ajax/send-mail.php',
+                                       type: 'POST',
+                                       data: {idacheteur: id_acheteur}
+                                   });
+                               }, 15000);
+                           }
+                       });
+                   }
+
+                   // Tout est ok → redirection
+                   window.location.href = '?page=vente';
+
+               } else {
+                   alert("Impossible de valider : " + response.message);
+               }
+           },
+           error: function () {
+               alert("Erreur de connexion avec Apache/PHP.");
+           }
+       });
+   });
     
     
 });

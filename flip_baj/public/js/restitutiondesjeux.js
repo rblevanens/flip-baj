@@ -395,28 +395,42 @@ $(document).ready(function() {
 	});
 
 	/**
-	 * Gère le double-clic sur une ligne pour sortir un jeu du stock.
+	 * Gère le double-clic sur une ligne pour sortir un jeu du stock (Restitution MVC).
 	 * @function
 	 */
 	$('#jeuxenstock tbody').on('dblclick', 'tr', function() {
-		/*console.log($(this).data('dt_rowid'));
-		console.log($(this).data('code'));
-		console.log(STATUS_JEUX_RENDUS);*/
 		$('body').addClass('waiting');
+
+		// On récupère les infos depuis les attributs "data-" de la ligne cliquée
+		let codeBarreJeu = $(this).data('code');
+		let idVendeur = $('#idVendeurEdition').val();
+
 		$.ajax({
+			url: 'api/restituer-jeu',
 			type: 'POST',
-			url: 'ajax/jeuxliste-update.php',
-			data: { 'id': $(this).data('dt_rowid'), 'statut': STATUS_JEUX_RENDUS, 'old_id_statut': '2', 'date': true, 'codebarre': $(this).data('code') },
-			success: function(data) {
-				if (data.message2 == '0') AfficherPopUp("Operation impossible", alerte);;
-			},
+			contentType: 'application/json',
+			data: JSON.stringify({
+				code_barre: codeBarreJeu,
+				id_vendeur: idVendeur
+			}),
 			dataType: 'json',
-			async: false
+			success: function(response) {
+				if (response.success) {
+					// Le jeu est rendu, on met à jour les deux tableaux en arrière-plan sans perdre la page
+					tablejeuxenstock.ajax.reload(null, false);
+					tablejeuxnrendus.ajax.reload(null, false);
+				} else {
+					alert("Impossible de restituer le jeu : " + response.message);
+				}
+			},
+			error: function() {
+				alert("Erreur réseau lors de la communication avec le serveur.");
+			},
+			complete: function() {
+				// S'exécute toujours, que ce soit un succès ou une erreur
+				$('body').removeClass('waiting');
+			}
 		});
-		// maj des compteurs
-		tablejeuxenstock.ajax.reload();
-		tablejeuxnrendus.ajax.reload();
-		$('body').removeClass('waiting');
 	});
 
 	/**
@@ -462,40 +476,30 @@ $(document).ready(function() {
 
 	majinfosmonetairesvendeur();
 
+
 	/**
-	 * Gère le clic sur le bouton de validation de remboursement.
+	 * Gère le clic sur le bouton de validation de remboursement (Version MVC).
 	 * @function
 	 */
 	$('#valider_remboursement_bouton').click(function() {
 		var id = $("#idVendeurEdition").val();
 		var montant_remboursement = parseInt($("#montant_remboursement").val(), 10);
 		var montant_don = parseInt($("#montant_don").val(), 10);
-	    console.log("Valeur sélectionnée dans le select : ", $('select[name="Moyen-remboursement"]').val());
 
-		if (isNaN(montant_remboursement)) {
-			montant_remboursement = 0;
-		}
-		if (isNaN(montant_don)) {
-			montant_don = 0;
-		}
+		if (isNaN(montant_remboursement)) montant_remboursement = 0;
+		if (isNaN(montant_don)) montant_don = 0;
+
 		if (montant_don == 0 && montant_remboursement == 0) {
 			alert('Veuillez remplir le montant du remboursement');
 			return;
 		}
+
 		var type_remb = 'erreur';
-		if (montant_remboursement == 0) {
-			type_remb = 'no_remb';
-		}
-		if ($('select[name="Moyen-remboursement"]').val() == '1') {
-			type_remb = TYPE_TRANS_ESPECES;
-		} else if ($('select[name="Moyen-remboursement"]').val() == '2') {
-			type_remb = TYPE_TRANS_CHEQUE;
-		} else if ($('select[name="Moyen-remboursement"]').val() == '3') {
-			type_remb = TYPE_TRANS_PAYPAL;
-		}else if ($('select[name="Moyen-remboursement"]').val() == '4') {
-			type_remb = TYPE_TRANS_VIREMENT;
-		}
-		console.log("Valeur sélectionnée dans le select : ", $('select[name="Moyen-remboursement"]').val());
+		if (montant_remboursement == 0) type_remb = 'no_remb';
+		if ($('select[name="Moyen-remboursement"]').val() == '1') type_remb = TYPE_TRANS_ESPECES;
+		else if ($('select[name="Moyen-remboursement"]').val() == '2') type_remb = TYPE_TRANS_CHEQUE;
+		else if ($('select[name="Moyen-remboursement"]').val() == '3') type_remb = TYPE_TRANS_PAYPAL;
+		else if ($('select[name="Moyen-remboursement"]').val() == '4') type_remb = TYPE_TRANS_VIREMENT;
 
 		if (type_remb == 'erreur') {
 			alert('Veuillez sélectionner un moyen de remboursement.');
@@ -512,28 +516,8 @@ $(document).ready(function() {
 		if (!confirm('Le vendeur récupère un montant de ' + montant_remboursement + '€ et donne ' + montant_don + '€ à l\'association du jeu.')) {
 			return;
 		}
-	
-		// ajout du don en base
-		if (montant_don != 0) {
-			$.ajax({
-				type: 'POST',
-				url: 'ajax/don-add.php',
-				data: {
-					id: id,
-					montant_don: montant_don,
-					type_don: 'Non remboursement'
-				},
-				success: function(data) {
-					if (data.message2 != '1') {
-						alert('Impossible d\'inscrire le don en base');
-					}
-				},
-				dataType: 'json',
-				async: false
-			});
-		}
 
-		//  Vérification du montant en caisse si le remboursement est en espèces
+		// Vérification du montant en caisse si le remboursement est en espèces
 		if (type_remb === TYPE_TRANS_ESPECES) {
 			var montantARembourser = montant_remboursement;
 			var argentEnCaisse = 0;
@@ -545,7 +529,6 @@ $(document).ready(function() {
 				async: false,
 				success: function(data) {
 					argentEnCaisse = parseFloat(data.message1) || 0;
-					console.log(" Argent en caisse :", argentEnCaisse);
 				},
 				error: function() {
 					alert('Impossible de vérifier le montant en caisse.');
@@ -558,78 +541,65 @@ $(document).ready(function() {
 				return;
 			}
 		}
-	
-		// ajout d'une transaction "remboursement"
-		if (montant_remboursement != 0) {
-			$.ajax({
-				type: 'POST',
-				url: 'ajax/remboursement-add.php',
-				data: {
-					id: id,
-					montant: montant_remboursement,
-					type: type_remb
-				},
-				success: function(data) {
-					if (data.message2 == '0') {
-						alert("Impossible d'enregistrer le remboursement");
-					}
-				},
-				dataType: 'json',
-				async: false
-			});
-		}
-	
-		// On refresh montant total dû/ déjà payé/ restant
-		majinfosmonetairesvendeur();
-		// On refresh la liste des remboursements
-		AfficherRemb();
-		// On refresh la liste des dons
-		AfficherDons();
-		// On reset le contenu du div contenant les champs de formulaires
-		$("#ul_remb").html(htmlcontent_ul_remb);
-	
-		// * Génération de la facture
-		$.ajax({
-			url: './pdf/generer_pdf.php',
-			type: 'GET',
-			data: { 'idrestitution': id },
-			success: function(response) {
-				console.log('Facture générée avec succès');
-			},
-			error: function(xhr, status, error) {
-				console.error('Erreur lors de la génération de la facture : ' + status + ' ' + error);
-			}
-		});
 
-		// * ajax permettant d'envoyer un mail
+		// --- L'APPEL UNIQUE MVC VERS LA TRANSACTION SÉCURISÉE ---
 		$.ajax({
-			url: 'ajax/send-mail.php',
+			url: 'api/cloturer-restitution',
 			type: 'POST',
-			data: { 'idrestitution': id },
+			contentType: 'application/json',
+			data: JSON.stringify({
+				id_vendeur: id,
+				montant_remboursement: montant_remboursement,
+				type_remboursement: type_remb,
+				montant_don: montant_don
+			}),
+			dataType: 'json',
 			success: function(response) {
-				console.log('Réponse du serveur : ' + response);
-			},
-			error: function(xhr, status, error) {
-				console.error('Erreur lors de la requête AJAX : ' + status + ' ' + error);
-			}
-		});
+				if (response.success) {
 
-		// * ajax permettant de modifier le statut des jeux vendu 
-		$.ajax({
-			type: 'POST',
-			url: 'ajax/change-status.php',
-			data: {
-				'id': idVendeurEdition
+					// 1. Mise à jour visuelle de l'interface
+					majinfosmonetairesvendeur();
+					AfficherRemb();
+					AfficherDons();
+					$("#ul_remb").html(htmlcontent_ul_remb);
+
+					// 2. Génération de la facture PDF
+					$.ajax({
+						url: './pdf/generer_pdf.php',
+						type: 'GET',
+						data: { 'idrestitution': id },
+						success: function() {
+							console.log('Facture générée avec succès');
+
+							// 3. Envoi du mail différé de 5 secondes
+							setTimeout(function() {
+								$.ajax({
+									url: 'ajax/send-mail.php',
+									type: 'POST',
+									data: { 'idrestitution': id }
+								});
+							}, 5000);
+
+							// Fin de la boucle, on recharge pour vider la page proprement
+							alert("Restitution clôturée avec succès !");
+							location.reload();
+						},
+						error: function() {
+							// Même si le PDF plante, la transaction financière a réussi en base.
+							alert("Restitution validée, mais erreur lors de la génération du PDF.");
+							location.reload();
+						}
+					});
+				} else {
+					alert("Erreur critique lors de la restitution : " + response.message);
+				}
 			},
-			success: function(updateResponse) {
-				console.log('Statut des jeux mis à jour avec succès.');
-				location.reload();
-			},
-			error: function(xhr, status, error) {
-				console.log('Erreur lors de la mise à jour du statut du jeu: ' + error);
+			error: function() {
+				alert("Erreur réseau lors de la communication avec le serveur.");
 			}
 		});
 	});
+
 	
 	// Gestion de la modale de modification vendeur
 	documentReadyDeLaModale();
