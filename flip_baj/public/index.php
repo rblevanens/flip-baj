@@ -97,29 +97,9 @@ switch ($page) {
         require __DIR__ . '/../main/admin.php';
         break;
 
-    case 'api/check-codebarre':
-        $controller = new JeuApiController();
-        $controller->checkCodeBarre();
-        break;
-
     case 'api/checkout':
         $controller = new TransactionApiController();
         $controller->checkout();
-        break;
-
-    case 'api/add-jeu':
-        $controller = new JeuApiController();
-        $controller->addJeu();
-        break;
-
-    case 'api/update-jeu':
-        $controller = new JeuApiController();
-        $controller->updateJeu();
-        break;
-
-    case 'api/restituer-jeu':
-        $controller = new JeuApiController();
-        $controller->restituerJeu();
         break;
 
     case 'api/cloturer-restitution':
@@ -155,6 +135,35 @@ switch ($page) {
     case 'api/save-vendeur':
         $controller = new UtilisateurApiController();
         $controller->saveVendeur();
+        break;
+
+
+    // --- ROUTES JEUX ---
+    case 'api/add-jeu':
+        $controller = new JeuApiController();
+        $controller->addJeu();
+        break;
+    case 'api/update-jeu':
+        $controller = new JeuApiController();
+        $controller->updateJeu();
+        break;
+    case 'api/restituer-jeu':
+        $controller = new JeuApiController();
+        $controller->restituerJeu();
+        break;
+    case 'api/check-codebarre':
+        $controller = new JeuApiController();
+        $controller->checkCodeBarre();
+        break;
+
+    // --- ROUTES JEDITABLE (TEXTE BRUT) ---
+    case 'api/inline-codebarre':
+        $controller = new JeuApiController();
+        $controller->inlineCodeBarre();
+        break;
+    case 'api/inline-prix':
+        $controller = new JeuApiController();
+        $controller->inlinePrix();
         break;
 
 
