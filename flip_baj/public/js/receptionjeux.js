@@ -93,7 +93,7 @@ $(document).ready(function() {
 		drawCallback: function(settings) {
 			$('#nbJeuxStockVendeurSelectionne').html(tablejeuxenstock.rows().count());
 
-			$('#jeuxenstock tbody td.jeu-prix-rendu').editable('ajax/jeuxprixrendu-update.php', {
+			$('#jeuxenstock tbody td.jeu-prix-rendu').editable('api/inline-prix?type=rendu', {
 				data: function(value, settings) {
 					return value.replace(/ €/gi, '');
 				},
@@ -106,7 +106,7 @@ $(document).ready(function() {
 				}
 			});
 
-			$('#jeuxenstock tbody td.jeu-prix-vendu').editable('ajax/jeuxprixvendu-update.php', {
+			$('#jeuxenstock tbody td.jeu-prix-vendu').editable('api/inline-prix?type=rendu', {
 				data: function(value, settings) {
 					return value.replace(/ €/gi, '');
 				},
@@ -119,7 +119,7 @@ $(document).ready(function() {
 				}
 			});
 
-			$('#jeuxenstock tbody td.jeu-codeBarre').editable('ajax/jeuxliste-checkandupdate.php', {
+			$('#jeuxenstock tbody td.jeu-codeBarre').editable('api/inline-codebarre', {
 				data: function(value, settings) {
 					if (!/Festival_\d{4}/.test(value)) {
 						return '';
@@ -179,7 +179,7 @@ $(document).ready(function() {
 			}
 		],
 		drawCallback: function() {
-			$('#jeuxnonrecus tbody td.jeu-codeBarre').editable('ajax/jeuxliste-checkandupdate.php', {
+			$('#jeuxnonrecus tbody td.jeu-codeBarre').editable('api/inline-codebarre', {
 				data: function(value, settings) {
 					if (!/Festival_\d{4}/.test(value)) {
 						return '';
