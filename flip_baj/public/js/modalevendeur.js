@@ -344,10 +344,10 @@ function documentReadyDeLaModale() {
 						$("#boutonfermer").show();
 
 						if (tParam && tParam === 'reception') {
-							location.href = 'receptionjeux.php?id=' + data.message1;
+							location.href = '?page=reception&id=' + data.message1;
 						}
 						else if (tParam === 'restitution') {
-							location.href = 'restitutiondesjeux.php?id=' + data.message1;
+							location.href = '?page=restitution&id=' + data.message1;
 						}
 						else {
 							location.reload();
@@ -370,10 +370,10 @@ function documentReadyDeLaModale() {
 							$('#messageformulairemodale').html('<p class="bg-success">vendeur mis à jour</p>');
 							$("#boutonfermer").show();
 							if (tParam && tParam === 'reception') {
-								location.href = 'receptionjeux.php?id=' + data.message1;
+								location.href = '?page=reception&id=' + data.message1;
 							}
 							else if (tParam === 'restitution') {
-								location.href = 'restitutiondesjeux.php?id=' + data.message1;
+								location.href = '?page=restitution&id=' + data.message1;
 							}
 							else {
 								location.href = location.href;

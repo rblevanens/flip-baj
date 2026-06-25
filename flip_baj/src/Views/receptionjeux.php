@@ -6,7 +6,7 @@
 
 <ul class="filariane ms-2">
     <li><a href="index.php">Home</a></li>
-    <li><a href="index.php?page=selectionvendeur">Sélection du vendeur</a></li>
+    <li><a href="?page=selectionvendeur">Sélection du vendeur</a></li>
     <li><a href="#">Réception des jeux</a></li>
 </ul>
 

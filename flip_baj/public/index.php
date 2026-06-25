@@ -10,6 +10,8 @@ use App\Controllers\ReceptionController;
 use App\Controllers\RestitutionController;
 use App\Controllers\Api\JeuApiController;
 use App\Controllers\Api\TransactionApiController;
+use App\Controllers\Api\UtilisateurApiController;
+use App\Controllers\Api\AcheteurApiController;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 

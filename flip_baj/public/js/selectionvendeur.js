@@ -56,10 +56,10 @@ $(document).ready(function() {
     $('#vendeurs tbody').on('dblclick', 'tr', function() {
         var idVendeur = table.row(this).data().idDuVendeur;
         if ($_GET('t') == 'reception') {
-            openEdit('receptionjeux.php?id=' + idVendeur);
+            openEdit('?page=reception&id=' + idVendeur);
         }
         if ($_GET('t') == 'restitution') {
-            openEdit('restitutiondesjeux.php?id=' + idVendeur);
+            openEdit('?page=restitution&id=' + idVendeur);
         }
     });
 

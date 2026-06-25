@@ -298,54 +298,59 @@ if (isset($_COOKIE['loggedin']) && $_COOKIE['loggedin'] === 'true') {
 		</div>
 
 	<!-- Pour le moment, on se concentre sur autre chose -->
-		<div class="col-sm-7">
-			<div class="card">
-				<div class="card-header bg-primary">
-					<h3 class="card-title text-white">Ajouter un jeu</h3>
-				</div>
-				<div class="card-body">
-					<form id="formulaireajoutjeu2"
-						class="row g-3 justify-content-center">
-						<script type="text/javascript" >console.log(" <?php echo $idadminVision; ?> ");</script>
-						<div class="col-auto">
-							<div class="input-group" title="Nom du jeu">
-								<span class="input-group-text"><i class="bi bi-person"></i></span>
-								<input type="text" class="form-control" id="NomJeuAjout"
-									data-jeuxacreer="" placeholder="Nom du jeu">
-							</div>
-						</div>
+        <div class="col-sm-6"> <div class="card">
+                <div class="card-header bg-primary">
+                    <h3 class="card-title text-white">Ajouter un jeu</h3>
+                </div>
+                <div class="card-body">
+                    <form id="formulaireajoutjeu2"
+                          class="row g-3 justify-content-center">
+                        <div class="col-auto">
+                            <div class="input-group" title="Nom du jeu">
+                                <span class="input-group-text"><i class="bi bi-person"></i></span>
+                                <input type="text" class="form-control" id="NomJeuAjout"
+                                       data-jeuxacreer="" placeholder="Nom du jeu">
+                            </div>
+                        </div>
 
-						<div class="col-auto">
-							<div class="input-group" title="Code a 4 chiffres">
-								<span class="input-group-text"><i class="bi bi-upc"></i></span>
-								<input size="17" type="text" class="form-control"
-									id="CodeBarreAjout" placeholder="Code à 4 chiffres">
-							</div>
-							
-						</div>
+                        <div class="col-auto">
+                            <div class="input-group" title="Code a 4 chiffres">
+                                <span class="input-group-text"><i class="bi bi-upc"></i></span>
+                                <input size="17" type="text" class="form-control"
+                                       id="CodeBarreAjout" placeholder="Code à 4 chiffres">
+                            </div>
+                        </div>
 
-						<div class="col-auto">
-							<div class="input-group" title= "Prix du jeu">
-								<span class="input-group-text"><i class="bi bi-currency-euro"></i></span>
-								<input size="4" type="text" size="6" class="form-control"
-									id="PrixAjout" placeholder="Prix">
-							</div>
-						</div>
+                        <div class="col-auto">
+                            <div class="input-group" title= "Prix du jeu">
+                                <span class="input-group-text"><i class="bi bi-currency-euro"></i></span>
+                                <input size="4" type="text" size="6" class="form-control"
+                                       id="PrixAjout" placeholder="Prix">
+                            </div>
+                        </div>
 
-						<div class="col-auto" title="Ajouter le jeu a la base de donnée">
-							<button id="boutonsave" type="button" class="btn btn-primary boutonsave">Ajouter</button>
-						</div>
-					</form>
+                        <div class="col-auto" title="Ajouter le jeu a la base de donnée">
+                            <button id="boutonsave" type="button" class="btn btn-primary boutonsave">Ajouter</button>
+                        </div>
+                    </form>
 
+                    <div id="messageerreurformulaire"></div>
+                    <div id="messageformulaire"></div>
 
-					<div id="messageerreurformulaire"></div>
-					<div id="messageformulaire"></div>
+                    <hr class="my-4">
 
-
-					
-				</div>
-			</div>
-		</div>	
+                    <div class="text-center mt-3">
+                        <h5 class="text-muted mb-3">Besoin d'importer un fichier partenaire (Excel/CSV) ?</h5>
+                        <a href="jassmeux/index.php" target="_blank" class="btn btn-warning btn-lg shadow-sm" style="font-weight: bold;">
+                            <i class="bi bi-box-arrow-in-down"></i> Lancer le module JassMeux
+                        </a>
+                        <p class="small text-muted mt-2">
+                            <em>Ce module externe permet l'import de masse (> 50 jeux) et la génération automatique des étiquettes.</em>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
 	
 
 

@@ -43,7 +43,7 @@
 
 <?php
 // Inclusion de la modale de création (à déplacer aussi dans src/Views/partials/ plus tard)
-require __DIR__ . '/../../main/modalevendeur.php';
+require __DIR__ . '/partials/modalevendeur.php';
 ?>
 
 <?php
